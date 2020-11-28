@@ -8,14 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.playground.R
+import com.example.playground.data.db.entity.MusicEntity
 import com.example.playground.ui.main.Musica
 import kotlinx.android.synthetic.main.item_musica.view.*
 import kotlin.random.Random
 import kotlin.random.nextInt
 
 class MusicaAdapter (
-    private val musicas: MutableList<Musica>,
-    private val clickListener: (Musica) -> Unit
+    private val musicas: List<MusicEntity>,
+    private val clickListener: (MusicEntity) -> Unit
 ) : RecyclerView.Adapter<MusicaAdapter.MusicaViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MusicaViewHolder {
@@ -36,12 +37,12 @@ class MusicaAdapter (
         }
 
         fun bind(
-            musica: Musica,
-            clickListener: (Musica) -> Unit
+            musica: MusicEntity,
+            clickListener: (MusicEntity) -> Unit
         ) {
             itemView.apply {
                 tv_number.text = musica.id.toString()
-                tv_title.text = musica.titulo
+                tv_title.text = musica.name
                 setOnClickListener {
                     clickListener(musica)
                 }

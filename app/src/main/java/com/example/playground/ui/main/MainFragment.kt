@@ -17,6 +17,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.playground.R
+import com.example.playground.data.db.entity.MusicEntity
 import com.example.playground.extensions.navigateWithAnimations
 import com.example.playground.extensions.observe
 import com.example.playground.ui.main.adapters.MusicaAdapter
@@ -39,7 +40,6 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         observe(viewModel.mostrar) { mostrar ->
-            Toast.makeText(activity, "Alterou mostrar: $mostrar", Toast.LENGTH_SHORT).show()
             when(mostrar){
                 true -> {
                     text1.visibility = View.VISIBLE
@@ -57,7 +57,7 @@ class MainFragment : Fragment() {
         observe(viewModel.musicasLiveData) { musicas ->
             titulos = ""
             musicas.forEach {m ->
-                val titulo = m.id.toString() + ": " + m.titulo + "\n"
+                val titulo = m.id.toString() + ": " + m.name + "\n"
                 titulos += titulo
             }
             titulos = titulos.removeSuffix("\n")
@@ -134,12 +134,17 @@ class MainFragment : Fragment() {
                 .setAutoCancel(true)
             notificationManager.notify(0, builder.build())
         }
+
+        buttonCadastro.setOnClickListener{
+            val action = MainFragmentDirections.actionMainFragmentToSaveMusicFragment()
+            findNavController().navigateWithAnimations(action)
+        }
     }
 
-    private fun onMusicaItemClick(musica: Musica){
+    private fun onMusicaItemClick(musica: MusicEntity){
         val action = MainFragmentDirections.actionMainFragmentToHomeFragment(
-            title = musica.titulo,
-            number = musica.id
+            title = musica.name,
+            number = musica.id.toInt()
         )
         findNavController().navigateWithAnimations(action)
     }

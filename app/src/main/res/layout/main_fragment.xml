@@ -136,6 +136,16 @@
             android:textColor="#fff"
             android:backgroundTint="#3F51B5" />
 
+        <Button
+            android:id="@+id/buttonCadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:text="Cadastro"
+            android:textColor="#fff"
+            android:backgroundTint="#4CAF50" />
+
     </LinearLayout>
 
 
