@@ -82,10 +82,19 @@ class MainFragment : Fragment() {
 
         button2.setOnClickListener {
             viewModel.onClickButton2()
-            text1.text = "Texto 1"
-            text2.text = "Texto 2"
-            text3.text = "Texto 3"
-            titulos = ""
+            rv_list_musicas.adapter?.let {adapter ->
+                rv_list_musicas.layoutManager?.let {layoutManager ->
+                    if(layoutManager is GridLayoutManager){
+                        if(layoutManager.spanCount == 3){
+                            rv_list_musicas.layoutManager = GridLayoutManager(activity, 1)
+                        }
+                        else {
+                            rv_list_musicas.layoutManager = GridLayoutManager(activity, 3)
+                        }
+                        adapter.notifyDataSetChanged()
+                    }
+                }
+            }
         }
 
         button3.setOnClickListener {

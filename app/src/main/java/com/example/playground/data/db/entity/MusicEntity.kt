@@ -19,7 +19,7 @@ data class MusicEntity (
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
 
-    val name: String? = null,
+    val name: String,
     val artist: String? = null,
     val track: Int? = null,
     val albumId : Long? = null,

@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.playground.R
 import com.example.playground.extensions.observe
+import com.example.playground.makeToastAndShow
 import kotlinx.android.synthetic.main.save_music_fragment.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -28,11 +29,13 @@ class SaveMusicFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         observe(viewModel.saveReponse){saveResponse ->
-            if(saveResponse){
-                Toast.makeText(requireContext(), "Salvo com sucesso!", Toast.LENGTH_SHORT).show()
+            if(saveResponse.success){
+                makeToastAndShow("Salvo com sucesso!")
                 findNavController().popBackStack()
             } else{
-                Toast.makeText(requireContext(), "Ocorreu em erro!", Toast.LENGTH_SHORT).show()
+                saveResponse.msg?.let {
+                    makeToastAndShow(it)
+                }
             }
         }
 

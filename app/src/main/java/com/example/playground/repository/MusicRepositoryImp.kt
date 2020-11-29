@@ -3,6 +3,7 @@ package com.example.playground.repository
 import androidx.lifecycle.LiveData
 import com.example.playground.data.db.dao.MusicDAO
 import com.example.playground.data.db.entity.MusicEntity
+import java.lang.Exception
 
 class MusicRepositoryImp(
     val musicDAO: MusicDAO
@@ -14,6 +15,11 @@ class MusicRepositoryImp(
         track: Int?,
         albumName: String?
     ) : Long {
+
+        if(name.isEmpty()){
+            throw Exception("O nome da música é obrigatório!")
+        }
+
         return musicDAO.insert(
             MusicEntity(
                 name = name,
@@ -30,6 +36,11 @@ class MusicRepositoryImp(
         track: Int?,
         albumName: String?
     ) {
+
+        if(name.isEmpty()){
+            throw Exception("O nome da música é obrigatório!")
+        }
+
         musicDAO.update(
             MusicEntity(
                 id = id,
