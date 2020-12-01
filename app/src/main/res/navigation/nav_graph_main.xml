@@ -51,5 +51,21 @@
         android:id="@+id/saveMusicFragment"
         android:name="com.example.playground.ui.manage.SaveMusicFragment"
         android:label="Salvar Música"
-        tools:layout="@layout/save_music_fragment" />
+        tools:layout="@layout/save_music_fragment">
+
+        <argument
+            android:name="musicName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="" />
+        <argument
+            android:name="musicArtist"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="" />
+        <argument
+            android:name="musicId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
 </navigation>

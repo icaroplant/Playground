@@ -36,4 +36,15 @@ class SaveMusicViewModel(
             _saveResponse.value = ResponseModel(false, e.message)
         }
     }
+
+    fun updateMusic(id: Long, name: String, artist: String?) = viewModelScope.launch {
+        try {
+            musicRepository.updateMusic(id, name, artist)
+            _saveResponse.value = ResponseModel(true)
+        } catch (e: Exception){
+            Log.e(TAG, "ERRO NO UPDATE: ${e.message}")
+            _saveResponse.value = ResponseModel(false, e.message)
+        }
+    }
 }
+

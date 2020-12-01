@@ -151,9 +151,10 @@ class MainFragment : Fragment() {
     }
 
     private fun onMusicaItemClick(musica: MusicEntity){
-        val action = MainFragmentDirections.actionMainFragmentToHomeFragment(
-            title = musica.name,
-            number = musica.id.toInt()
+        val action = MainFragmentDirections.actionMainFragmentToSaveMusicFragment(
+            musicId = musica.id,
+            musicName = musica.name,
+            musicArtist = musica.artist
         )
         findNavController().navigateWithAnimations(action)
     }
