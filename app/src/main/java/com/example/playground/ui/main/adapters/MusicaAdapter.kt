@@ -16,7 +16,8 @@ import kotlin.random.nextInt
 
 class MusicaAdapter (
     private val musicas: List<MusicEntity>,
-    private val clickListener: (MusicEntity) -> Unit
+    private val clickListener: (MusicEntity) -> Unit,
+    private val longClickListener: (MusicEntity) -> Boolean
 ) : RecyclerView.Adapter<MusicaAdapter.MusicaViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MusicaViewHolder {
@@ -27,7 +28,7 @@ class MusicaAdapter (
     override fun getItemCount(): Int = musicas.size
 
     override fun onBindViewHolder(holder: MusicaViewHolder, position: Int) {
-        holder.bind(musicas[position], clickListener)
+        holder.bind(musicas[position], clickListener, longClickListener)
     }
 
     inner class MusicaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -38,13 +39,17 @@ class MusicaAdapter (
 
         fun bind(
             musica: MusicEntity,
-            clickListener: (MusicEntity) -> Unit
+            clickListener: (MusicEntity) -> Unit,
+            longClickListener: (MusicEntity) -> Boolean
         ) {
             itemView.apply {
                 tv_number.text = musica.id.toString()
                 tv_title.text = musica.name
                 setOnClickListener {
                     clickListener(musica)
+                }
+                setOnLongClickListener{
+                    longClickListener(musica)
                 }
             }
         }

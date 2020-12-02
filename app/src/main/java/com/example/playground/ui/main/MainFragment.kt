@@ -5,17 +5,14 @@ import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.playground.R
 import com.example.playground.data.db.entity.MusicEntity
 import com.example.playground.extensions.navigateWithAnimations
@@ -28,6 +25,7 @@ class MainFragment : Fragment() {
     private val viewModel: MainViewModel by viewModel()
 
     private var titulos  = ""
+    private var spanCount = 3
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,21 +37,6 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        observe(viewModel.mostrar) { mostrar ->
-            when(mostrar){
-                true -> {
-                    text1.visibility = View.VISIBLE
-                    text2.visibility = View.VISIBLE
-                    text3.visibility = View.VISIBLE
-                }
-                false -> {
-                    text1.visibility = View.GONE
-                    text2.visibility = View.GONE
-                    text3.visibility = View.GONE
-                }
-            }
-        }
-
         observe(viewModel.musicasLiveData) { musicas ->
             titulos = ""
             musicas.forEach {m ->
@@ -64,42 +47,43 @@ class MainFragment : Fragment() {
 
             button1.isEnabled = true
 
-            rv_list_musicas.layoutManager = GridLayoutManager(activity,3)
-            rv_list_musicas.adapter = MusicaAdapter(musicas, ::onMusicaItemClick)
+            rv_list_musicas.apply {
+                layoutManager = GridLayoutManager(activity,spanCount)
+                adapter = MusicaAdapter(musicas, ::onMusicaItemClick, ::onMusicaItemLongClick)
+                alpha = 1.0f
+            }
             progressBar.visibility = View.INVISIBLE
+
         }
 
-        buttonMostrar.setOnClickListener {
-            viewModel.onClickButtonMostrar()
+        observe(viewModel.musicDeleted){
+            rv_list_musicas?.adapter?.run {
+                loadMusics()
+            }
         }
 
         button1.setOnClickListener {
-            progressBar.visibility = View.VISIBLE
-            button1.isEnabled = false
-            viewModel.onClickButton1()
-
+            rv_list_musicas?.run {
+                alpha = 0.6f
+            }
+            loadMusics()
         }
 
         button2.setOnClickListener {
-            viewModel.onClickButton2()
             rv_list_musicas.adapter?.let {adapter ->
                 rv_list_musicas.layoutManager?.let {layoutManager ->
                     if(layoutManager is GridLayoutManager){
-                        if(layoutManager.spanCount == 3){
-                            rv_list_musicas.layoutManager = GridLayoutManager(activity, 1)
-                        }
-                        else {
-                            rv_list_musicas.layoutManager = GridLayoutManager(activity, 3)
-                        }
+                        spanCount = if(layoutManager.spanCount == 3) 1 else 3
+                        rv_list_musicas.layoutManager = GridLayoutManager(activity, spanCount)
                         adapter.notifyDataSetChanged()
                     }
                 }
             }
         }
 
-        button3.setOnClickListener {
-            val current = findNavController().currentDestination
-            viewModel.onClickButton3()
+        button3.setOnClickListener{
+            val action = MainFragmentDirections.actionMainFragmentToSaveMusicFragment()
+            findNavController().navigateWithAnimations(action)
         }
 
         buttonHome.setOnClickListener(){
@@ -143,11 +127,12 @@ class MainFragment : Fragment() {
                 .setAutoCancel(true)
             notificationManager.notify(0, builder.build())
         }
+    }
 
-        buttonCadastro.setOnClickListener{
-            val action = MainFragmentDirections.actionMainFragmentToSaveMusicFragment()
-            findNavController().navigateWithAnimations(action)
-        }
+    private fun loadMusics(){
+        progressBar.visibility = View.VISIBLE
+        button1.isEnabled = false
+        viewModel.loadMusics()
     }
 
     private fun onMusicaItemClick(musica: MusicEntity){
@@ -159,4 +144,8 @@ class MainFragment : Fragment() {
         findNavController().navigateWithAnimations(action)
     }
 
+    private fun onMusicaItemLongClick(musica: MusicEntity) : Boolean{
+        viewModel.deleteMusic(musica)
+        return true
+    }
 }

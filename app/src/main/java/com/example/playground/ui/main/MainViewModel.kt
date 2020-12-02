@@ -20,9 +20,11 @@ class MainViewModel(
 
     private val _mostrar = MutableLiveData<Boolean>()
     private val _musicasLiveData = MutableLiveData<List<MusicEntity>>()
+    private val _musicDeleted = MutableLiveData<Long>()
 
     val musicasLiveData: LiveData<List<MusicEntity>> get() = _musicasLiveData
     val mostrar : LiveData<Boolean> get() = _mostrar
+    val musicDeleted : LiveData<Long> get() = _musicDeleted
 
     init {
         _mostrar.value = false
@@ -33,7 +35,7 @@ class MainViewModel(
         _mostrar.value = !_mostrar.value!!
     }
 
-    fun onClickButton1(){
+    fun loadMusics(){
         Log.i("MAIN_VIEW_MODEL", "Clicou Button1")
         viewModelScope.launch {
             val musicas = async {
@@ -43,12 +45,14 @@ class MainViewModel(
         }
     }
 
-    fun onClickButton2(){
-        Log.i("MAIN_VIEW_MODEL", "Clicou Button2")
+    fun deleteMusic(musicEntity: MusicEntity){
+        Log.i("MAIN_VIEW_MODEL", "Clicou Excluir música")
+        viewModelScope.launch {
+            val result = async{
+                musicRepository.deleteMusic(musicEntity.id)
+            }.await()
+            _musicDeleted.value = musicEntity.id
+        }
 
-    }
-
-    fun onClickButton3(){
-        Log.i("MAIN_VIEW_MODEL", "Clicou Button3")
     }
 }

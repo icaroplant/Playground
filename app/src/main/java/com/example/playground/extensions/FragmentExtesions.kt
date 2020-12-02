@@ -1,8 +1,14 @@
 package com.example.playground.extensions
 
+import android.content.Context
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+import androidx.annotation.NonNull
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
+import com.google.android.material.snackbar.Snackbar
+import java.lang.Exception
 
 /**
  *
@@ -26,4 +32,31 @@ inline fun <reified T> Fragment.observe(
     crossinline execution: (T) -> Unit
 ) {
     liveData.observe(viewLifecycleOwner, Observer { execution(it) })
+}
+
+fun Fragment.makeSnackBar(@NonNull msg: String){
+    try {
+        view?.run {
+            Snackbar.make(this, msg, Snackbar.LENGTH_LONG).show()
+        }
+    } catch (e: Exception){
+    }
+}
+
+fun Fragment.makeSnackBarWithAction(
+    @NonNull msg: String,
+    @NonNull actionText: String,
+    @NonNull actionListener: (View) -> Unit
+){
+    try {
+        view?.run {
+            Snackbar.make(this, msg, Snackbar.LENGTH_LONG).setAction(actionText, actionListener).show()
+        }
+    } catch (e: Exception){
+    }
+}
+
+fun Fragment.forceHideKeyboard() {
+    val imm = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
 }
