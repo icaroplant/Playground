@@ -16,3 +16,18 @@ fun makeToast(@NonNull msg: String){
 fun getColor(@ColorRes colorId: Int) : Int{
     return ContextCompat.getColor(MyApp.context, colorId)
 }
+
+data class LiveDataSingleEvent<out T>(private val content: T) {
+
+    private var hasBeenHandled = false
+
+    val contentIfNotHandled: T?
+        get() = if (hasBeenHandled) {
+            null
+        } else {
+            hasBeenHandled = true
+            content
+        }
+
+    fun peekContent(): T = content
+}

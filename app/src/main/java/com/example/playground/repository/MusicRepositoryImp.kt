@@ -12,8 +12,7 @@ class MusicRepositoryImp(
     override suspend fun insertMusic(
         name: String,
         artist: String?,
-        track: Int?,
-        albumName: String?
+        track: Int?
     ) : Long {
 
         if(name.isEmpty()){
@@ -33,8 +32,7 @@ class MusicRepositoryImp(
         id: Long,
         name: String,
         artist: String?,
-        track: Int?,
-        albumName: String?
+        track: Int?
     ) {
 
         if(name.isEmpty()){
@@ -69,5 +67,21 @@ class MusicRepositoryImp(
 
     override fun getAllMusics(): LiveData<List<MusicEntity>> {
         return musicDAO.getAll()
+    }
+
+    override suspend fun restoreMusic(
+        id: Long,
+        name: String,
+        artist: String?,
+        track: Int?
+    ){
+        musicDAO.insert(
+            MusicEntity(
+                id = id,
+                name = name,
+                artist = artist,
+                track = track
+            )
+        )
     }
 }

@@ -1,13 +1,11 @@
 package com.example.playground.di
 
 import com.example.playground.data.db.AppDatabase
-import com.example.playground.data.db.dao.AlbumDAO
-import com.example.playground.data.db.dao.MusicDAO
 import com.example.playground.repository.MusicRepository
 import com.example.playground.repository.MusicRepositoryImp
 import com.example.playground.ui.chat.ChatViewModel
 import com.example.playground.ui.home.HomeViewModel
-import com.example.playground.ui.main.MainRepository
+import com.example.playground.repository.MainRepositoryMock
 import com.example.playground.ui.main.MainViewModel
 import com.example.playground.ui.manage.SaveMusicViewModel
 import org.koin.android.ext.koin.androidApplication
@@ -16,11 +14,10 @@ import org.koin.dsl.module
 
 val mainModule = module {
     single {
-        MainRepository()
+        MainRepositoryMock()
     }
 
     viewModel { MainViewModel(
-        repository = get(),
         musicRepository = get()
     ) }
     viewModel { HomeViewModel() }

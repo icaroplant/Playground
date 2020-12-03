@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.example.playground.R
+import com.example.playground.data.db.ResponseModel
 import com.example.playground.extensions.*
 import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.save_music_fragment.*
@@ -38,24 +38,39 @@ class SaveMusicFragment : Fragment() {
             }
         }
 
-        observe(viewModel.saveReponse){response ->
+        observe(viewModel.repositoryReponse){response ->
+
             if(response.success){
-                makeSnackBarWithAction("Salvo com sucesso!", "Desfazer") { view ->
-                    viewModel.deleteMusic(response.msg?.toLong())
+                when (response) {
+                    is ResponseModel.INSERT -> {
+                        makeSnackBarWithAction("Salvo com sucesso!", "Desfazer") { view ->
+                            response.model?.id?.let {id ->
+                                viewModel.deleteMusic(id)
+                            }
+                        }
+                        clearFields()
+                    }
+                    is ResponseModel.UPDATE -> {
+                        makeSnackBarWithAction("Atualizado com sucesso!", "Desfazer") { view ->
+                            response.model?.let { backup ->
+                                viewModel.restoreMusicFromUpdate(backup.id, backup.name, backup.artist)
+                            }
+                        }
+                    }
+                    is ResponseModel.RESTORE ->{
+                        makeSnackBar("Música restaurada com sucesso!")
+                        response.model?.let { backup ->
+                            etMusicName.setText(backup.name)
+                            etMusicArtist.setText(backup.artist)
+                        }
+                    }
+                    else -> {
+                    }
                 }
-                clearFields()
                 forceHideKeyboard()
             } else{
-                response.msg?.let {
-                    makeSnackBar(it)
-                }
-            }
-        }
-
-        observe(viewModel.deleteReponse){response ->
-            if(!response.success){
-                response.msg?.let{
-                    makeSnackBar(it)
+                response.error?.let {
+                    makeSnackBar("Erro: $it")
                 }
             }
         }

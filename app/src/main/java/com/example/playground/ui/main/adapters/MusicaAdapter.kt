@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.playground.R
 import com.example.playground.data.db.entity.MusicEntity
-import com.example.playground.ui.main.Musica
 import kotlinx.android.synthetic.main.item_musica.view.*
 import kotlin.random.Random
 import kotlin.random.nextInt

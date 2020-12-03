@@ -3,7 +3,6 @@ package com.example.playground.ui.main
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -17,12 +16,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.playground.R
+import com.example.playground.data.db.ResponseModel
 import com.example.playground.data.db.entity.MusicEntity
-import com.example.playground.extensions.changeVisibility
-import com.example.playground.extensions.navigateWithAnimations
-import com.example.playground.extensions.observe
+import com.example.playground.extensions.*
 import com.example.playground.getColor
 import com.example.playground.ui.main.adapters.MusicaAdapter
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -64,6 +63,32 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
             }
             //progressBar.changeVisibility(false)
             slParent.isRefreshing = false
+        }
+
+        observe(viewModel.repositoryReponse){event ->
+
+            event.contentIfNotHandled?.let {response ->
+                if(response.success){
+                    when (response) {
+                        is ResponseModel.DELETE -> {
+                            makeSnackBarWithAction("Deletado com sucesso!", "Desfazer") { view ->
+                                response.model?.let { backup ->
+                                    viewModel.restoreMusicFromDelete(backup.id, backup.name, backup.artist)
+                                }
+                            }
+                        }
+                        is ResponseModel.RESTORE ->{
+                            makeSnackBar("Música restaurada com sucesso!")
+                        }
+                        else -> {
+                        }
+                    }
+                } else{
+                    response.error?.let {
+                        makeSnackBar("Erro: $it")
+                    }
+                }
+            }
         }
 
         button2.setOnClickListener {
@@ -139,7 +164,7 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
         //progressBar.changeVisibility(true)
         slParent.isRefreshing = true
         rv_list_musicas.alpha = 0.6f
-        viewModel.deleteMusic(musica)
+        viewModel.deleteMusic(musica.id)
         return true
     }
 
@@ -151,5 +176,9 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
             rv_list_musicas.alpha = 1.0f
             slParent.isRefreshing = false
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
     }
 }

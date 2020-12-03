@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.playground.data.db.ResponseModel
+import com.example.playground.data.db.entity.MusicEntity
 import com.example.playground.repository.MusicRepository
 import kotlinx.coroutines.launch
 import java.lang.Exception
@@ -13,11 +14,9 @@ class SaveMusicViewModel(
     val musicRepository: MusicRepository
 ) : ViewModel() {
 
-    private val _saveResponse = MutableLiveData<ResponseModel>()
-    private val _deleteResponse = MutableLiveData<ResponseModel>()
+    private val _repositoryResponse = MutableLiveData<ResponseModel<MusicEntity>>()
 
-    val saveReponse : MutableLiveData<ResponseModel> get() = _saveResponse
-    val deleteReponse : MutableLiveData<ResponseModel> get() = _deleteResponse
+    val repositoryReponse : MutableLiveData<ResponseModel<MusicEntity>> get() = _repositoryResponse
 
     companion object{
         private val TAG = SaveMusicViewModel::class.java.simpleName
@@ -27,35 +26,41 @@ class SaveMusicViewModel(
         try {
             val id = musicRepository.insertMusic(name, artist)
             if(id > 0){
-                Log.i(TAG, "SAVE COM SUCESSO: $id")
-                _saveResponse.value = ResponseModel(true, id.toString())
+                _repositoryResponse.value = ResponseModel.INSERT(s = true, m = MusicEntity(id, name, artist))
             } else{
-                Log.i(TAG, "ERRO NO SAVE: $id")
-                _saveResponse.value = ResponseModel(false, "ERRO NO INSERT: $id")
+                _repositoryResponse.value = ResponseModel.INSERT(s = false, e = "ERRO NO INSERT")
             }
         } catch (e: Exception){
-            Log.e(TAG, "ERRO NO SAVE: ${e.message}")
-            _saveResponse.value = ResponseModel(false, e.message)
+            _repositoryResponse.value = ResponseModel.INSERT(s = false, e = e.message)
         }
     }
 
     fun updateMusic(id: Long, name: String, artist: String?) = viewModelScope.launch {
         try {
+            val backup = musicRepository.getMusic(id).firstOrNull()
             musicRepository.updateMusic(id, name, artist)
-            _saveResponse.value = ResponseModel(true, id.toString())
+            _repositoryResponse.value = ResponseModel.UPDATE(s = true, m = backup)
         } catch (e: Exception){
-            Log.e(TAG, "ERRO NO UPDATE: ${e.message}")
-            _saveResponse.value = ResponseModel(false, e.message)
+            _repositoryResponse.value = ResponseModel.UPDATE(s = false, e = e.message)
         }
     }
 
-    fun deleteMusic(id: Long?) = viewModelScope.launch {
+    fun deleteMusic(id: Long) = viewModelScope.launch {
         try {
-            musicRepository.deleteMusic(id!!)
-            _deleteResponse.value = ResponseModel(true, id.toString())
+            val backup = musicRepository.getMusic(id).firstOrNull()
+            musicRepository.deleteMusic(id)
+            _repositoryResponse.value = ResponseModel.DELETE(s = true, m = backup)
         } catch (e: Exception){
-            Log.e(TAG, "ERRO NO DELETE: ${e.message}")
-            _deleteResponse.value = ResponseModel(false, e.message)
+            _repositoryResponse.value = ResponseModel.DELETE(s = false, e = e.message)
+        }
+    }
+
+    fun restoreMusicFromUpdate(id: Long, name: String, artist: String?) = viewModelScope.launch {
+        try {
+            musicRepository.updateMusic(id, name, artist)
+            _repositoryResponse.value = ResponseModel.RESTORE(s = true, m = MusicEntity(id, name, artist))
+        } catch (e: Exception){
+            _repositoryResponse.value = ResponseModel.RESTORE(s = false, e = e.message)
         }
     }
 }
