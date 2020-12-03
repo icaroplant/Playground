@@ -28,5 +28,5 @@ interface MusicRepository {
 
     suspend fun getMusicsByArtist(artist: String) : List<MusicEntity>
 
-    suspend fun getAllMusics() : List<MusicEntity>
+    fun getAllMusics() : LiveData<List<MusicEntity>>
 }

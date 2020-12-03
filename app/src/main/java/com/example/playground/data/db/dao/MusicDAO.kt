@@ -1,5 +1,6 @@
 package com.example.playground.data.db.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -22,7 +23,7 @@ interface  MusicDAO {
     suspend fun deleteAll()
 
     @Query("SELECT * FROM Music")
-    suspend fun getAll() : List<MusicEntity>
+    fun getAll() : LiveData<List<MusicEntity>>
 
     @Query("SELECT * FROM Music WHERE id = :id")
     suspend fun getById(id: Long) : List<MusicEntity>

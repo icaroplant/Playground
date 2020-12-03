@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,95 +9,92 @@
     tools:context=".ui.main.MainFragment"
     app:defaultNavHost="true">
 
-    <LinearLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/slParent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="80dp"
-        android:clipToPadding="false"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:paddingBottom="80dp"
+            android:clipToPadding="false"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="Carregar"
-                android:textColor="#fff"
-                android:backgroundTint="#2196F3" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:textColor="#fff"
-                android:backgroundTint="#F44336"
-                android:text="Mudar Layout"/>
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#fff"
-                android:backgroundTint="#4CAF50"
-                android:text="Cadastrar"/>
-
-        </LinearLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_list_musicas"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="3"
-                tools:listitem="@layout/item_musica"
-                tools:itemCount="7"/>
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:gravity="center">
 
-            <ProgressBar
-                android:id="@+id/progressBar"
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#fff"
+                    android:backgroundTint="#00BCD4"
+                    android:text="Mudar Layout"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_list_musicas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="3"
+                    tools:listitem="@layout/item_musica"
+                    tools:itemCount="7"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="invisible"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+
+            <Button
+                android:id="@+id/buttonHome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:visibility="invisible"
-                android:layout_gravity="center" />
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                android:text="Home"
+                android:textColor="#fff"
+                android:backgroundTint="#FF9800" />
 
-        </FrameLayout>
+            <Button
+                android:id="@+id/buttonNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                android:text="Notification"
+                android:textColor="#fff"
+                android:backgroundTint="#3F51B5" />
 
-
-        <Button
-            android:id="@+id/buttonHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_gravity="center"
-            android:text="Home"
-            android:textColor="#fff"
-            android:backgroundTint="#FF9800" />
-
-        <Button
-            android:id="@+id/buttonNotification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_gravity="center"
-            android:text="Notification"
-            android:textColor="#fff"
-            android:backgroundTint="#3F51B5" />
-
-    </LinearLayout>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="24dp"
+        android:backgroundTint="#4CAF50"
+        android:src="@drawable/ic_baseline_add_24"/>
 
-</ScrollView>
+</FrameLayout>

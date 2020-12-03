@@ -67,7 +67,7 @@ class MusicRepositoryImp(
         return musicDAO.getByArtist(artist)
     }
 
-    override suspend fun getAllMusics(): List<MusicEntity> {
+    override fun getAllMusics(): LiveData<List<MusicEntity>> {
         return musicDAO.getAll()
     }
 }

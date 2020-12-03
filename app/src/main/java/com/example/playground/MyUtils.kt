@@ -1,9 +1,9 @@
 package com.example.playground
 
-import android.view.View
 import android.widget.Toast
+import androidx.annotation.ColorRes
 import androidx.annotation.NonNull
-import com.google.android.material.snackbar.Snackbar
+import androidx.core.content.ContextCompat
 import java.lang.Exception
 
 fun makeToast(@NonNull msg: String){
@@ -11,4 +11,8 @@ fun makeToast(@NonNull msg: String){
         Toast.makeText(MyApp.context, msg, Toast.LENGTH_SHORT).show()
     } catch (e: Exception){
     }
+}
+
+fun getColor(@ColorRes colorId: Int) : Int{
+    return ContextCompat.getColor(MyApp.context, colorId)
 }

@@ -3,6 +3,7 @@ package com.example.playground.ui.main
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,17 +12,23 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.playground.R
 import com.example.playground.data.db.entity.MusicEntity
+import com.example.playground.extensions.changeVisibility
 import com.example.playground.extensions.navigateWithAnimations
 import com.example.playground.extensions.observe
+import com.example.playground.getColor
 import com.example.playground.ui.main.adapters.MusicaAdapter
 import kotlinx.android.synthetic.main.main_fragment.*
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class MainFragment : Fragment() {
+class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
     private val viewModel: MainViewModel by viewModel()
 
     private var titulos  = ""
@@ -37,7 +44,12 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        observe(viewModel.musicasLiveData) { musicas ->
+        //progressBar.changeVisibility(true)
+        slParent.setOnRefreshListener(this)
+        slParent.setColorSchemeColors(getColor(R.color.refresh_progress_1), getColor(R.color.refresh_progress_2), getColor(R.color.refresh_progress_3))
+        slParent.isRefreshing = true
+
+        observe(viewModel.allMusicsEvent) { musicas ->
             titulos = ""
             musicas.forEach {m ->
                 val titulo = m.id.toString() + ": " + m.name + "\n"
@@ -45,28 +57,13 @@ class MainFragment : Fragment() {
             }
             titulos = titulos.removeSuffix("\n")
 
-            button1.isEnabled = true
-
             rv_list_musicas.apply {
                 layoutManager = GridLayoutManager(activity,spanCount)
                 adapter = MusicaAdapter(musicas, ::onMusicaItemClick, ::onMusicaItemLongClick)
                 alpha = 1.0f
             }
-            progressBar.visibility = View.INVISIBLE
-
-        }
-
-        observe(viewModel.musicDeleted){
-            rv_list_musicas?.adapter?.run {
-                loadMusics()
-            }
-        }
-
-        button1.setOnClickListener {
-            rv_list_musicas?.run {
-                alpha = 0.6f
-            }
-            loadMusics()
+            //progressBar.changeVisibility(false)
+            slParent.isRefreshing = false
         }
 
         button2.setOnClickListener {
@@ -81,7 +78,7 @@ class MainFragment : Fragment() {
             }
         }
 
-        button3.setOnClickListener{
+        fbRegister.setOnClickListener{
             val action = MainFragmentDirections.actionMainFragmentToSaveMusicFragment()
             findNavController().navigateWithAnimations(action)
         }
@@ -129,12 +126,6 @@ class MainFragment : Fragment() {
         }
     }
 
-    private fun loadMusics(){
-        progressBar.visibility = View.VISIBLE
-        button1.isEnabled = false
-        viewModel.loadMusics()
-    }
-
     private fun onMusicaItemClick(musica: MusicEntity){
         val action = MainFragmentDirections.actionMainFragmentToSaveMusicFragment(
             musicId = musica.id,
@@ -145,7 +136,20 @@ class MainFragment : Fragment() {
     }
 
     private fun onMusicaItemLongClick(musica: MusicEntity) : Boolean{
+        //progressBar.changeVisibility(true)
+        slParent.isRefreshing = true
+        rv_list_musicas.alpha = 0.6f
         viewModel.deleteMusic(musica)
         return true
+    }
+
+    override fun onRefresh() {
+        //progressBar.changeVisibility(true)
+        rv_list_musicas.alpha = 0.6f
+        viewModel.viewModelScope.launch {
+            delay(2000)
+            rv_list_musicas.alpha = 1.0f
+            slParent.isRefreshing = false
+        }
     }
 }
