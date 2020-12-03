@@ -21,44 +21,65 @@ class MainViewModel(
     val allMusicsEvent : LiveData<List<MusicEntity>> get() = _allMusicsEvent
     val repositoryReponse : MutableLiveData<LiveDataSingleEvent<ResponseModel<MusicEntity>>> get() = _repositoryResponse
 
+    fun saveMusic(name: String, artist: String?) = viewModelScope.launch {
+        try {
+            val id = musicRepository.insertMusic(name, artist)
+            if(id > 0){
+                _repositoryResponse.value = LiveDataSingleEvent(ResponseModel.INSERT(s = true, m = MusicEntity(id, name, artist)))
+            } else{
+                _repositoryResponse.value = LiveDataSingleEvent(ResponseModel.INSERT(s = false, e = "ERRO NO INSERT"))
+            }
+        } catch (e: Exception){
+            _repositoryResponse.value = LiveDataSingleEvent(ResponseModel.INSERT(s = false, e = e.message))
+        }
+    }
+
+    fun updateMusic(id: Long, name: String, artist: String?) = viewModelScope.launch {
+        try {
+            val backup = musicRepository.getMusic(id).firstOrNull()
+            musicRepository.updateMusic(id, name, artist)
+            _repositoryResponse.value = LiveDataSingleEvent(ResponseModel.UPDATE(s = true, m = backup))
+        } catch (e: Exception){
+            _repositoryResponse.value = LiveDataSingleEvent(ResponseModel.UPDATE(s = false, e = e.message))
+        }
+    }
+
 
     fun deleteMusic(id: Long) = viewModelScope.launch {
         try {
             val backup = musicRepository.getMusic(id).firstOrNull()
             musicRepository.deleteMusic(id)
-            _repositoryResponse.value =
-                LiveDataSingleEvent(
-                    ResponseModel.DELETE(
-                        s = true,
-                        m = backup
-                    )
-                )
+            _repositoryResponse.value = LiveDataSingleEvent(ResponseModel.DELETE(s = true, m = backup))
         } catch (e: Exception){
-            _repositoryResponse.value =
-                LiveDataSingleEvent(
-                    ResponseModel.DELETE(
-                        s = false,
-                        e = e.message
-                    )
-                )
+            _repositoryResponse.value = LiveDataSingleEvent(ResponseModel.DELETE(s = false, e = e.message))
+        }
+    }
+
+    fun deleteMusicFromInsert(id: Long) = viewModelScope.launch {
+        try {
+            val backup = musicRepository.getMusic(id).firstOrNull()
+            musicRepository.deleteMusic(id)
+            _repositoryResponse.value = LiveDataSingleEvent(ResponseModel.RESTORE(s = true))
+        } catch (e: Exception){
+            _repositoryResponse.value = LiveDataSingleEvent(ResponseModel.RESTORE(s = false, e = e.message))
         }
     }
 
     fun restoreMusicFromDelete(id: Long, name: String, artist: String?) = viewModelScope.launch {
         try {
             musicRepository.restoreMusic(id, name, artist)
-            _repositoryResponse.value =
-                LiveDataSingleEvent(
-                    ResponseModel.RESTORE(s = true)
-                )
+            _repositoryResponse.value = LiveDataSingleEvent(ResponseModel.RESTORE(s = true))
         } catch (e: Exception){
-            _repositoryResponse.value =
-                LiveDataSingleEvent(
-                    ResponseModel.RESTORE(
-                        s = false,
-                        e = e.message
-                    )
-                )
+            _repositoryResponse.value = LiveDataSingleEvent(ResponseModel.RESTORE(s = false, e = e.message))
+        }
+    }
+
+    fun restoreMusicFromUpdate(id: Long, name: String, artist: String?) = viewModelScope.launch {
+        try {
+            musicRepository.updateMusic(id, name, artist)
+            _repositoryResponse.value = LiveDataSingleEvent(ResponseModel.RESTORE(s = true))
+        } catch (e: Exception){
+            _repositoryResponse.value = LiveDataSingleEvent(ResponseModel.RESTORE(s = false, e = e.message))
         }
     }
 }

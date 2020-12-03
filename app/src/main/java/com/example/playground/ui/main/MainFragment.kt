@@ -73,6 +73,20 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
             event.contentIfNotHandled?.let {response ->
                 if(response.success){
                     when (response) {
+                        is ResponseModel.INSERT -> {
+                            makeSnackBarWithAction("Salvo com sucesso!", "Desfazer") { view ->
+                                response.model?.id?.let {id ->
+                                    viewModel.deleteMusicFromInsert(id)
+                                }
+                            }
+                        }
+                        is ResponseModel.UPDATE -> {
+                            makeSnackBarWithAction("Atualizado com sucesso!", "Desfazer") { view ->
+                                response.model?.let { backup ->
+                                    viewModel.restoreMusicFromUpdate(backup.id, backup.name, backup.artist)
+                                }
+                            }
+                        }
                         is ResponseModel.DELETE -> {
                             makeSnackBarWithAction("Deletado com sucesso!", "Desfazer") { view ->
                                 response.model?.let { backup ->
@@ -81,7 +95,7 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
                             }
                         }
                         is ResponseModel.RESTORE ->{
-                            makeSnackBar("Música restaurada com sucesso!")
+                            makeSnackBar("Ação desfeita com sucesso!")
                         }
                         else -> {
                         }
@@ -107,10 +121,7 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
         }
 
         fbRegister.setOnClickListener{
-//            val action = MainFragmentDirections.actionMainFragmentToSaveMusicFragment()
-//            findNavController().navigateWithAnimations(action)
-            ManageMusicModalBottomSheet.newInstance().showOnce(childFragmentManager)
-
+            ManageMusicModalBottomSheet.newInstance(viewModel).showOnce(childFragmentManager)
         }
 
         buttonHome.setOnClickListener{
@@ -151,9 +162,10 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
         }
     }
 
-    private fun onMusicaItemClick(musica: MusicEntity){
+    private fun onMusicaItemClick(item: MusicEntity){
         ManageMusicModalBottomSheet.newInstance(
-            MusicModel(musica.id, musica.name, musica.artist)
+            viewModel,
+            MusicModel(item.id, item.name, item.artist)
         ).showOnce(childFragmentManager)
     }
 
