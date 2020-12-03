@@ -1,9 +1,10 @@
-package com.example.playground
+package com.example.playground.utils
 
 import android.widget.Toast
 import androidx.annotation.ColorRes
 import androidx.annotation.NonNull
 import androidx.core.content.ContextCompat
+import com.example.playground.MyApp
 import java.lang.Exception
 
 fun makeToast(@NonNull msg: String){

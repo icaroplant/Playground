@@ -19,9 +19,8 @@ import com.example.playground.R
 import com.example.playground.data.db.ResponseModel
 import com.example.playground.data.db.entity.MusicEntity
 import com.example.playground.extensions.*
-import com.example.playground.getColor
+import com.example.playground.utils.getColor
 import com.example.playground.ui.main.adapters.MusicaAdapter
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -43,9 +42,12 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //progressBar.changeVisibility(true)
         slParent.setOnRefreshListener(this)
-        slParent.setColorSchemeColors(getColor(R.color.refresh_progress_1), getColor(R.color.refresh_progress_2), getColor(R.color.refresh_progress_3))
+        slParent.setColorSchemeColors(
+            getColor(R.color.refresh_progress_1),
+            getColor(R.color.refresh_progress_2),
+            getColor(R.color.refresh_progress_3)
+        )
         slParent.isRefreshing = true
 
         observe(viewModel.allMusicsEvent) { musicas ->
@@ -61,7 +63,6 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
                 adapter = MusicaAdapter(musicas, ::onMusicaItemClick, ::onMusicaItemLongClick)
                 alpha = 1.0f
             }
-            //progressBar.changeVisibility(false)
             slParent.isRefreshing = false
         }
 
@@ -104,16 +105,14 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
         }
 
         fbRegister.setOnClickListener{
-            val action = MainFragmentDirections.actionMainFragmentToSaveMusicFragment()
-            findNavController().navigateWithAnimations(action)
+//            val action = MainFragmentDirections.actionMainFragmentToSaveMusicFragment()
+//            findNavController().navigateWithAnimations(action)
+
+            
+
         }
 
-        buttonHome.setOnClickListener(){
-//            val bundle = bundleOf(
-//                "title" to "Lista de Músicas",
-//                "number" to 10,
-//                "list" to titulos
-//            )
+        buttonHome.setOnClickListener{
 
             val action = MainFragmentDirections.actionMainFragmentToHomeFragment(
                 title = "Lista de Músicas",
@@ -161,7 +160,6 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
     }
 
     private fun onMusicaItemLongClick(musica: MusicEntity) : Boolean{
-        //progressBar.changeVisibility(true)
         slParent.isRefreshing = true
         rv_list_musicas.alpha = 0.6f
         viewModel.deleteMusic(musica.id)
@@ -169,7 +167,6 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
     }
 
     override fun onRefresh() {
-        //progressBar.changeVisibility(true)
         rv_list_musicas.alpha = 0.6f
         viewModel.viewModelScope.launch {
             delay(2000)
@@ -178,7 +175,4 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
         }
     }
 
-    override fun onPause() {
-        super.onPause()
-    }
 }
