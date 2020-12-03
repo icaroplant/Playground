@@ -21,6 +21,8 @@ import com.example.playground.data.db.entity.MusicEntity
 import com.example.playground.extensions.*
 import com.example.playground.utils.getColor
 import com.example.playground.ui.main.adapters.MusicaAdapter
+import com.example.playground.ui.manage.ManageMusicModalBottomSheet
+import com.example.playground.ui.manage.MusicModel
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -92,7 +94,7 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
             }
         }
 
-        button2.setOnClickListener {
+        btMudarLayout.setOnClickListener {
             rv_list_musicas.adapter?.let {adapter ->
                 rv_list_musicas.layoutManager?.let {layoutManager ->
                     if(layoutManager is GridLayoutManager){
@@ -107,8 +109,7 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
         fbRegister.setOnClickListener{
 //            val action = MainFragmentDirections.actionMainFragmentToSaveMusicFragment()
 //            findNavController().navigateWithAnimations(action)
-
-            
+            ManageMusicModalBottomSheet.newInstance().showOnce(childFragmentManager)
 
         }
 
@@ -151,12 +152,9 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
     }
 
     private fun onMusicaItemClick(musica: MusicEntity){
-        val action = MainFragmentDirections.actionMainFragmentToSaveMusicFragment(
-            musicId = musica.id,
-            musicName = musica.name,
-            musicArtist = musica.artist
-        )
-        findNavController().navigateWithAnimations(action)
+        ManageMusicModalBottomSheet.newInstance(
+            MusicModel(musica.id, musica.name, musica.artist)
+        ).showOnce(childFragmentManager)
     }
 
     private fun onMusicaItemLongClick(musica: MusicEntity) : Boolean{

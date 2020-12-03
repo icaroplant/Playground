@@ -24,7 +24,7 @@ val mainModule = module {
     viewModel { HomeViewModel() }
     viewModel { ChatViewModel() }
     viewModel { SaveMusicViewModel(musicRepository = get()) }
-    viewModel { ManageMusicViewModel() }
+    viewModel { ManageMusicViewModel(musicRepository = get()) }
 
     single { AppDatabase.getInstance(androidApplication()).musicDAO }
     single { AppDatabase.getInstance(androidApplication()).albumDAO }

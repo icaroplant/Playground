@@ -7,6 +7,6 @@ import kotlinx.android.parcel.Parcelize
 data class MusicModel (
     var id: Long,
     var name: String,
-    var artist: String?,
-    var track: String?
+    var artist: String? = null,
+    var track: String? = null
 ) : Parcelable
