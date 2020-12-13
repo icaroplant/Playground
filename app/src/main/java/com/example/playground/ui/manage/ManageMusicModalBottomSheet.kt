@@ -52,12 +52,15 @@ class ManageMusicModalBottomSheet(
         btSave.setOnClickListener{
             val name = etMusicName.text.toString().trim()
             val artist = etMusicArtist.text.toString().trim()
-            entity?.let {
-                mainViewModel.updateMusic(it.id, name, artist)
-            } ?:
+            if(name.isNotEmpty()){
+                entity?.let {
+                    mainViewModel.updateMusic(it.id, name, artist)
+                } ?:
                 mainViewModel.saveMusic(name, artist)
-            dismiss()
-
+                dismiss()
+            } else{
+                etMusicName.error = "Campo obrigatório"
+            }
         }
     }
 
