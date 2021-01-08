@@ -22,20 +22,20 @@
             <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                 android:id="@+id/slParent"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="300dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" >
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_list_musicas"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    tools:itemCount="7"
                     tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    tools:spanCount="3"
                     tools:listitem="@layout/item_musica"
-                    tools:itemCount="7" />
+                    tools:spanCount="3" />
 
             </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="#FF9800"
+                android:backgroundTint="#1976D2"
                 android:text="Home"
                 android:textColor="#fff"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +72,19 @@
                 android:layout_gravity="center"
                 android:backgroundTint="#3F51B5"
                 android:text="Notification"
+                android:textColor="#fff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonHome" />
+
+            <Button
+                android:id="@+id/btDeepLinkInter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#F57C00"
+                android:text="DeepLink Inter"
                 android:textColor="#fff"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

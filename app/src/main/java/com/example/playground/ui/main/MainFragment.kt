@@ -3,6 +3,8 @@ package com.example.playground.ui.main
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -159,6 +161,13 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
                 .setContentIntent(deeplink)
                 .setAutoCancel(true)
             notificationManager.notify(0, builder.build())
+        }
+
+        btDeepLinkInter.setOnClickListener{
+            Intent(Intent.ACTION_VIEW).run {
+                this.data = Uri.parse("bancointer://convidarAmigao")
+                ContextCompat.startActivity(requireContext(), this, null)
+            }
         }
     }
 
