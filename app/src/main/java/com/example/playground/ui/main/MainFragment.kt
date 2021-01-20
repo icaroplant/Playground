@@ -163,9 +163,26 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
             notificationManager.notify(0, builder.build())
         }
 
+        btDeepLinkInter.text = "Convidar Amigo"
         btDeepLinkInter.setOnClickListener{
             Intent(Intent.ACTION_VIEW).run {
-                this.data = Uri.parse("bancointer://convidarAmigao")
+                this.data = Uri.parse("bancointer://convidarAmigo")
+                ContextCompat.startActivity(requireContext(), this, null)
+            }
+        }
+
+        btDeepLinkInter2.text = "Central de Privacidade"
+        btDeepLinkInter2.setOnClickListener{
+            Intent(Intent.ACTION_VIEW).run {
+                this.data = Uri.parse("bancointer://centralPrivacidade")
+                ContextCompat.startActivity(requireContext(), this, null)
+            }
+        }
+
+        btDeepLinkInter3.text = "Marketplace"
+        btDeepLinkInter3.setOnClickListener{
+            Intent(Intent.ACTION_VIEW).run {
+                this.data = Uri.parse("bancointer://marketplace")
                 ContextCompat.startActivity(requireContext(), this, null)
             }
         }
