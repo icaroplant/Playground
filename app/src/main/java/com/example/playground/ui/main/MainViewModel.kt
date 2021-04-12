@@ -19,7 +19,11 @@ class MainViewModel(
     private val _repositoryResponse = MutableLiveData<LiveDataSingleEvent<ResponseModel<MusicEntity>>>()
 
     val allMusicsEvent : LiveData<List<MusicEntity>> get() = _allMusicsEvent
-    val repositoryReponse : MutableLiveData<LiveDataSingleEvent<ResponseModel<MusicEntity>>> get() = _repositoryResponse
+    val repositoryReponse : LiveData<LiveDataSingleEvent<ResponseModel<MusicEntity>>> get() = _repositoryResponse
+
+    fun onStart(){
+        //do nothing
+    }
 
     fun saveMusic(name: String, artist: String?) = viewModelScope.launch {
         try {

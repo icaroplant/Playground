@@ -1,5 +1,6 @@
 package com.example.playground.codetest
 
+import android.webkit.URLUtil
 import kotlin.math.sqrt
 
 val lazyValue: String by lazy {
@@ -60,8 +61,17 @@ fun main(){
     var x = 1
     var y = 2
     x = y.also { y = x }
-    println(x)
-    println(y)
+    println("x=$x")
+    println("y=$y")
+
+    println("----------------")
+    var url = "https://inter.me/marketplace/produto"
+    if( url.contains("https://inter.me/")){
+        val path = url.removePrefix("https://inter.me/")
+        val deeplink = "bancointer://$path"
+        println(deeplink)
+    }
+
 
 }
 

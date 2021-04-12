@@ -1,4 +1,4 @@
-package com.example.playground.ui.main
+ package com.example.playground.ui.main
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -163,27 +163,43 @@ class MainFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
             notificationManager.notify(0, builder.build())
         }
 
-        btDeepLinkInter.text = "Convidar Amigo"
-        btDeepLinkInter.setOnClickListener{
-            Intent(Intent.ACTION_VIEW).run {
-                this.data = Uri.parse("bancointer://convidarAmigo")
-                ContextCompat.startActivity(requireContext(), this, null)
+        btDeepLinkInter.apply {
+            text = "Marketplace"
+            setOnClickListener{
+                Intent(Intent.ACTION_VIEW).run {
+                    this.data = Uri.parse("bancointer://marketplace")
+                    ContextCompat.startActivity(requireContext(), this, null)
+                }
             }
         }
 
-        btDeepLinkInter2.text = "Central de Privacidade"
-        btDeepLinkInter2.setOnClickListener{
-            Intent(Intent.ACTION_VIEW).run {
-                this.data = Uri.parse("bancointer://centralPrivacidade")
-                ContextCompat.startActivity(requireContext(), this, null)
+        btDeepLinkInter2.apply {
+            text = "Whatsapp Inter"
+            setOnClickListener{
+                Intent(Intent.ACTION_VIEW).run {
+                    this.data = Uri.parse("bancointer://whatsappAuthentication")
+                    ContextCompat.startActivity(requireContext(), this, null)
+                }
             }
         }
 
-        btDeepLinkInter3.text = "Marketplace"
-        btDeepLinkInter3.setOnClickListener{
-            Intent(Intent.ACTION_VIEW).run {
-                this.data = Uri.parse("bancointer://marketplace")
-                ContextCompat.startActivity(requireContext(), this, null)
+        btDeepLinkInter3.apply {
+            text = "One Link"
+            setOnClickListener{
+                Intent(Intent.ACTION_VIEW).run {
+                    this.data = Uri.parse("https://bancointer.onelink.me/s9CL/31528354")
+                    ContextCompat.startActivity(requireContext(), this, null)
+                }
+            }
+        }
+
+        btDeepLinkInter4.apply {
+            text = "gointer Marketplace"
+            setOnClickListener{
+                Intent(Intent.ACTION_VIEW).run {
+                    this.data = Uri.parse("https://gointer.app/marketplace")
+                    ContextCompat.startActivity(requireContext(), this, null)
+                }
             }
         }
     }
