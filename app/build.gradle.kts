@@ -1,6 +1,6 @@
 
 plugins{
-    id("com.android.library")
+    id("com.android.application")
     kotlin("android")
     kotlin("android.extensions")
     id("kotlin-kapt")
@@ -14,7 +14,7 @@ android {
     buildToolsVersion("30.0.2")
 
     defaultConfig {
-        minSdkVersion(21)
+        minSdkVersion(26)
         targetSdkVersion(30)
         versionCode = 1
         versionName = "1.0"
@@ -35,6 +35,14 @@ android {
 
     testOptions {
         unitTests.isReturnDefaultValues = true
+    }
+
+    packagingOptions {
+        exclude("META-INF/DEPENDENCIES")
+        exclude("META-INF/NOTICE")
+        exclude("META-INF/LICENSE")
+        exclude("META-INF/LGPL2.1")
+        exclude("META-INF/AL2.0")
     }
 
 }
