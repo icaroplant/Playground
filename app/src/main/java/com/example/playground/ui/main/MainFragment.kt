@@ -241,12 +241,12 @@ import java.util.*
         button7.apply {
             text = "Evento Calendario"
             setOnClickListener{
-                val beginTime = Calendar.getInstance()set(2021, 5, 19, 7, 30)
-                val endTime = Calendar.getInstance().set(2021, 5, 19, 8, 30)
+                val beginTime = Calendar.getInstance().apply { set(2021, 5, 19, 7, 30) }
+                val endTime = Calendar.getInstance().apply { set(2021, 5, 19, 8, 30) }
                 val intent: Intent = Intent(Intent.ACTION_INSERT)
                     .setData(Events.CONTENT_URI)
-                    .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis())
-                    .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis())
+                    .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.timeInMillis)
+                    .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.timeInMillis)
                     .putExtra(Events.TITLE, "Reunião Inter")
                     .putExtra(Events.DESCRIPTION, "Investimentos em Fundos Imobiliários")
                     //.putExtra(Events.EVENT_LOCATION, "App Inter")

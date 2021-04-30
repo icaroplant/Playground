@@ -55,6 +55,7 @@ fun main(){
     println("----------------")
     println(TipoSegmentacao.values().firstOrNull { it.name == "BLACK" }?.name?.toLowerCase()?.capitalize())
     println(TipoSegmentacao.valueOf("ONE"))
+    println(enumValueOrNull<TipoSegmentacao>("BLACK"))
 
 
     println("----------------")
@@ -110,3 +111,11 @@ fun avaliacao(expressao: Expressao): Int {
         else -> -1
     }
 }
+
+inline fun <reified T : Enum<T>> enumValueOrNull(type: String): T? =
+    try {
+        enumValueOf<T>(type)
+    } catch (e: Throwable) {
+        null
+    }
+

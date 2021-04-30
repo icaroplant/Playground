@@ -14,7 +14,7 @@ android {
     buildToolsVersion("30.0.2")
 
     defaultConfig {
-        minSdkVersion(21)
+        minSdkVersion(26)
         targetSdkVersion(30)
         versionCode = 1
         versionName = "1.0"
@@ -35,6 +35,7 @@ android {
 
     testOptions {
         unitTests.isReturnDefaultValues = true
+        unitTests.isIncludeAndroidResources = true
     }
 
     packagingOptions {
@@ -85,8 +86,16 @@ dependencies {
     implementation("io.mockk:mockk:$mock_version")
     implementation("io.mockk:mockk-android:$mock_version")
 
+    //Test
     testImplementation("junit:junit:4.13")
     androidTestImplementation("androidx.test.ext:junit:1.1.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
+    testImplementation("org.robolectric:robolectric:4.4")
+    debugImplementation("androidx.fragment:fragment-testing:1.2.4")
+
+    //Permission Dispatcher
+    val permission_dispatcher = "4.8.0"
+    implementation("com.github.permissions-dispatcher:permissionsdispatcher:$permission_dispatcher")
+    kapt("com.github.permissions-dispatcher:permissionsdispatcher-processor:$permission_dispatcher")
 
 }
