@@ -1,6 +1,11 @@
 package com.example.playground.codetest
 
 import android.webkit.URLUtil
+import java.sql.Date
+import java.text.SimpleDateFormat
+import java.time.*
+import java.time.format.DateTimeFormatter
+import java.util.*
 import kotlin.math.sqrt
 
 val lazyValue: String by lazy {
@@ -72,6 +77,37 @@ fun main(){
         val deeplink = "bancointer://$path"
         println(deeplink)
     }
+
+    println("----------------")
+    val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+    var data = format.parse("2021-03-03T09:00:00")
+    println("data: ${data.toScheduleString()}")
+
+
+    val s = "2021-03-03T09:00:00Z"
+    val d = LocalDateTime.parse(s, DateTimeFormatter.ISO_OFFSET_DATE_TIME)
+    println(d.toStringLocalFromUTC())
+
+    println("----------------")
+    val dates = mapOf(
+        "2021-03-01" to "2021-03-01T12:00:00Z",
+        "2021-03-02" to "2021-03-01T12:30:00Z",
+        "2021-03-03" to "2021-03-01T15:00:00Z",
+        "2021-03-04" to "2021-03-01T16:00:00Z",
+        "2021-03-05" to "2021-03-01T17:30:00Z",
+        "2021-03-06" to "2021-03-02T11:00:00Z",
+        "2021-03-07" to "2021-03-02T12:00:00Z",
+        "2021-03-08" to "2021-03-02T13:00:00Z",
+        "2021-03-09" to "2021-03-02T18:00:00Z",
+        "2021-04-01" to "2021-04-01T09:00:00Z",
+        "2021-04-02" to "2021-04-01T10:00:00Z",
+        "2021-04-03" to "2021-04-01T11:00:00Z",
+        "2021-04-04" to "2021-04-02T18:00:00Z",
+        "2021-04-05" to "2021-04-02T19:00:00Z",
+        "2021-04-06" to "2021-04-02T20:00:00Z"
+    )
+    val newDates = dates.map { YearMonth.parse(it.key, DateTimeFormatter.ofPattern("yyyy-MM-dd")) }
+    println(newDates)
 
 
 }

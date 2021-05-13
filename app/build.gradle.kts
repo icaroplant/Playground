@@ -98,4 +98,8 @@ dependencies {
     implementation("com.github.permissions-dispatcher:permissionsdispatcher:$permission_dispatcher")
     kapt("com.github.permissions-dispatcher:permissionsdispatcher-processor:$permission_dispatcher")
 
+    //Gson
+    val gson = "2.8.6"
+    implementation("com.google.code.gson:gson:$gson")
+
 }

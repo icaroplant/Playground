@@ -84,6 +84,7 @@ class ChatFragment : Fragment() {
         Manifest.permission.RECORD_AUDIO
     )
     fun onPermissionsDenied() {
+        Toast.makeText(requireContext(), "PERMISSIONS DENIED", Toast.LENGTH_SHORT).show()
     }
 
     @OnNeverAskAgain(

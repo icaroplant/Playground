@@ -9,6 +9,7 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.CalendarContract
 import android.provider.CalendarContract.Events
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -252,7 +253,17 @@ import java.util.*
                     //.putExtra(Events.EVENT_LOCATION, "App Inter")
                     .putExtra(Events.AVAILABILITY, Events.AVAILABILITY_BUSY)
                     .putExtra(Intent.EXTRA_EMAIL, "gerente@bancointer.com.br")
-                startActivity(intent)
+                startActivityForResult(intent, 111)
+            }
+        }
+
+        button8.apply {
+            text = "Video Conference"
+            setOnClickListener{
+                Intent(Intent.ACTION_VIEW).run {
+                    this.data = Uri.parse("bancointer://videoConference")
+                    ContextCompat.startActivity(requireContext(), this, null)
+                }
             }
         }
     }
@@ -279,5 +290,15 @@ import java.util.*
             slParent.isRefreshing = false
         }
     }
+
+     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+         super.onActivityResult(requestCode, resultCode, data)
+         Log.d("INTENT_RESULT", "requestCode: $requestCode")
+         Log.d("INTENT_RESULT", "resultCode: $resultCode")
+         Log.d("INTENT_RESULT", "timezone: ${data?.getStringExtra("timezone")}")
+         Log.d("INTENT_RESULT", "allday: ${data?.getBooleanExtra("allday", false)}")
+         Log.d("INTENT_RESULT", "go_to_millis: ${data?.getLongExtra("go_to_millis", 0L)}")
+         Log.d("INTENT_RESULT", "data: ${data.toString()}")
+     }
 
 }
