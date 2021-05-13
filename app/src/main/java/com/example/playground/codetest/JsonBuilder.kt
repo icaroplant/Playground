@@ -36,6 +36,25 @@ data class WarningResponse(
 )
 
 fun main(){
+    val schedules = buildResponse()
+    val gson = GsonBuilder().setPrettyPrinting().create()
+    val json = gson.toJson(schedules)
+
+    val f = "json_response_mock.txt"
+
+    //write
+    File(f).printWriter().use { out ->
+        out.println(json)
+    }
+
+    //read
+    val bufferedReader: BufferedReader = File(f).bufferedReader()
+    val inputString = bufferedReader.use { it.readText() }
+    val post = gson.fromJson(inputString, SchedulesResponse::class.java)
+    println(post)
+}
+
+fun buildResponse(): SchedulesResponse{
     val now = getNow()
     val startDate = now.minusMonths(1).withDayOfMonth(1)
     val endMonth = now.plusMonths(1)
@@ -72,18 +91,7 @@ fun main(){
         schedules = days
     )
 
-
-    val gson = GsonBuilder().setPrettyPrinting().create()
-    val json = gson.toJson(schedules)
-
-    File("json_response_mock.txt").printWriter().use { out ->
-        out.println(json)
-    }
-
-    val bufferedReader: BufferedReader = File("json_response_mock.txt").bufferedReader()
-    val inputString = bufferedReader.use { it.readText() }
-    val post = gson.fromJson(inputString, SchedulesResponse::class.java)
-    println(post)
+    return schedules
 }
 
 fun getNow() = LocalDateTime.now(ZoneOffset.UTC)
