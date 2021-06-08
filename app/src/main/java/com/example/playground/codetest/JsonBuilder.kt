@@ -76,9 +76,9 @@ fun buildResponse(): SchedulesResponse{
             h-15 -> buildDay(datetime, VideoConferenceStatus.COMPLETED)
             h-10 -> buildDay(datetime, VideoConferenceStatus.CANCELED)
             h -> buildDay(datetime, VideoConferenceStatus.STARTED)
-            h+5 -> buildDay(datetime, VideoConferenceStatus.UNAVAILABLE)
             h+15 -> buildDay(datetime)
             h+20 -> buildDay(datetime, VideoConferenceStatus.SCHEDULED)
+            in start..h -> buildDay(datetime, VideoConferenceStatus.UNAVAILABLE)
             else -> buildDay(datetime, VideoConferenceStatus.AVAILABLE)
         }
 

@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.playground.R
+import com.example.playground.extensions.toHtml
 import kotlinx.android.synthetic.main.chat_fragment.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import permissions.dispatcher.*
@@ -32,6 +33,12 @@ class ChatFragment : Fragment() {
         button1.setOnClickListener{
             openWhatsApp(requireContext(), "https://wa.me/553130034070")
         }
+
+        tvSpannedText.text = String.format(
+            getString(R.string.video_conference_confirmation_description_success),
+            "Quarta, 4 de março",
+            "11:30"
+        ).toHtml
 
         getPermissionsWithPermissionCheck()
 

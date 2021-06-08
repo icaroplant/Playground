@@ -109,6 +109,28 @@ fun main(){
     val newDates = dates.map { YearMonth.parse(it.key, DateTimeFormatter.ofPattern("yyyy-MM-dd")) }
     println(newDates)
 
+    println("----------------")
+    val calendar = buildResponse()
+    val mapped = calendar.schedules.mapKeys { LocalDate.parse(it.key) }
+    val yearMonth = YearMonth.parse("2021-04")
+    val month = mapped.filter { it.key.toYearMonth() == yearMonth }
+    month.forEach{
+        println(it.key)
+    }
+
+    println("----------------")
+    val l = mutableListOf(
+        "1",
+        "3",
+        "4",
+        "5",
+        "7",
+    )
+    l.add(4, "6")
+    println(l)
+
+
+
 
 }
 

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Playground</string>
+
+    <string name="video_conference_confirmation_description_success"><![CDATA[Sua reunião por vídeo com seu gerente Inter Black foi agendada para <b>%1$s,  às %2$s.</b><br /><br />Você acessa sua reunião aqui pelo app do Inter. Esperamos por você.]]></string>
 </resources>

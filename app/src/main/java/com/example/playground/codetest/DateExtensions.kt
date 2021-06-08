@@ -1,5 +1,6 @@
 package com.example.playground.codetest
 
+import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.time.*
 import java.time.format.DateTimeFormatter
@@ -182,4 +183,12 @@ fun LocalDateTime.toStringYearMonthDay(): String {
 
 fun LocalDateTime.toMonth(): String {
     return format(DateTimeFormatter.ofPattern("MMMM", Locale.getDefault()))
+}
+
+fun LocalDate.toYearMonth(): YearMonth? {
+    return try{
+        YearMonth.parse(this.toString(), DateTimeFormatter.ISO_DATE)
+    } catch (e: ParseException){
+        null
+    }
 }
