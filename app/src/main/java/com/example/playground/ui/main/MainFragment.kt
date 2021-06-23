@@ -261,7 +261,17 @@ import java.util.*
             text = "Video Conference"
             setOnClickListener{
                 Intent(Intent.ACTION_VIEW).run {
-                    this.data = Uri.parse("bancointer://videoConference")
+                    this.data = Uri.parse("bancointer://videoConferenciaAgendamento")
+                    ContextCompat.startActivity(requireContext(), this, null)
+                }
+            }
+        }
+
+        button9.apply {
+            text = "Video Reunião"
+            setOnClickListener{
+                Intent(Intent.ACTION_VIEW).run {
+                    this.data = Uri.parse("bancointer://videoConferencia?url=https%3A%2F%2Finter-video.loca.lt%2Froom%2FMobile")
                     ContextCompat.startActivity(requireContext(), this, null)
                 }
             }
