@@ -276,6 +276,16 @@ import java.util.*
                 }
             }
         }
+
+        button10.apply {
+            text = "Web Url"
+            setOnClickListener{
+                Intent(Intent.ACTION_VIEW).run {
+                    this.data = Uri.parse("https://cloud.comunicacao.bancointer.com.br/plano-odono-clientes")
+                    ContextCompat.startActivity(requireContext(), this, null)
+                }
+            }
+        }
     }
 
     private fun onMusicaItemClick(item: MusicEntity){

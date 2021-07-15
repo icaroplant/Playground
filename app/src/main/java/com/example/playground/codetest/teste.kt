@@ -1,17 +1,30 @@
 package com.example.playground.codetest
 
+import android.os.Parcelable
 import android.webkit.URLUtil
+import com.google.gson.Gson
+import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 import java.sql.Date
+import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.time.*
 import java.time.format.DateTimeFormatter
+import java.time.format.TextStyle
+import java.time.temporal.ChronoField
+import java.time.temporal.ChronoUnit
 import java.util.*
+import java.util.concurrent.TimeUnit
 import kotlin.math.sqrt
 
 val lazyValue: String by lazy {
     println("computed!")
     "Hello"
 }
+
+const val LOCAL_DATE_TIME_PARSE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+const val LOCAL_TIME_PARSE_FORMAT = "HH:mm"
+private val UTC = TimeZone.getTimeZone("UTC")
 
 fun main(){
     val msg = "A soma é ${soma(2,4)}"
@@ -129,9 +142,90 @@ fun main(){
     l.add(4, "6")
     println(l)
 
+    println("----------------")
+    val timezone = ZonedDateTime.now().withZoneSameInstant(ZoneId.of("Etc/Greenwich"))
+    println("${timezone.zone}")
+    println("${timezone.offset}")
 
 
+    println("----------------")
+    val input = "2021-07-02T12:00:00Z"
+    val calendarUtc = calendarNewInstance(UTC)
+    SimpleDateFormat(LOCAL_DATE_TIME_PARSE_FORMAT, defaultLocale).let {
+        it.timeZone = UTC
+        calendarUtc.time = it.parse(input) ?: throw ParseException("Erro parsing local date", 0)
+    }
+    val output = SimpleDateFormat(LOCAL_TIME_PARSE_FORMAT, defaultLocale).format(calendarUtc.time)
+    println(output)
 
+    println("----------------")
+    Segmentation.update(ClientSegmentationModel.Type.DIGITAL)
+    val p = PersonalHelpCenterModel(
+        clientSegmentation = ClientSegmentationModel(
+            type = Segmentation.type
+        )
+    )
+
+    val copy = p.copy()
+    println(copy)
+
+    println("----------------")
+    val json = "{}"
+    val response = Gson().fromJson(json, PersonalHelpCenterResponse::class.java)
+    println(response)
+
+    val model = response.toPersonalHelpCenterModel()
+    Segmentation.update(null)
+    val copy2 = model.copy()
+    println(copy2)
+
+}
+
+fun PersonalHelpCenterResponse.toPersonalHelpCenterModel() = PersonalHelpCenterModel(
+    clientSegmentation = ClientSegmentationModel(
+        type = enumValueOrNull<ClientSegmentationModel.Type>(this.clientSegmentation)
+            ?: Segmentation.type
+    )
+)
+
+
+data class PersonalHelpCenterResponse (
+    @SerializedName("clientSegmentation") val clientSegmentation: String
+)
+
+@Parcelize
+data class PersonalHelpCenterModel(
+    val clientSegmentation: ClientSegmentationModel? = null
+) : Parcelable
+
+@Parcelize
+data class ClientSegmentationModel (
+    val type: Type?
+): Parcelable {
+    enum class Type {
+        DIGITAL,
+        ONE,
+        BLACK,
+        WIN,
+        BASIC;
+    }
+}
+
+object Segmentation {
+    private var segmentation: ClientSegmentationModel.Type? = null
+        set(value) {
+            field = value
+        }
+
+    val typeName: String
+        get() = segmentation?.name ?: ""
+
+    val type: ClientSegmentationModel.Type?
+        get() = segmentation
+
+    fun update(type: ClientSegmentationModel.Type?) {
+        segmentation = type
+    }
 }
 
 enum class TipoSegmentacao {
@@ -176,4 +270,7 @@ inline fun <reified T : Enum<T>> enumValueOrNull(type: String): T? =
     } catch (e: Throwable) {
         null
     }
+
+private fun calendarNewInstance(timeZone: TimeZone? = null, withoutTime: Boolean = false): Calendar =
+    Calendar.getInstance(timeZone ?: TimeZone.getDefault())
 

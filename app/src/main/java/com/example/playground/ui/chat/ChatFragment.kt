@@ -40,6 +40,11 @@ class ChatFragment : Fragment() {
             "11:30"
         ).toHtml
 
+        val count = 1
+        tvPlural.text = String.format(
+            resources.getQuantityString(R.plurals.video_conference_duration_time_full, count, count),
+        )
+
         getPermissionsWithPermissionCheck()
 
     }
