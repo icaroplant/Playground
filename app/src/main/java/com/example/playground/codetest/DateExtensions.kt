@@ -131,11 +131,11 @@ fun java.util.Date.toMonth(): String {
 }
 
 fun String.toCapitalizeWords(): String {
-    val words = this.split(" ").toMutableList()
+    val words = this.toLowerCase(defaultLocale).split(" ").toMutableList()
     var output = ""
 
     for (word in words) {
-        output += word.capitalize() + " "
+        output += word.capitalize(defaultLocale) + " "
     }
 
     return output.trim()

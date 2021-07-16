@@ -5,7 +5,6 @@
     android:id="@+id/nav_graph_main"
     app:startDestination="@id/mainFragment">
 
-
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.playground.ui.main.MainFragment"
@@ -15,9 +14,10 @@
             android:id="@+id/action_mainFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_saveMusicFragment"
-            app:destination="@id/saveMusicFragment" />
+            android:id="@+id/action_mainFragment_to_instrumentFragment"
+            app:destination="@id/instrumentFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.playground.ui.home.HomeFragment"
@@ -47,25 +47,11 @@
         android:label="Chat Fragment"
         tools:layout="@layout/chat_fragment">
     </fragment>
-    <fragment
-        android:id="@+id/saveMusicFragment"
-        android:name="com.example.playground.ui.manage.SaveMusicFragment"
-        android:label="Salvar Música"
-        tools:layout="@layout/save_music_fragment">
 
-        <argument
-            android:name="musicName"
-            app:argType="string"
-            app:nullable="true"
-            android:defaultValue="" />
-        <argument
-            android:name="musicArtist"
-            app:argType="string"
-            app:nullable="true"
-            android:defaultValue="" />
-        <argument
-            android:name="musicId"
-            app:argType="long"
-            android:defaultValue="-1L" />
-    </fragment>
+    <fragment
+        android:id="@+id/instrumentFragment"
+        android:name="com.example.playground.ui.instrument.InstrumentFragment"
+        android:label="Instrumento"
+        tools:layout="@layout/instrument_fragment" />
+
 </navigation>

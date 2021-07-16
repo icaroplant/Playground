@@ -6,6 +6,7 @@ import com.example.playground.repository.MusicRepositoryImp
 import com.example.playground.ui.chat.ChatViewModel
 import com.example.playground.ui.home.HomeViewModel
 import com.example.playground.repository.MainRepositoryMock
+import com.example.playground.ui.instrument.InstrumentViewModel
 import com.example.playground.ui.main.MainViewModel
 import com.example.playground.ui.manage.ManageMusicViewModel
 import org.koin.android.ext.koin.androidApplication
@@ -22,6 +23,7 @@ val mainModule = module {
     ) }
     viewModel { HomeViewModel() }
     viewModel { ChatViewModel() }
+    viewModel { InstrumentViewModel() }
     viewModel { ManageMusicViewModel() }
 
     single { AppDatabase.getInstance(androidApplication()).musicDAO }

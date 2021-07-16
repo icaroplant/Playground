@@ -36,6 +36,7 @@ android {
     testOptions {
         unitTests.isReturnDefaultValues = true
         unitTests.isIncludeAndroidResources = true
+        //animationsDisabled = true
     }
 
     packagingOptions {
@@ -44,6 +45,8 @@ android {
         exclude("META-INF/LICENSE")
         exclude("META-INF/LGPL2.1")
         exclude("META-INF/AL2.0")
+        exclude("META-INF/ASL2.0")
+        exclude("META-INF/NOTICE")
     }
 
 }
@@ -79,19 +82,21 @@ dependencies {
     val coroutines_version = "1.4.2"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version")
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version")
 
     //Mockk
     val mock_version = "1.9.3"
     implementation("io.mockk:mockk:$mock_version")
     implementation("io.mockk:mockk-android:$mock_version")
+    androidTestImplementation("io.mockk:mockk-android:$mock_version")
 
     //Test
     testImplementation("junit:junit:4.13")
+    testImplementation("org.robolectric:robolectric:4.4")
     androidTestImplementation("androidx.test.ext:junit:1.1.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
-    testImplementation("org.robolectric:robolectric:4.4")
-    debugImplementation("androidx.fragment:fragment-testing:1.2.4")
+    //androidTestImplementation("io.insert-koin:koin-test-junit4:3.0.2")
+    debugImplementation("androidx.fragment:fragment-testing:1.3.3")
 
     //Permission Dispatcher
     val permission_dispatcher = "4.8.0"
