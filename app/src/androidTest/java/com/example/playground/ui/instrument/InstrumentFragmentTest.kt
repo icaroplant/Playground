@@ -7,9 +7,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.playground.R
-import com.example.playground.extensions.checkHasText
-import com.example.playground.extensions.checkIsDisplayed
-import com.example.playground.extensions.waitFor
+import com.example.playground.extensions.*
 import com.example.playground.ui.instrument.model.InstrumentModel
 import io.mockk.mockk
 import io.mockk.unmockkAll
@@ -62,6 +60,9 @@ class InstrumentFragmentTest {
         R.id.progressInstrument
             .checkIsDisplayed()
 
+        R.id.llInstrumentContainer
+            .checkIsNotDisplayed()
+
         waitFor(2000)
 
         scenario.onFragment { fragment ->
@@ -71,13 +72,24 @@ class InstrumentFragmentTest {
         }
 
         R.id.progressInstrument
-            .checkIsDisplayed()
+            .checkIsNotDisplayed()
 
         R.id.tvName
             .checkIsDisplayed()
             .checkHasText(instrumentModel.name)
 
+        R.id.btnShow
+            .checkHasText("Hide")
+
         waitFor(2000)
+
+        R.id.btnShow.click()
+
+        R.id.ivPhoto
+            .checkIsNotDisplayed()
+
+        R.id.btnShow
+            .checkHasText("Show")
 
     }
 }

@@ -16,3 +16,11 @@ fun View.hideKeyboard() {
 fun View.changeVisibility(isVisible: Boolean) {
     visibility = takeIf { isVisible }?.run { View.VISIBLE } ?: View.GONE
 }
+
+fun View.gone() {
+    visibility = View.GONE
+}
+
+fun View.visible() {
+    visibility = View.VISIBLE
+}
