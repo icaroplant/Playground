@@ -4,9 +4,6 @@ import android.content.Context
 import androidx.fragment.app.testing.FragmentScenario
 import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.lifecycle.Lifecycle
-import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.IdlingRegistry
-import androidx.test.espresso.matcher.ViewMatchers.isRoot
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.playground.R
@@ -17,7 +14,6 @@ import com.example.playground.ui.instrument.model.InstrumentModel
 import io.mockk.mockk
 import io.mockk.unmockkAll
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.delay
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
@@ -63,7 +59,10 @@ class InstrumentFragmentTest {
     @Test
     fun assert_Instrument_Model()  {
 
-        onView(isRoot()).perform(waitFor(2000))
+        R.id.progressInstrument
+            .checkIsDisplayed()
+
+        waitFor(2000)
 
         scenario.onFragment { fragment ->
             fragment.render(
@@ -71,11 +70,14 @@ class InstrumentFragmentTest {
             )
         }
 
+        R.id.progressInstrument
+            .checkIsDisplayed()
+
         R.id.tvName
             .checkIsDisplayed()
             .checkHasText(instrumentModel.name)
 
-        onView(isRoot()).perform(waitFor(2000))
+        waitFor(2000)
 
     }
 }
