@@ -63,7 +63,7 @@ class InstrumentFragmentTest {
         R.id.llInstrumentContainer
             .checkIsNotDisplayed()
 
-        waitFor(2000)
+        //waitFor(2000)
 
         scenario.onFragment { fragment ->
             fragment.render(
@@ -81,7 +81,7 @@ class InstrumentFragmentTest {
         R.id.btnShow
             .checkHasText("Hide")
 
-        waitFor(2000)
+        //waitFor(2000)
 
         R.id.btnShow.click()
 

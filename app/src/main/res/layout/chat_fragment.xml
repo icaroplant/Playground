@@ -29,14 +29,45 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/btWhatsapp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginEnd="8dp"
-            android:text="Button1"
+            android:text="Open Whatsapp"
             android:textColor="#fff"
-            android:backgroundTint="#2196F3" />
+            android:backgroundTint="@color/green_600" />
+
+        <Button
+            android:id="@+id/btBrowser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:text="Open Browser"
+            android:textColor="#fff"
+            android:backgroundTint="@color/blue_700" />
+
+        <TextView
+            android:id="@+id/tvSelectedContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="Select a content with browser"/>
+
+        <TextView
+            android:id="@+id/tvInputStream"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="InputStream"/>
 
         <TextView
             android:id="@+id/tvSpannedText"

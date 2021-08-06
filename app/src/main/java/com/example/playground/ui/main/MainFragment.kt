@@ -284,10 +284,10 @@ import java.util.*
         }
 
         button10.apply {
-            text = "Web Url"
+            text = "Intercom"
             setOnClickListener{
                 Intent(Intent.ACTION_VIEW).run {
-                    this.data = Uri.parse("https://cloud.comunicacao.bancointer.com.br/plano-odono-clientes")
+                    this.data = Uri.parse("bancointer://interchat")
                     ContextCompat.startActivity(requireContext(), this, null)
                 }
             }

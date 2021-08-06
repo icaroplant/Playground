@@ -2,8 +2,6 @@ package com.example.playground.ui.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
-import com.example.playground.CoroutinesTestRule
-import com.example.playground.InstantTaskExecutorRule
 import com.example.playground.data.db.ResponseModel
 import com.example.playground.data.db.entity.MusicEntity
 import com.example.playground.repository.MusicRepository
@@ -21,12 +19,6 @@ import org.junit.Test
 
 @ExperimentalCoroutinesApi
 class MainViewModelTest {
-
-    @get:Rule
-    val rule = InstantTaskExecutorRule()
-
-    @get:Rule
-    var coroutinesTestRule = CoroutinesTestRule()
 
     private val musicRepository: MusicRepository = mockk()
 

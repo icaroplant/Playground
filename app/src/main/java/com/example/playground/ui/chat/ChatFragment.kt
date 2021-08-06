@@ -1,6 +1,7 @@
 package com.example.playground.ui.chat
 
 import android.Manifest
+import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -10,17 +11,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.net.toFile
 import androidx.fragment.app.Fragment
 import com.example.playground.R
 import com.example.playground.extensions.toHtml
 import kotlinx.android.synthetic.main.chat_fragment.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import permissions.dispatcher.*
+import java.lang.Exception
 
 @RuntimePermissions
 class ChatFragment : Fragment() {
 
     private val viewModel: ChatViewModel by viewModel()
+    private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+        tvSelectedContent.text = uri.toString()
+        try {
+            val contentResolver = requireActivity().contentResolver
+            val inputStream = contentResolver.openInputStream(uri)
+            tvInputStream.text = contentResolver.getType(uri)
+        } catch (e: Exception){
+            e.printStackTrace()
+        }
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -30,8 +44,12 @@ class ChatFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        button1.setOnClickListener{
+        btWhatsapp.setOnClickListener{
             openWhatsApp(requireContext(), "https://wa.me/553130034070")
+        }
+
+        btBrowser.setOnClickListener {
+            openBrowserWithPermissionCheck()
         }
 
         tvSpannedText.text = String.format(
@@ -44,9 +62,6 @@ class ChatFragment : Fragment() {
         tvPlural.text = String.format(
             resources.getQuantityString(R.plurals.video_conference_duration_time_full, count, count),
         )
-
-        getPermissionsWithPermissionCheck()
-
     }
 
     private fun openWhatsApp(context: Context, toNumber: String, msg: String? = null) {
@@ -74,35 +89,27 @@ class ChatFragment : Fragment() {
     }
 
     @NeedsPermission(
-        Manifest.permission.CAMERA,
-        Manifest.permission.MODIFY_AUDIO_SETTINGS,
-        Manifest.permission.RECORD_AUDIO
+        Manifest.permission.READ_EXTERNAL_STORAGE
     )
-    fun getPermissions() {
-        Toast.makeText(requireContext(), "PERMISSIONS GRANTED", Toast.LENGTH_SHORT).show()
+    fun openBrowser() {
+        getContent.launch("image/*")
     }
 
     @OnShowRationale(
-        Manifest.permission.CAMERA,
-        Manifest.permission.MODIFY_AUDIO_SETTINGS,
-        Manifest.permission.RECORD_AUDIO
+        Manifest.permission.READ_EXTERNAL_STORAGE
     )
     fun showRationale(request: PermissionRequest) {
     }
 
     @OnPermissionDenied(
-        Manifest.permission.CAMERA,
-        Manifest.permission.MODIFY_AUDIO_SETTINGS,
-        Manifest.permission.RECORD_AUDIO
+        Manifest.permission.READ_EXTERNAL_STORAGE
     )
     fun onPermissionsDenied() {
         Toast.makeText(requireContext(), "PERMISSIONS DENIED", Toast.LENGTH_SHORT).show()
     }
 
     @OnNeverAskAgain(
-        Manifest.permission.CAMERA,
-        Manifest.permission.MODIFY_AUDIO_SETTINGS,
-        Manifest.permission.RECORD_AUDIO
+        Manifest.permission.READ_EXTERNAL_STORAGE
     )
     fun onPermissionsNeverAskAgain() {
     }

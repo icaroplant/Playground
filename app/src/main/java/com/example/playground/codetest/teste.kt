@@ -179,6 +179,13 @@ fun main(){
     val copy2 = model.copy()
     println(copy2)
 
+    println("----------------")
+    var shouldRefresh = true
+    val r = shouldRefresh.also {
+        shouldRefresh = false
+    }
+    println(r)
+
 }
 
 fun PersonalHelpCenterResponse.toPersonalHelpCenterModel() = PersonalHelpCenterModel(
