@@ -8,11 +8,11 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.example.playground.R
 import com.example.playground.codetest.toCapitalizeWords
-import com.example.playground.extensions.changeVisibility
 import com.example.playground.extensions.gone
 import com.example.playground.extensions.observe
 import com.example.playground.extensions.visible
 import com.example.playground.ui.instrument.model.InstrumentModel
+import com.example.playground.utils.DialogImageViewer
 import kotlinx.android.synthetic.main.instrument_fragment.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -34,6 +34,13 @@ class InstrumentFragment : Fragment() {
         llInstrumentContainer.gone()
 
         viewModel.callGetInstrument()
+
+        ivPhoto.setOnClickListener {
+            DialogImageViewer(
+                context = requireContext(),
+                resId = R.drawable.guitarra_les_paul
+            ).show()
+        }
 
         btnShow.setOnClickListener {
             val visible = ivPhoto.isVisible

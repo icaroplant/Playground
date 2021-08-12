@@ -108,4 +108,8 @@ dependencies {
     val gson = "2.8.6"
     implementation("com.google.code.gson:gson:$gson")
 
+    //ImageViewers
+    val photoview = "2.0.0"
+    implementation("com.github.chrisbanes:PhotoView:$photoview")
+
 }
