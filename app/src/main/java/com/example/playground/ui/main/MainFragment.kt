@@ -160,6 +160,12 @@ import java.util.*
             )
         }
 
+        buttonGlide.setOnClickListener {
+            findNavController().navigateWithAnimations(
+                MainFragmentDirections.actionMainFragmentToGlideFragment()
+            )
+        }
+
         buttonNotification.setOnClickListener(){
             val deeplink = findNavController().createDeepLink()
                 .setDestination(R.id.chatFragment)

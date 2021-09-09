@@ -112,4 +112,8 @@ dependencies {
     val photoview = "2.0.0"
     implementation("com.github.chrisbanes:PhotoView:$photoview")
 
+    //Glide
+    val glide = "4.11.0"
+    implementation("com.github.bumptech.glide:glide:$glide")
+
 }

@@ -186,6 +186,10 @@ fun main(){
     }
     println(r)
 
+    println("----------------")
+    val formatedString = String.format("%02d", 9)
+    println(formatedString)
+
 }
 
 fun PersonalHelpCenterResponse.toPersonalHelpCenterModel() = PersonalHelpCenterModel(

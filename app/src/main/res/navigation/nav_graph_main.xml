@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_mainFragment_to_instrumentFragment"
             app:destination="@id/instrumentFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_glideFragment"
+            app:destination="@id/glideFragment" />
     </fragment>
 
     <fragment
@@ -45,13 +48,16 @@
         android:id="@+id/chatFragment"
         android:name="com.example.playground.ui.chat.ChatFragment"
         android:label="Chat Fragment"
-        tools:layout="@layout/chat_fragment">
-    </fragment>
-
+        tools:layout="@layout/chat_fragment"/>
     <fragment
         android:id="@+id/instrumentFragment"
         android:name="com.example.playground.ui.instrument.InstrumentFragment"
         android:label="Instrumento"
         tools:layout="@layout/instrument_fragment" />
+    <fragment
+        android:id="@+id/glideFragment"
+        android:name="com.example.playground.ui.glide.GlideFragment"
+        android:label="Glide"
+        tools:layout="@layout/glide_fragment"/>
 
 </navigation>

@@ -283,4 +283,10 @@
 
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
+
+    <color name="grayscale_500">#161616</color>
+    <color name="grayscale_400">#6A6C72</color>
+    <color name="grayscale_300">#B6B7BB</color>
+    <color name="grayscale_200">#DEDFE4</color>
+    <color name="grayscale_100">#F5F6FA</color>
 </resources>
