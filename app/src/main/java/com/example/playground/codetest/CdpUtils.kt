@@ -12,7 +12,8 @@ data class CdpEvent(
     val masterLabel: String,
     val developerName: String,
     val category: String,
-    val externalDataTranFields: List<CdpCustomField>
+    val externalDataTranFields: List<CdpCustomField>,
+    var printed: Boolean = false
 )
 
 data class CdpCustomField(
@@ -26,14 +27,38 @@ data class CdpCustomField(
 
 fun main() {
     val gson = GsonBuilder().setPrettyPrinting().serializeNulls().create()
-    val f = "app/src/main/java/com/example/playground/codetest/schema.json"
+    val f = "app/src/main/java/com/example/playground/codetest/schema_lite.json"
 
     //read
     val bufferedReader: BufferedReader = File(f).bufferedReader()
     val inputString = bufferedReader.use { it.readText() }
     val schema = gson.fromJson(inputString, Schema::class.java)
 
+    printDuplicatedEvents(schema)
     printDuplicatedFields(schema)
+
+}
+
+fun printDuplicatedEvents(schema: Schema) {
+    println("searching duplicated events...\n")
+    var count = 0
+    val size = schema.records.size
+    for (i in 0 until size) {
+        val event = schema.records[i]
+        if (event.printed) continue
+        val eventName = event.masterLabel
+        for (j in i+1 until size) {
+            val otherEvent = schema.records[j]
+            if(eventName == otherEvent.masterLabel) {
+                count++
+                println("Event: ${event.masterLabel}")
+                otherEvent.printed = true
+            }
+        }
+    }
+    println("\nfinished! $count events duplicated")
+    println("-------------------------------------")
+    println()
 }
 
 fun printDuplicatedFields(schema: Schema) {
@@ -56,4 +81,6 @@ fun printDuplicatedFields(schema: Schema) {
         }
     }
     println("\nfinished! $count fields duplicated")
+    println("-------------------------------------")
+    println()
 }
