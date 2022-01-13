@@ -190,6 +190,29 @@ fun main(){
     val formatedString = String.format("%02d", 9)
     println(formatedString)
 
+    println("----------------")
+    val map = mutableMapOf<String,Any>(
+        "1" to "um",
+        "2" to "dois",
+        "3" to "tres",
+        "4" to "quatro"
+    )
+    map.put("5", "cinco")
+
+    println("----------------")
+    val now = calendarNewInstance(UTC)
+    val date1 = calendarNewInstance(UTC).apply { add(Calendar.HOUR, -6) }
+    val diff = date1.time.hoursUntilNowUtc().toInt()
+    println("Hours until now: $diff")
+
+    println("----------------")
+    val nowUtc = Calendar.getInstance(TimeZone.getTimeZone("UTC")).time
+    println("nowUtc      : $nowUtc")
+    println("offsetUtc   : ${nowUtc.timezoneOffset}")
+    val nowLocale = Calendar.getInstance().time
+    println("nowLocale   : $nowLocale")
+    println("offsetLocale: ${nowLocale.timezoneOffset}")
+
 }
 
 fun PersonalHelpCenterResponse.toPersonalHelpCenterModel() = PersonalHelpCenterModel(
@@ -284,4 +307,11 @@ inline fun <reified T : Enum<T>> enumValueOrNull(type: String): T? =
 
 private fun calendarNewInstance(timeZone: TimeZone? = null, withoutTime: Boolean = false): Calendar =
     Calendar.getInstance(timeZone ?: TimeZone.getDefault())
+
+fun java.util.Date.hoursUntilNowUtc(): Long = TimeUnit.HOURS.convert(
+    Calendar.getInstance(TimeZone.getTimeZone("UTC")).time.time - this.time,
+    TimeUnit.MILLISECONDS
+)
+
+fun java.util.Date.toLocale(): java.util.Date = Calendar.getInstance().apply { time = this@toLocale }.time
 

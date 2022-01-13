@@ -298,6 +298,16 @@ import java.util.*
                 }
             }
         }
+
+        button11.apply {
+            text = "Precisa de ajuda"
+            setOnClickListener{
+                Intent(Intent.ACTION_VIEW).run {
+                    this.data = Uri.parse("bancointer://precisaDeAjuda")
+                    ContextCompat.startActivity(requireContext(), this, null)
+                }
+            }
+        }
     }
 
     private fun onMusicaItemClick(item: MusicEntity){
