@@ -26,7 +26,7 @@ data class CdpCustomField(
 
 fun main() {
     val gson = GsonBuilder().setPrettyPrinting().serializeNulls().create()
-    val f = "schema.json"
+    val f = "app/src/main/java/com/example/playground/codetest/schema.json"
 
     //read
     val bufferedReader: BufferedReader = File(f).bufferedReader()
