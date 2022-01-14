@@ -3377,7 +3377,7 @@
         {
           "masterLabel": "onboarding",
           "developerName": "onboarding",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -6083,7 +6083,7 @@
         {
           "masterLabel": "nome_card",
           "developerName": "nome_card",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -7357,7 +7357,7 @@
         {
           "masterLabel": "nivel_protecao",
           "developerName": "nivel_protecao",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         }
       ]
@@ -7419,7 +7419,7 @@
         {
           "masterLabel": "nivel_protecao",
           "developerName": "nivel_protecao",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         }
       ]
@@ -9321,7 +9321,7 @@
         {
           "masterLabel": "value",
           "developerName": "value",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -9531,7 +9531,7 @@
         {
           "masterLabel": "value",
           "developerName": "value",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         }
       ]
@@ -9679,13 +9679,13 @@
         {
           "masterLabel": "price",
           "developerName": "price",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "discount_price",
           "developerName": "discount_price",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         }
       ]
@@ -9771,13 +9771,13 @@
         {
           "masterLabel": "discount_price",
           "developerName": "discount_price",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "price",
           "developerName": "price",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -10013,19 +10013,19 @@
         {
           "masterLabel": "estimativa_entrega_anterior",
           "developerName": "estimativa_entrega_anterior",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "frete_anterior",
           "developerName": "frete_anterior",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "estimativa_entrega_selecionado",
           "developerName": "estimativa_entrega_selecionado",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -10037,7 +10037,7 @@
         {
           "masterLabel": "frete_selecionado",
           "developerName": "frete_selecionado",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -10849,7 +10849,7 @@
         {
           "masterLabel": "flash_sale_window",
           "developerName": "flash_sale_window",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -10879,7 +10879,7 @@
         {
           "masterLabel": "tarifa_ida",
           "developerName": "tarifa_ida",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -10891,7 +10891,7 @@
         {
           "masterLabel": "quantity",
           "developerName": "quantity",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -10939,7 +10939,7 @@
         {
           "masterLabel": "quantidade_paradas_volta",
           "developerName": "quantidade_paradas_volta",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -10951,7 +10951,7 @@
         {
           "masterLabel": "number_of_passengers",
           "developerName": "number_of_passengers",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -10975,7 +10975,7 @@
         {
           "masterLabel": "tarifa_volta",
           "developerName": "tarifa_volta",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -10987,13 +10987,13 @@
         {
           "masterLabel": "discount_value",
           "developerName": "discount_value",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "valor_beneficio",
           "developerName": "valor_beneficio",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11023,13 +11023,13 @@
         {
           "masterLabel": "cashback",
           "developerName": "cashback",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "flash_sale",
           "developerName": "flash_sale",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11047,7 +11047,7 @@
         {
           "masterLabel": "discount_price",
           "developerName": "discount_price",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11089,7 +11089,7 @@
         {
           "masterLabel": "quantidade_paradas_ida",
           "developerName": "quantidade_paradas_ida",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11101,13 +11101,13 @@
         {
           "masterLabel": "price",
           "developerName": "price",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "value",
           "developerName": "value",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         }
       ]
@@ -11181,19 +11181,19 @@
         {
           "masterLabel": "discount_price",
           "developerName": "discount_price",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "number_of_passengers",
           "developerName": "number_of_passengers",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "shipping",
           "developerName": "shipping",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11217,13 +11217,13 @@
         {
           "masterLabel": "value",
           "developerName": "value",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "promotionalLimit",
           "developerName": "promotionalLimit",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11235,7 +11235,7 @@
         {
           "masterLabel": "valor_beneficio",
           "developerName": "valor_beneficio",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11259,7 +11259,7 @@
         {
           "masterLabel": "price",
           "developerName": "price",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11277,7 +11277,7 @@
         {
           "masterLabel": "quantity",
           "developerName": "quantity",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11307,7 +11307,7 @@
         {
           "masterLabel": "flash_sale_window",
           "developerName": "flash_sale_window",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11343,7 +11343,7 @@
         {
           "masterLabel": "cashback",
           "developerName": "cashback",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11373,7 +11373,7 @@
         {
           "masterLabel": "totalCashbackValue",
           "developerName": "totalCashbackValue",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11391,13 +11391,13 @@
         {
           "masterLabel": "promotionalCashbackRelatedValue",
           "developerName": "promotionalCashbackRelatedValue",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "flash_sale",
           "developerName": "flash_sale",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11459,7 +11459,7 @@
         {
           "masterLabel": "debug_mode",
           "developerName": "debug_mode",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11655,7 +11655,7 @@
         {
           "masterLabel": "valor_beneficio",
           "developerName": "valor_beneficio",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11673,7 +11673,7 @@
         {
           "masterLabel": "quantity",
           "developerName": "quantity",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11709,7 +11709,7 @@
         {
           "masterLabel": "price",
           "developerName": "price",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11739,7 +11739,7 @@
         {
           "masterLabel": "flash_sale",
           "developerName": "flash_sale",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11751,7 +11751,7 @@
         {
           "masterLabel": "cashback",
           "developerName": "cashback",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11763,7 +11763,7 @@
         {
           "masterLabel": "parcelas",
           "developerName": "parcelas",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11799,19 +11799,19 @@
         {
           "masterLabel": "flash_sale_window",
           "developerName": "flash_sale_window",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "value",
           "developerName": "value",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "promotionalCashbackRelatedValue",
           "developerName": "promotionalCashbackRelatedValue",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11829,7 +11829,7 @@
         {
           "masterLabel": "shipping",
           "developerName": "shipping",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -11883,19 +11883,19 @@
         {
           "masterLabel": "promotionalLimit",
           "developerName": "promotionalLimit",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "totalCashbackValue",
           "developerName": "totalCashbackValue",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "cashback_interX",
           "developerName": "cashback_interX",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12005,7 +12005,7 @@
         {
           "masterLabel": "flash_sale_window",
           "developerName": "flash_sale_window",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12017,7 +12017,7 @@
         {
           "masterLabel": "discount_price",
           "developerName": "discount_price",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12041,7 +12041,7 @@
         {
           "masterLabel": "flash_sale",
           "developerName": "flash_sale",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12053,7 +12053,7 @@
         {
           "masterLabel": "price",
           "developerName": "price",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12115,7 +12115,7 @@
         {
           "masterLabel": "quantidade_parada_ida",
           "developerName": "quantidade_parada_ida",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12127,7 +12127,7 @@
         {
           "masterLabel": "quantidade_parada_volta",
           "developerName": "quantidade_parada_volta",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12145,7 +12145,7 @@
         {
           "masterLabel": "value",
           "developerName": "value",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12175,7 +12175,7 @@
         {
           "masterLabel": "quantidade_paradas_ida",
           "developerName": "quantidade_paradas_ida",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12217,7 +12217,7 @@
         {
           "masterLabel": "number_of_passengers",
           "developerName": "number_of_passengers",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12253,7 +12253,7 @@
         {
           "masterLabel": "quantidade_paradas_volta",
           "developerName": "quantidade_paradas_volta",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         }
       ]
@@ -12327,7 +12327,7 @@
         {
           "masterLabel": "unique_search_term",
           "developerName": "unique_search_term",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12345,7 +12345,7 @@
         {
           "masterLabel": "min_value",
           "developerName": "min_value",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12363,7 +12363,7 @@
         {
           "masterLabel": "number_of_passengers",
           "developerName": "number_of_passengers",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12381,13 +12381,13 @@
         {
           "masterLabel": "quantidade_parada_volta",
           "developerName": "quantidade_parada_volta",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "numero_resultados",
           "developerName": "numero_resultados",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12405,7 +12405,7 @@
         {
           "masterLabel": "value",
           "developerName": "value",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12465,19 +12465,19 @@
         {
           "masterLabel": "quantidade_paradas_volta",
           "developerName": "quantidade_paradas_volta",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "max_value",
           "developerName": "max_value",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
           "masterLabel": "quantidade_paradas_ida",
           "developerName": "quantidade_paradas_ida",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {
@@ -12495,7 +12495,7 @@
         {
           "masterLabel": "quantidade_parada_ida",
           "developerName": "quantidade_parada_ida",
-          "dataType": "Number",
+          "dataType": "Text",
           "isDataRequired": false
         },
         {

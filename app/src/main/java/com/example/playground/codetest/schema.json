@@ -976,7 +976,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "content","developerName": "content","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -991,7 +991,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "content","developerName": "content","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -2396,7 +2396,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "onboarding","developerName": "onboarding","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "onboarding","developerName": "onboarding","dataType": "Text","isDataRequired": false},
         {"masterLabel": "widget","developerName": "widget","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_id","developerName": "content_id","dataType": "Text","isDataRequired": false},
@@ -3522,7 +3522,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "content_id","developerName": "content_id","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "content_id","developerName": "content_id","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -3594,7 +3594,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "value","developerName": "value","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "value","developerName": "value","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -4203,7 +4203,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "cartao_adicional","developerName": "cartao_adicional","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "cartao_adicional","developerName": "cartao_adicional","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -4218,7 +4218,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "cartao_adicional","developerName": "cartao_adicional","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "cartao_adicional","developerName": "cartao_adicional","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -4453,7 +4453,7 @@
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "nome_da_carta","developerName": "nome_da_carta","dataType": "Text","isDataRequired": false},
         {"masterLabel": "valor_da_carta","developerName": "valor_da_carta","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "seguro_presta_mista","developerName": "seguro_presta_mista","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "seguro_presta_mista","developerName": "seguro_presta_mista","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -4748,7 +4748,7 @@
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "seguro_presta_mista","developerName": "seguro_presta_mista","dataType": "Text","isDataRequired": false},
         {"masterLabel": "nome_do_veiculo","developerName": "nome_do_veiculo","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "cartaMRV","developerName": "cartaMRV","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "cartaMRV","developerName": "cartaMRV","dataType": "Text","isDataRequired": false},
         {"masterLabel": "valor_da_carta","developerName": "valor_da_carta","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -6073,32 +6073,32 @@
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "cartao","developerName": "cartao","dataType": "Text","isDataRequired": false},
         {"masterLabel": "viagens","developerName": "viagens","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "Rotativo","developerName": "Rotativo","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "Rotativo","developerName": "Rotativo","dataType": "Text","isDataRequired": false},
         {"masterLabel": "shopping","developerName": "shopping","dataType": "Text","isDataRequired": false},
         {"masterLabel": "inter_cel","developerName": "inter_cel","dataType": "Text","isDataRequired": false},
         {"masterLabel": "delivery","developerName": "delivery","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "Outros","developerName": "Outros","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "Previdencia","developerName": "Previdencia","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "Shellbox","developerName": "Shellbox","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "Outros","developerName": "Outros","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "Previdencia","developerName": "Previdencia","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "Shellbox","developerName": "Shellbox","dataType": "Text","isDataRequired": false},
         {"masterLabel": "inter_arcade","developerName": "inter_arcade","dataType": "Text","isDataRequired": false},
         {"masterLabel": "seguros","developerName": "seguros","dataType": "Text","isDataRequired": false},
         {"masterLabel": "rotativo","developerName": "rotativo","dataType": "Text","isDataRequired": false},
         {"masterLabel": "gift_cards","developerName": "gift_cards","dataType": "Text","isDataRequired": false},
         {"masterLabel": "shellbox","developerName": "shellbox","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "Cartao","developerName": "Cartao","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "Cartao","developerName": "Cartao","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "localiza","developerName": "localiza","dataType": "Text","isDataRequired": false},
         {"masterLabel": "inter_pass","developerName": "inter_pass","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "Seguros","developerName": "Seguros","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "Recarga","developerName": "Recarga","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "Viagens","developerName": "Viagens","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "Seguros","developerName": "Seguros","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "Recarga","developerName": "Recarga","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "Viagens","developerName": "Viagens","dataType": "Text","isDataRequired": false},
         {"masterLabel": "outros","developerName": "outros","dataType": "Text","isDataRequired": false},
         {"masterLabel": "investimentos","developerName": "investimentos","dataType": "Text","isDataRequired": false},
         {"masterLabel": "previdencia","developerName": "previdencia","dataType": "Text","isDataRequired": false},
         {"masterLabel": "recarga","developerName": "recarga","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "Investimentos","developerName": "Investimentos","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "Delivery","developerName": "Delivery","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "Shopping","developerName": "Shopping","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "Investimentos","developerName": "Investimentos","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "Delivery","developerName": "Delivery","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "Shopping","developerName": "Shopping","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -7277,7 +7277,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -7352,7 +7352,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false}
       ]
@@ -7383,7 +7383,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false}
       ]
@@ -7459,7 +7459,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "content_GB","developerName": "content_GB","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "content_GB","developerName": "content_GB","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -7568,7 +7568,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_pag","developerName": "content_pag","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_renov","developerName": "content_renov","dataType": "Text","isDataRequired": false},
@@ -7589,7 +7589,7 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -7605,7 +7605,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false}
       ]
@@ -7623,7 +7623,7 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_pag","developerName": "content_pag","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false}
       ]
@@ -7758,7 +7758,7 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_renov","developerName": "content_renov","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_pag","developerName": "content_pag","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
@@ -7886,7 +7886,7 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currecly","developerName": "currecly","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "content_parc","developerName": "content_parc","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "content_parc","developerName": "content_parc","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_pag","developerName": "content_pag","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_name","developerName": "content_name","dataType": "Text","isDataRequired": false},
         {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false}
@@ -7907,7 +7907,7 @@
         {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false},
         {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_button","developerName": "content_button","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "content_parc","developerName": "content_parc","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "content_parc","developerName": "content_parc","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_name","developerName": "content_name","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_pag","developerName": "content_pag","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currecly","developerName": "currecly","dataType": "Text","isDataRequired": false}
@@ -8016,7 +8016,7 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "content_parc","developerName": "content_parc","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "content_parc","developerName": "content_parc","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currecly","developerName": "currecly","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_pag","developerName": "content_pag","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_name","developerName": "content_name","dataType": "Text","isDataRequired": false}
@@ -8034,7 +8034,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "content_parc","developerName": "content_parc","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "content_parc","developerName": "content_parc","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currecly","developerName": "currecly","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_name","developerName": "content_name","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_pag","developerName": "content_pag","dataType": "Text","isDataRequired": false}
@@ -8211,7 +8211,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "endereco","developerName": "endereco","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "endereco","developerName": "endereco","dataType": "Text","isDataRequired": false},
         {"masterLabel": "pagamento","developerName": "pagamento","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -8330,7 +8330,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "numerodeseguros","developerName": "numerodeseguros","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "numerodeseguros","developerName": "numerodeseguros","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -8401,7 +8401,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "numerodeseguros","developerName": "numerodeseguros","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "numerodeseguros","developerName": "numerodeseguros","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -8431,7 +8431,7 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "formadepagamento","developerName": "formadepagamento","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "numerodeseguros","developerName": "numerodeseguros","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "numerodeseguros","developerName": "numerodeseguros","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -9196,7 +9196,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "content_id","developerName": "content_id","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "content_id","developerName": "content_id","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -9211,7 +9211,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "content_id","developerName": "content_id","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "content_id","developerName": "content_id","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -9226,7 +9226,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "content_id","developerName": "content_id","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "content_id","developerName": "content_id","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -9241,7 +9241,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "content_id","developerName": "content_id","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "content_id","developerName": "content_id","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -9711,7 +9711,7 @@
         {"masterLabel": "nome_investimento","developerName": "nome_investimento","dataType": "Text","isDataRequired": false},
         {"masterLabel": "price_minimo","developerName": "price_minimo","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "nome_card","developerName": "nome_card","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "nome_card","developerName": "nome_card","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tipo_resgate","developerName": "tipo_resgate","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -13430,7 +13430,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "nivel_protecao","developerName": "nivel_protecao","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "nivel_protecao","developerName": "nivel_protecao","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -13460,7 +13460,7 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "opcao_selecionada","developerName": "opcao_selecionada","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "nivel_protecao","developerName": "nivel_protecao","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "nivel_protecao","developerName": "nivel_protecao","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -13476,7 +13476,7 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_id","developerName": "content_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "nivel_protecao","developerName": "nivel_protecao","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "nivel_protecao","developerName": "nivel_protecao","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -14864,9 +14864,9 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "assistencia_obrigatoria","developerName": "assistencia_obrigatoria","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "assistencia_pet","developerName": "assistencia_pet","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "assistencia_pet","developerName": "assistencia_pet","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_id","developerName": "content_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "segunda_opiniao","developerName": "segunda_opiniao","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "segunda_opiniao","developerName": "segunda_opiniao","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -14910,9 +14910,9 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "assistencia_pet","developerName": "assistencia_pet","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "assistencia_pet","developerName": "assistencia_pet","dataType": "Text","isDataRequired": false},
         {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "segunda_opiniao","developerName": "segunda_opiniao","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "segunda_opiniao","developerName": "segunda_opiniao","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_id","developerName": "content_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "assistencia_obrigatoria","developerName": "assistencia_obrigatoria","dataType": "Text","isDataRequired": false}
       ]
@@ -15197,7 +15197,7 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "assistenciafuneral","developerName": "assistenciafuneral","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "valorcobertura","developerName": "valorcobertura","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "valorcobertura","developerName": "valorcobertura","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -15296,7 +15296,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "pagina_corrente","developerName": "pagina_corrente","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "pagina_corrente","developerName": "pagina_corrente","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_name_subquestao","developerName": "content_name_subquestao","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_name","developerName": "content_name","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_id_subquestao","developerName": "content_id_subquestao","dataType": "Text","isDataRequired": false},
@@ -17032,8 +17032,8 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "cupom","developerName": "cupom","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "valido","developerName": "valido","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "valor","developerName": "valor","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "valido","developerName": "valido","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "valor","developerName": "valor","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -17253,7 +17253,7 @@
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
         {"masterLabel": "titulo_do_cashback","developerName": "titulo_do_cashback","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "value","developerName": "value","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "value","developerName": "value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "cashback_adicional_id","developerName": "cashback_adicional_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_id","developerName": "content_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tipo","developerName": "tipo","dataType": "Text","isDataRequired": false}
@@ -17305,7 +17305,7 @@
         {"masterLabel": "titulo_do_limite_adicional","developerName": "titulo_do_limite_adicional","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tipo","developerName": "tipo","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "value","developerName": "value","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "value","developerName": "value","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -17341,8 +17341,8 @@
         {"masterLabel": "item_id","developerName": "item_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
         {"masterLabel": "seller_id","developerName": "seller_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "discount_price","developerName": "discount_price","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "discount_price","developerName": "discount_price","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -17362,8 +17362,8 @@
         {"masterLabel": "item_id","developerName": "item_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "discount_price","developerName": "discount_price","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "discount_price","developerName": "discount_price","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_category_id","developerName": "item_category_id","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -17425,11 +17425,11 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "cart_id","developerName": "cart_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "estimativa_entrega_anterior","developerName": "estimativa_entrega_anterior","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "frete_anterior","developerName": "frete_anterior","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "estimativa_entrega_selecionado","developerName": "estimativa_entrega_selecionado","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "estimativa_entrega_anterior","developerName": "estimativa_entrega_anterior","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "frete_anterior","developerName": "frete_anterior","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "estimativa_entrega_selecionado","developerName": "estimativa_entrega_selecionado","dataType": "Text","isDataRequired": false},
         {"masterLabel": "seller_id","developerName": "seller_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "frete_selecionado","developerName": "frete_selecionado","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "frete_selecionado","developerName": "frete_selecionado","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tipo_frete_anterior","developerName": "tipo_frete_anterior","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tipo_frete_selecionado","developerName": "tipo_frete_selecionado","dataType": "Text","isDataRequired": false}
       ]
@@ -17448,8 +17448,8 @@
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "cod_banco","developerName": "cod_banco","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_trans","developerName": "content_trans","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "favorito","developerName": "favorito","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "Favorito","developerName": "Favorito","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "favorito","developerName": "favorito","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "Favorito","developerName": "Favorito","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_data","developerName": "content_data","dataType": "Text","isDataRequired": false},
         {"masterLabel": "agencia","developerName": "agencia","dataType": "Text","isDataRequired": false}
       ]
@@ -17466,10 +17466,10 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "favorito","developerName": "favorito","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "favorito","developerName": "favorito","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_trans","developerName": "content_trans","dataType": "Text","isDataRequired": false},
         {"masterLabel": "agencia","developerName": "agencia","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "Favorito","developerName": "Favorito","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "Favorito","developerName": "Favorito","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_data","developerName": "content_data","dataType": "Text","isDataRequired": false},
         {"masterLabel": "cod_banco","developerName": "cod_banco","dataType": "Text","isDataRequired": false}
       ]
@@ -17803,11 +17803,11 @@
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "term","developerName": "term","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_referrer","developerName": "page_referrer","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "valor_parcela","developerName": "valor_parcela","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "valor_parcela","developerName": "valor_parcela","dataType": "Text","isDataRequired": false},
         {"masterLabel": "medium","developerName": "medium","dataType": "Text","isDataRequired": false},
         {"masterLabel": "ignore_referrer","developerName": "ignore_referrer","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "tipo_simulacao","developerName": "tipo_simulacao","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "tipo_simulacao","developerName": "tipo_simulacao","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_title","developerName": "page_title","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origem","developerName": "origem","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false},
@@ -17815,7 +17815,7 @@
         {"masterLabel": "convenio","developerName": "convenio","dataType": "Text","isDataRequired": false},
         {"masterLabel": "campaign","developerName": "campaign","dataType": "Text","isDataRequired": false},
         {"masterLabel": "campaign_id","developerName": "campaign_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "valor_total","developerName": "valor_total","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "valor_total","developerName": "valor_total","dataType": "Text","isDataRequired": false},
         {"masterLabel": "passo","developerName": "passo","dataType": "Text","isDataRequired": false},
         {"masterLabel": "source","developerName": "source","dataType": "Text","isDataRequired": false}
       ]
@@ -17888,7 +17888,7 @@
         {"masterLabel": "page_referrer","developerName": "page_referrer","dataType": "Text","isDataRequired": false},
         {"masterLabel": "campaign_id","developerName": "campaign_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_location","developerName": "page_location","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Text","isDataRequired": false},
         {"masterLabel": "medium","developerName": "medium","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_title","developerName": "page_title","dataType": "Text","isDataRequired": false},
         {"masterLabel": "passo","developerName": "passo","dataType": "Text","isDataRequired": false},
@@ -17942,7 +17942,7 @@
         {"masterLabel": "source","developerName": "source","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_referrer","developerName": "page_referrer","dataType": "Text","isDataRequired": false},
         {"masterLabel": "campaign","developerName": "campaign","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -18058,7 +18058,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "biometric","developerName": "biometric","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "biometric","developerName": "biometric","dataType": "Text","isDataRequired": false},
         {"masterLabel": "identifier","developerName": "identifier","dataType": "Text","isDataRequired": false},
         {"masterLabel": "account","developerName": "account","dataType": "Text","isDataRequired": false}
       ]
@@ -18285,7 +18285,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Text","isDataRequired": false},
         {"masterLabel": "passo","developerName": "passo","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_referrer","developerName": "page_referrer","dataType": "Text","isDataRequired": false},
@@ -19663,14 +19663,14 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "travel_class","developerName": "travel_class","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "flash_sale_window","developerName": "flash_sale_window","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "flash_sale_window","developerName": "flash_sale_window","dataType": "Text","isDataRequired": false},
         {"masterLabel": "ida_volta","developerName": "ida_volta","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tag2","developerName": "tag2","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin_start_time","developerName": "origin_start_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination","developerName": "destination","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "tarifa_ida","developerName": "tarifa_ida","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "tarifa_ida","developerName": "tarifa_ida","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tag1","developerName": "tag1","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "quantity","developerName": "quantity","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "quantity","developerName": "quantity","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tag","developerName": "tag","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_id","developerName": "item_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tipo_tarifa_volta","developerName": "tipo_tarifa_volta","dataType": "Text","isDataRequired": false},
@@ -19678,35 +19678,35 @@
         {"masterLabel": "destination_start_date","developerName": "destination_start_date","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_name","developerName": "item_name","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tipo_tarifa_ida","developerName": "tipo_tarifa_ida","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "quantidade_paradas_volta","developerName": "quantidade_paradas_volta","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "quantidade_paradas_volta","developerName": "quantidade_paradas_volta","dataType": "Text","isDataRequired": false},
         {"masterLabel": "start_time","developerName": "start_time","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "number_of_passengers","developerName": "number_of_passengers","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "number_of_passengers","developerName": "number_of_passengers","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination_start_time","developerName": "destination_start_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_category_id","developerName": "item_category_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "tarifa_volta","developerName": "tarifa_volta","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "tarifa_volta","developerName": "tarifa_volta","dataType": "Text","isDataRequired": false},
         {"masterLabel": "iata_destination","developerName": "iata_destination","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "discount_value","developerName": "discount_value","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "valor_beneficio","developerName": "valor_beneficio","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "discount_value","developerName": "discount_value","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "valor_beneficio","developerName": "valor_beneficio","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin_start_date","developerName": "origin_start_date","dataType": "Text","isDataRequired": false},
         {"masterLabel": "end_time","developerName": "end_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "beneficio_selecionado","developerName": "beneficio_selecionado","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "cashback","developerName": "cashback","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "flash_sale","developerName": "flash_sale","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "cashback","developerName": "cashback","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "flash_sale","developerName": "flash_sale","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin","developerName": "origin","dataType": "Text","isDataRequired": false},
         {"masterLabel": "iata_item_category","developerName": "iata_item_category","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "discount_price","developerName": "discount_price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "discount_price","developerName": "discount_price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "end_date","developerName": "end_date","dataType": "Text","isDataRequired": false},
         {"masterLabel": "start_date","developerName": "start_date","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_category","developerName": "item_category","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_prod","developerName": "content_prod","dataType": "Text","isDataRequired": false},
         {"masterLabel": "cart_id","developerName": "cart_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "botao_utilizado","developerName": "botao_utilizado","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "quantidade_paradas_ida","developerName": "quantidade_paradas_ida","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "quantidade_paradas_ida","developerName": "quantidade_paradas_ida","dataType": "Text","isDataRequired": false},
         {"masterLabel": "seller_id","developerName": "seller_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "value","developerName": "value","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "value","developerName": "value","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -19742,43 +19742,43 @@
         {"masterLabel": "destination_start_time","developerName": "destination_start_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "ida_volta","developerName": "ida_volta","dataType": "Text","isDataRequired": false},
         {"masterLabel": "beneficio_selecionado","developerName": "beneficio_selecionado","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "discount_price","developerName": "discount_price","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "number_of_passengers","developerName": "number_of_passengers","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "shipping","developerName": "shipping","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "discount_price","developerName": "discount_price","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "number_of_passengers","developerName": "number_of_passengers","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "shipping","developerName": "shipping","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin_start_time","developerName": "origin_start_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_category","developerName": "item_category","dataType": "Text","isDataRequired": false},
         {"masterLabel": "promotionalCashbackCode","developerName": "promotionalCashbackCode","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "value","developerName": "value","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "promotionalLimit","developerName": "promotionalLimit","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "value","developerName": "value","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "promotionalLimit","developerName": "promotionalLimit","dataType": "Text","isDataRequired": false},
         {"masterLabel": "end_date","developerName": "end_date","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "valor_beneficio","developerName": "valor_beneficio","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "valor_beneficio","developerName": "valor_beneficio","dataType": "Text","isDataRequired": false},
         {"masterLabel": "iata_destination","developerName": "iata_destination","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination","developerName": "destination","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_id","developerName": "item_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_prod","developerName": "content_prod","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "quantity","developerName": "quantity","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "quantity","developerName": "quantity","dataType": "Text","isDataRequired": false},
         {"masterLabel": "promotionalCashbackAnalyticsTitle","developerName": "promotionalCashbackAnalyticsTitle","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tag","developerName": "tag","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin_start_date","developerName": "origin_start_date","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "flash_sale_window","developerName": "flash_sale_window","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "flash_sale_window","developerName": "flash_sale_window","dataType": "Text","isDataRequired": false},
         {"masterLabel": "start_time","developerName": "start_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin","developerName": "origin","dataType": "Text","isDataRequired": false},
         {"masterLabel": "cashback_adicional_id","developerName": "cashback_adicional_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "start_date","developerName": "start_date","dataType": "Text","isDataRequired": false},
         {"masterLabel": "iata_item_category","developerName": "iata_item_category","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "cashback","developerName": "cashback","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "cashback","developerName": "cashback","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tag2","developerName": "tag2","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tela","developerName": "tela","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tag1","developerName": "tag1","dataType": "Text","isDataRequired": false},
         {"masterLabel": "end_time","developerName": "end_time","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "totalCashbackValue","developerName": "totalCashbackValue","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "totalCashbackValue","developerName": "totalCashbackValue","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination_start_date","developerName": "destination_start_date","dataType": "Text","isDataRequired": false},
         {"masterLabel": "iata_origin","developerName": "iata_origin","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "promotionalCashbackRelatedValue","developerName": "promotionalCashbackRelatedValue","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "flash_sale","developerName": "flash_sale","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "promotionalCashbackRelatedValue","developerName": "promotionalCashbackRelatedValue","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "flash_sale","developerName": "flash_sale","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_name","developerName": "item_name","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -19840,7 +19840,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Text","isDataRequired": false},
         {"masterLabel": "outbound","developerName": "outbound","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_title","developerName": "page_title","dataType": "Text","isDataRequired": false},
         {"masterLabel": "campaign_id","developerName": "campaign_id","dataType": "Text","isDataRequired": false},
@@ -19929,36 +19929,36 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "promotionalCashbackAnalyticsTitle","developerName": "promotionalCashbackAnalyticsTitle","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "valor_beneficio","developerName": "valor_beneficio","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "valor_beneficio","developerName": "valor_beneficio","dataType": "Text","isDataRequired": false},
         {"masterLabel": "seller_id","developerName": "seller_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "transaction_id","developerName": "transaction_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "quantity","developerName": "quantity","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "quantity","developerName": "quantity","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin","developerName": "origin","dataType": "Text","isDataRequired": false},
         {"masterLabel": "promotionalCashbackCode","developerName": "promotionalCashbackCode","dataType": "Text","isDataRequired": false},
         {"masterLabel": "iata_origin","developerName": "iata_origin","dataType": "Text","isDataRequired": false},
         {"masterLabel": "start_time","developerName": "start_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "modalidade_de_pagamento","developerName": "modalidade_de_pagamento","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin_start_time","developerName": "origin_start_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tag","developerName": "tag","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "flash_sale","developerName": "flash_sale","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "flash_sale","developerName": "flash_sale","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_id","developerName": "item_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "cashback","developerName": "cashback","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "cashback","developerName": "cashback","dataType": "Text","isDataRequired": false},
         {"masterLabel": "ida_volta","developerName": "ida_volta","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "parcelas","developerName": "parcelas","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "parcelas","developerName": "parcelas","dataType": "Text","isDataRequired": false},
         {"masterLabel": "start_date","developerName": "start_date","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_name","developerName": "item_name","dataType": "Text","isDataRequired": false},
         {"masterLabel": "flight_number","developerName": "flight_number","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_category","developerName": "item_category","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination_start_date","developerName": "destination_start_date","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "flash_sale_window","developerName": "flash_sale_window","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "value","developerName": "value","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "promotionalCashbackRelatedValue","developerName": "promotionalCashbackRelatedValue","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "flash_sale_window","developerName": "flash_sale_window","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "value","developerName": "value","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "promotionalCashbackRelatedValue","developerName": "promotionalCashbackRelatedValue","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tela","developerName": "tela","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin_start_date","developerName": "origin_start_date","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "shipping","developerName": "shipping","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "shipping","developerName": "shipping","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tag1","developerName": "tag1","dataType": "Text","isDataRequired": false},
         {"masterLabel": "beneficio_selecionado","developerName": "beneficio_selecionado","dataType": "Text","isDataRequired": false},
         {"masterLabel": "payment_method","developerName": "payment_method","dataType": "Text","isDataRequired": false},
@@ -19967,9 +19967,9 @@
         {"masterLabel": "cashback_adicional_id","developerName": "cashback_adicional_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_prod","developerName": "content_prod","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination_start_time","developerName": "destination_start_time","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "promotionalLimit","developerName": "promotionalLimit","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "totalCashbackValue","developerName": "totalCashbackValue","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "cashback_interX","developerName": "cashback_interX","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "promotionalLimit","developerName": "promotionalLimit","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "totalCashbackValue","developerName": "totalCashbackValue","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "cashback_interX","developerName": "cashback_interX","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content_pag","developerName": "content_pag","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tag2","developerName": "tag2","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination","developerName": "destination","dataType": "Text","isDataRequired": false},
@@ -19988,7 +19988,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "time","developerName": "time","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "time","developerName": "time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "sdk","developerName": "sdk","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -20049,7 +20049,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "time","developerName": "time","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "time","developerName": "time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "sdk","developerName": "sdk","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -20177,7 +20177,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "line","developerName": "line","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "line","developerName": "line","dataType": "Text","isDataRequired": false},
         {"masterLabel": "file","developerName": "file","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "route","developerName": "route","dataType": "Text","isDataRequired": false},
@@ -20204,7 +20204,7 @@
         {"masterLabel": "time_zone_settings","developerName": "time_zone_settings","dataType": "Text","isDataRequired": false},
         {"masterLabel": "validUntil","developerName": "validUntil","dataType": "Text","isDataRequired": false},
         {"masterLabel": "message","developerName": "message","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "duration","developerName": "duration","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "duration","developerName": "duration","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -20236,13 +20236,13 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "code","developerName": "code","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "duration","developerName": "duration","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "biometric","developerName": "biometric","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "duration","developerName": "duration","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "biometric","developerName": "biometric","dataType": "Text","isDataRequired": false},
         {"masterLabel": "method","developerName": "method","dataType": "Text","isDataRequired": false},
         {"masterLabel": "identifier","developerName": "identifier","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false},
         {"masterLabel": "message","developerName": "message","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "iSafeRegister","developerName": "iSafeRegister","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "iSafeRegister","developerName": "iSafeRegister","dataType": "Text","isDataRequired": false},
         {"masterLabel": "identifier_type","developerName": "identifier_type","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false}
       ]
@@ -20262,7 +20262,7 @@
         {"masterLabel": "identifier","developerName": "identifier","dataType": "Text","isDataRequired": false},
         {"masterLabel": "accountNumber","developerName": "accountNumber","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "duration","developerName": "duration","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "duration","developerName": "duration","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -20277,7 +20277,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "isAutenticated","developerName": "isAutenticated","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "isAutenticated","developerName": "isAutenticated","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -20298,10 +20298,10 @@
         {"masterLabel": "medium","developerName": "medium","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false},
         {"masterLabel": "ignore_referrer","developerName": "ignore_referrer","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_location","developerName": "page_location","dataType": "Text","isDataRequired": false},
         {"masterLabel": "campaign_id","developerName": "campaign_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "entrances","developerName": "entrances","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "entrances","developerName": "entrances","dataType": "Text","isDataRequired": false},
         {"masterLabel": "term","developerName": "term","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_title","developerName": "page_title","dataType": "Text","isDataRequired": false}
       ]
@@ -20340,7 +20340,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "isAutenticated","developerName": "isAutenticated","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "isAutenticated","developerName": "isAutenticated","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -20355,7 +20355,7 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "statusCode","developerName": "statusCode","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "statusCode","developerName": "statusCode","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error","developerName": "error","dataType": "Text","isDataRequired": false},
         {"masterLabel": "data","developerName": "data","dataType": "Text","isDataRequired": false},
@@ -20396,7 +20396,7 @@
         {"masterLabel": "safetynet","developerName": "safetynet","dataType": "Text","isDataRequired": false},
         {"masterLabel": "date_settings","developerName": "date_settings","dataType": "Text","isDataRequired": false},
         {"masterLabel": "date_time_zone","developerName": "date_time_zone","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "isInternalRelease","developerName": "isInternalRelease","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "isInternalRelease","developerName": "isInternalRelease","dataType": "Text","isDataRequired": false},
         {"masterLabel": "raspError","developerName": "raspError","dataType": "Text","isDataRequired": false},
         {"masterLabel": "raspStatus","developerName": "raspStatus","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
@@ -20417,8 +20417,8 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "firebase_previous_class","developerName": "firebase_previous_class","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "firebase_previous_id","developerName": "firebase_previous_id","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "entrances","developerName": "entrances","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "firebase_previous_id","developerName": "firebase_previous_id","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "entrances","developerName": "entrances","dataType": "Text","isDataRequired": false},
         {"masterLabel": "firebase_previous_screen","developerName": "firebase_previous_screen","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -20437,14 +20437,14 @@
         {"masterLabel": "page_title","developerName": "page_title","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_location","developerName": "page_location","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "debug_mode","developerName": "debug_mode","dataType": "Text","isDataRequired": false},
         {"masterLabel": "term","developerName": "term","dataType": "Text","isDataRequired": false},
         {"masterLabel": "campaign_id","developerName": "campaign_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_referrer","developerName": "page_referrer","dataType": "Text","isDataRequired": false},
         {"masterLabel": "medium","developerName": "medium","dataType": "Text","isDataRequired": false},
         {"masterLabel": "campaign","developerName": "campaign","dataType": "Text","isDataRequired": false},
         {"masterLabel": "source","developerName": "source","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "percent_scrolled","developerName": "percent_scrolled","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "percent_scrolled","developerName": "percent_scrolled","dataType": "Text","isDataRequired": false},
         {"masterLabel": "ignore_referrer","developerName": "ignore_referrer","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -20460,15 +20460,15 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "bebes","developerName": "bebes","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "bebes","developerName": "bebes","dataType": "Text","isDataRequired": false},
         {"masterLabel": "ida_volta","developerName": "ida_volta","dataType": "Text","isDataRequired": false},
         {"masterLabel": "iata_origin","developerName": "iata_origin","dataType": "Text","isDataRequired": false},
         {"masterLabel": "iata_destination","developerName": "iata_destination","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination_start_date","developerName": "destination_start_date","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "adultos","developerName": "adultos","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "adultos","developerName": "adultos","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination","developerName": "destination","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "criancas","developerName": "criancas","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "number_of_passengers","developerName": "number_of_passengers","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "criancas","developerName": "criancas","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "number_of_passengers","developerName": "number_of_passengers","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin_start_date","developerName": "origin_start_date","dataType": "Text","isDataRequired": false},
         {"masterLabel": "travel_class","developerName": "travel_class","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin","developerName": "origin","dataType": "Text","isDataRequired": false},
@@ -20488,21 +20488,21 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "max_duracao_ida","developerName": "max_duracao_ida","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "max_duracao_ida","developerName": "max_duracao_ida","dataType": "Text","isDataRequired": false},
         {"masterLabel": "ordernar","developerName": "ordernar","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "min_duracao_ida","developerName": "min_duracao_ida","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "maximo_valor","developerName": "maximo_valor","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "min_duracao_ida","developerName": "min_duracao_ida","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "maximo_valor","developerName": "maximo_valor","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
         {"masterLabel": "max_volta_horario","developerName": "max_volta_horario","dataType": "Text","isDataRequired": false},
         {"masterLabel": "min_volta_horario","developerName": "min_volta_horario","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "paradas","developerName": "paradas","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "max_duracao_volta","developerName": "max_duracao_volta","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "minimo_valor","developerName": "minimo_valor","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "min_value","developerName": "min_value","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "paradas","developerName": "paradas","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "max_duracao_volta","developerName": "max_duracao_volta","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "minimo_valor","developerName": "minimo_valor","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "min_value","developerName": "min_value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "max_ida_horario","developerName": "max_ida_horario","dataType": "Text","isDataRequired": false},
         {"masterLabel": "min_ida_horario","developerName": "min_ida_horario","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "min_duracao_volta","developerName": "min_duracao_volta","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "max_value","developerName": "max_value","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "min_duracao_volta","developerName": "min_duracao_volta","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "max_value","developerName": "max_value","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -20566,12 +20566,12 @@
         {"masterLabel": "campaign_id","developerName": "campaign_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "video_url","developerName": "video_url","dataType": "Text","isDataRequired": false},
         {"masterLabel": "visible","developerName": "visible","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "video_current_time","developerName": "video_current_time","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "video_current_time","developerName": "video_current_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "source","developerName": "source","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_location","developerName": "page_location","dataType": "Text","isDataRequired": false},
         {"masterLabel": "video_provider","developerName": "video_provider","dataType": "Text","isDataRequired": false},
         {"masterLabel": "ignore_referrer","developerName": "ignore_referrer","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "video_duration","developerName": "video_duration","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "video_duration","developerName": "video_duration","dataType": "Text","isDataRequired": false},
         {"masterLabel": "campaign","developerName": "campaign","dataType": "Text","isDataRequired": false},
         {"masterLabel": "medium","developerName": "medium","dataType": "Text","isDataRequired": false},
         {"masterLabel": "term","developerName": "term","dataType": "Text","isDataRequired": false},
@@ -20579,7 +20579,7 @@
         {"masterLabel": "video_title","developerName": "video_title","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_title","developerName": "page_title","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_referrer","developerName": "page_referrer","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "video_percent","developerName": "video_percent","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "video_percent","developerName": "video_percent","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -20594,13 +20594,13 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "video_percent","developerName": "video_percent","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "video_percent","developerName": "video_percent","dataType": "Text","isDataRequired": false},
         {"masterLabel": "campaign","developerName": "campaign","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_title","developerName": "page_title","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_referrer","developerName": "page_referrer","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false},
         {"masterLabel": "medium","developerName": "medium","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "video_current_time","developerName": "video_current_time","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "video_current_time","developerName": "video_current_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "video_provider","developerName": "video_provider","dataType": "Text","isDataRequired": false},
         {"masterLabel": "source","developerName": "source","dataType": "Text","isDataRequired": false},
         {"masterLabel": "video_url","developerName": "video_url","dataType": "Text","isDataRequired": false},
@@ -20609,7 +20609,7 @@
         {"masterLabel": "term","developerName": "term","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_location","developerName": "page_location","dataType": "Text","isDataRequired": false},
         {"masterLabel": "campaign_id","developerName": "campaign_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "video_duration","developerName": "video_duration","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "video_duration","developerName": "video_duration","dataType": "Text","isDataRequired": false},
         {"masterLabel": "video_title","developerName": "video_title","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -20626,14 +20626,14 @@
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
         {"masterLabel": "campaign","developerName": "campaign","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "video_duration","developerName": "video_duration","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "video_duration","developerName": "video_duration","dataType": "Text","isDataRequired": false},
         {"masterLabel": "medium","developerName": "medium","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_referrer","developerName": "page_referrer","dataType": "Text","isDataRequired": false},
         {"masterLabel": "video_provider","developerName": "video_provider","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_title","developerName": "page_title","dataType": "Text","isDataRequired": false},
         {"masterLabel": "source","developerName": "source","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "video_percent","developerName": "video_percent","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "video_current_time","developerName": "video_current_time","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "video_percent","developerName": "video_percent","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "video_current_time","developerName": "video_current_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "content","developerName": "content","dataType": "Text","isDataRequired": false},
         {"masterLabel": "ignore_referrer","developerName": "ignore_referrer","dataType": "Text","isDataRequired": false},
         {"masterLabel": "visible","developerName": "visible","dataType": "Text","isDataRequired": false},
@@ -20661,15 +20661,15 @@
         {"masterLabel": "item_name","developerName": "item_name","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origem_clique","developerName": "origem_clique","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_category_id","developerName": "item_category_id","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "flash_sale_window","developerName": "flash_sale_window","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "flash_sale_window","developerName": "flash_sale_window","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "discount_price","developerName": "discount_price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "discount_price","developerName": "discount_price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "seller_id","developerName": "seller_id","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
         {"masterLabel": "complemento_origem","developerName": "complemento_origem","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "flash_sale","developerName": "flash_sale","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "flash_sale","developerName": "flash_sale","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tag","developerName": "tag","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "price","developerName": "price","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "price","developerName": "price","dataType": "Text","isDataRequired": false},
         {"masterLabel": "tag1","developerName": "tag1","dataType": "Text","isDataRequired": false}
       ]
     },
@@ -20685,30 +20685,30 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactkey","developerName": "contactkey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "quantidade_parada_ida","developerName": "quantidade_parada_ida","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "quantidade_parada_ida","developerName": "quantidade_parada_ida","dataType": "Text","isDataRequired": false},
         {"masterLabel": "end_date","developerName": "end_date","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "quantidade_parada_volta","developerName": "quantidade_parada_volta","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "quantidade_parada_volta","developerName": "quantidade_parada_volta","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination","developerName": "destination","dataType": "Text","isDataRequired": false},
         {"masterLabel": "ida_volta","developerName": "ida_volta","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "value","developerName": "value","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "value","developerName": "value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin","developerName": "origin","dataType": "Text","isDataRequired": false},
         {"masterLabel": "start_time","developerName": "start_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "iata_destination","developerName": "iata_destination","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination_start_date","developerName": "destination_start_date","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "quantidade_paradas_ida","developerName": "quantidade_paradas_ida","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "quantidade_paradas_ida","developerName": "quantidade_paradas_ida","dataType": "Text","isDataRequired": false},
         {"masterLabel": "iata_origin","developerName": "iata_origin","dataType": "Text","isDataRequired": false},
         {"masterLabel": "travel_class","developerName": "travel_class","dataType": "Text","isDataRequired": false},
         {"masterLabel": "end_time","developerName": "end_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_category","developerName": "item_category","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin_start_date","developerName": "origin_start_date","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "number_of_passengers","developerName": "number_of_passengers","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "number_of_passengers","developerName": "number_of_passengers","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin_start_time","developerName": "origin_start_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "start_date","developerName": "start_date","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination_start_time","developerName": "destination_start_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "iata_item_category","developerName": "iata_item_category","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "quantidade_paradas_volta","developerName": "quantidade_paradas_volta","dataType": "Number","isDataRequired": false}
+        {"masterLabel": "quantidade_paradas_volta","developerName": "quantidade_paradas_volta","dataType": "Text","isDataRequired": false}
       ]
     },
     {
@@ -20726,20 +20726,20 @@
         {"masterLabel": "destination_start_time","developerName": "destination_start_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin_start_time","developerName": "origin_start_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "start_time","developerName": "start_time","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "unique_search_term","developerName": "unique_search_term","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "unique_search_term","developerName": "unique_search_term","dataType": "Text","isDataRequired": false},
         {"masterLabel": "iata_origin","developerName": "iata_origin","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_location","developerName": "page_location","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "min_value","developerName": "min_value","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "min_value","developerName": "min_value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "page_referrer","developerName": "page_referrer","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination","developerName": "destination","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "number_of_passengers","developerName": "number_of_passengers","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "number_of_passengers","developerName": "number_of_passengers","dataType": "Text","isDataRequired": false},
         {"masterLabel": "end_time","developerName": "end_time","dataType": "Text","isDataRequired": false},
         {"masterLabel": "destination_start_date","developerName": "destination_start_date","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "quantidade_parada_volta","developerName": "quantidade_parada_volta","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "numero_resultados","developerName": "numero_resultados","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "quantidade_parada_volta","developerName": "quantidade_parada_volta","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "numero_resultados","developerName": "numero_resultados","dataType": "Text","isDataRequired": false},
         {"masterLabel": "source","developerName": "source","dataType": "Text","isDataRequired": false},
         {"masterLabel": "term","developerName": "term","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "value","developerName": "value","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "value","developerName": "value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "item_category","developerName": "item_category","dataType": "Text","isDataRequired": false},
         {"masterLabel": "iata_destination","developerName": "iata_destination","dataType": "Text","isDataRequired": false},
         {"masterLabel": "ida_volta","developerName": "ida_volta","dataType": "Text","isDataRequired": false},
@@ -20749,12 +20749,12 @@
         {"masterLabel": "end_date","developerName": "end_date","dataType": "Text","isDataRequired": false},
         {"masterLabel": "error_value","developerName": "error_value","dataType": "Text","isDataRequired": false},
         {"masterLabel": "travel_class","developerName": "travel_class","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "quantidade_paradas_volta","developerName": "quantidade_paradas_volta","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "max_value","developerName": "max_value","dataType": "Number","isDataRequired": false},
-        {"masterLabel": "quantidade_paradas_ida","developerName": "quantidade_paradas_ida","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "quantidade_paradas_volta","developerName": "quantidade_paradas_volta","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "max_value","developerName": "max_value","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "quantidade_paradas_ida","developerName": "quantidade_paradas_ida","dataType": "Text","isDataRequired": false},
         {"masterLabel": "currency","developerName": "currency","dataType": "Text","isDataRequired": false},
         {"masterLabel": "search_term","developerName": "search_term","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "quantidade_parada_ida","developerName": "quantidade_parada_ida","dataType": "Number","isDataRequired": false},
+        {"masterLabel": "quantidade_parada_ida","developerName": "quantidade_parada_ida","dataType": "Text","isDataRequired": false},
         {"masterLabel": "medium","developerName": "medium","dataType": "Text","isDataRequired": false},
         {"masterLabel": "campaign","developerName": "campaign","dataType": "Text","isDataRequired": false},
         {"masterLabel": "origin","developerName": "origin","dataType": "Text","isDataRequired": false},

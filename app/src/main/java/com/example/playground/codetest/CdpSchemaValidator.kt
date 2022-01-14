@@ -36,6 +36,7 @@ fun main() {
 
     printDuplicatedEvents(schema)
     printDuplicatedFields(schema)
+    printInvalidLabels(schema)
 
 }
 
@@ -47,9 +48,9 @@ fun printDuplicatedEvents(schema: Schema) {
         val event = schema.records[i]
         if (event.printed) continue
         val eventName = event.masterLabel
-        for (j in i+1 until size) {
+        for (j in i + 1 until size) {
             val otherEvent = schema.records[j]
-            if(eventName == otherEvent.masterLabel) {
+            if (eventName == otherEvent.masterLabel) {
                 count++
                 println("Event: ${event.masterLabel}")
                 otherEvent.printed = true
@@ -70,9 +71,9 @@ fun printDuplicatedFields(schema: Schema) {
             val field = event.externalDataTranFields[i]
             if (field.printed) continue
             val fieldName = field.masterLabel
-            for (j in i+1 until size) {
+            for (j in i + 1 until size) {
                 val otherField = event.externalDataTranFields[j]
-                if(fieldName == otherField.masterLabel) {
+                if (fieldName == otherField.masterLabel) {
                     count++
                     println("Event: ${event.masterLabel}   Field: $fieldName")
                     otherField.printed = true
@@ -83,4 +84,30 @@ fun printDuplicatedFields(schema: Schema) {
     println("\nfinished! $count fields duplicated")
     println("-------------------------------------")
     println()
+}
+
+fun printInvalidLabels(schema: Schema) {
+    println("searching invalid labels...\n")
+    var count = 0
+    schema.records.forEach { event ->
+        if (!event.developerName.isValidField()) {
+            count++
+            println("Event: ${event.developerName}")
+        }
+        event.externalDataTranFields.forEach { field ->
+            if (!field.developerName.isValidField()) {
+                count++
+                println("Event: ${event.developerName}   Field: ${field.developerName}")
+            }
+        }
+    }
+    println("\nfinished! $count invalid labels")
+    println("-------------------------------------")
+    println()
+}
+
+internal fun String.isValidField(): Boolean {
+    return !this.contains(" ") &&
+            !this.contains("[À-ú]".toRegex()) &&
+            this.count() <= 80
 }
