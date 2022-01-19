@@ -1,18 +1,13 @@
 package com.example.playground.codetest
 
 import android.os.Parcelable
-import android.webkit.URLUtil
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
-import java.sql.Date
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.time.*
 import java.time.format.DateTimeFormatter
-import java.time.format.TextStyle
-import java.time.temporal.ChronoField
-import java.time.temporal.ChronoUnit
 import java.util.*
 import java.util.concurrent.TimeUnit
 import kotlin.math.sqrt
@@ -212,6 +207,20 @@ fun main(){
     val nowLocale = Calendar.getInstance().time
     println("nowLocale   : $nowLocale")
     println("offsetLocale: ${nowLocale.timezoneOffset}")
+
+    println("----------------")
+    val dateStrings = listOf(
+        "2022-01-18T12:45:47.095Z",
+        "2022-01-18T13:45:47.007Z",
+        "2022-01-18T17:45:47.888Z",
+        "2022-01-16T13:45:47.095Z",
+        "2022-01-01T23:59:47.000",
+        "2022-01-29T00:45:47.095Z"
+    )
+    dateStrings.forEach {
+        println("${it.toDateFromRestUtc()} | ${it.toDateOrNull()} - ${it.toDateFromRestUtc() == it.toDateOrNull()}")
+    }
+
 
 }
 
