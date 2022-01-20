@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_mainFragment_to_glideFragment"
             app:destination="@id/glideFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_animationsFragment"
+            app:destination="@id/animationsFragment" />
     </fragment>
 
     <fragment
@@ -59,5 +62,10 @@
         android:name="com.example.playground.ui.glide.GlideFragment"
         android:label="Glide"
         tools:layout="@layout/glide_fragment"/>
+    <fragment
+        android:id="@+id/animationsFragment"
+        android:name="com.example.playground.ui.animations.AnimationsFragment"
+        android:label="animations_fragment"
+        tools:layout="@layout/animations_fragment" />
 
 </navigation>

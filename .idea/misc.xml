@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ripple_shape_rectangle_rounded4_transparent.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/drawable/shape_oval_border_grayscale_500.xml" value="0.31979166666666664" />
+        <entry key="app/src/main/res/drawable/shape_rectangle_rounded4_transparent.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layout/animations_fragment.xml" value="0.29635416666666664" />
         <entry key="app/src/main/res/layout/glide_fragment.xml" value="0.2994791666666667" />
+        <entry key="app/src/main/res/layout/home_fragment.xml" value="0.3079673135852911" />
         <entry key="app/src/main/res/layout/instrument_fragment.xml" value="0.2994791666666667" />
         <entry key="app/src/main/res/layout/main_fragment.xml" value="0.2994791666666667" />
       </map>

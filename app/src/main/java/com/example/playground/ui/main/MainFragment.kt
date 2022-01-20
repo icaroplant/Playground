@@ -281,6 +281,12 @@ import java.util.*
                 context.openDeepLink("bancointer://precisaDeAjuda")
             }
         }
+
+        buttonAnimations.setOnClickListener {
+            findNavController().navigateWithAnimations(
+                MainFragmentDirections.actionMainFragmentToAnimationsFragment()
+            )
+        }
     }
 
     private fun onMusicaItemClick(item: MusicEntity){

@@ -96,6 +96,17 @@
 
                 <Button
                     style="@style/DefaultButton"
+                    android:id="@+id/buttonAnimations"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:backgroundTint="#CF031F"
+                    android:text="Animations"
+                    android:textColor="#fff" />
+
+                <Button
+                    style="@style/DefaultButton"
                     android:id="@+id/buttonNotification"
                     android:layout_width="0dp"
                     android:layout_height="80dp"
