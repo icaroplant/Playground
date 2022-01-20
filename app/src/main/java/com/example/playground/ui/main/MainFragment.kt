@@ -194,50 +194,35 @@ import java.util.*
         button.apply {
             text = "Marketplace"
             setOnClickListener{
-                Intent(Intent.ACTION_VIEW).run {
-                    this.data = Uri.parse("bancointer://marketplace")
-                    ContextCompat.startActivity(requireContext(), this, null)
-                }
+                context.openDeepLink("bancointer://marketplace")
             }
         }
 
         button2.apply {
             text = "Whatsapp"
             setOnClickListener{
-                Intent(Intent.ACTION_VIEW).run {
-                    this.data = Uri.parse("bancointer://whatsappAuthentication")
-                    ContextCompat.startActivity(requireContext(), this, null)
-                }
+                context.openDeepLink("bancointer://whatsappAuthentication")
             }
         }
 
         button3.apply {
             text = "One Link"
             setOnClickListener{
-                Intent(Intent.ACTION_VIEW).run {
-                    this.data = Uri.parse("https://bancointer.onelink.me/s9CL/31528354")
-                    ContextCompat.startActivity(requireContext(), this, null)
-                }
+                context.openDeepLink("https://bancointer.onelink.me/s9CL/31528354")
             }
         }
 
         button4.apply {
             text = "gointer Marketplace"
             setOnClickListener{
-                Intent(Intent.ACTION_VIEW).run {
-                    this.data = Uri.parse("https://gointer.app/marketplace")
-                    ContextCompat.startActivity(requireContext(), this, null)
-                }
+                context.openDeepLink("https://gointer.app/marketplace")
             }
         }
 
         button5.apply {
             text = "Convidar Amigo"
             setOnClickListener{
-                Intent(Intent.ACTION_VIEW).run {
-                    this.data = Uri.parse("bancointer://convidarAmigo")
-                    ContextCompat.startActivity(requireContext(), this, null)
-                }
+                context.openDeepLink("bancointer://convidarAmigo")
             }
         }
 
@@ -272,40 +257,28 @@ import java.util.*
         button8.apply {
             text = "Video Conference"
             setOnClickListener{
-                Intent(Intent.ACTION_VIEW).run {
-                    this.data = Uri.parse("bancointer://videoConferenciaAgendamento")
-                    ContextCompat.startActivity(requireContext(), this, null)
-                }
+                context.openDeepLink("bancointer://videoConferenciaAgendamento")
             }
         }
 
         button9.apply {
             text = "Video Reunião"
             setOnClickListener{
-                Intent(Intent.ACTION_VIEW).run {
-                    this.data = Uri.parse("bancointer://videoConferencia?url=https%3A%2F%2Finter-video.loca.lt%2Froom%2FMobile")
-                    ContextCompat.startActivity(requireContext(), this, null)
-                }
+                context.openDeepLink("bancointer://videoConferencia?url=https%3A%2F%2Finter-video.loca.lt%2Froom%2FMobile")
             }
         }
 
         button10.apply {
             text = "Intercom"
             setOnClickListener{
-                Intent(Intent.ACTION_VIEW).run {
-                    this.data = Uri.parse("bancointer://interchat")
-                    ContextCompat.startActivity(requireContext(), this, null)
-                }
+                context.openDeepLink("bancointer://interchat")
             }
         }
 
         button11.apply {
             text = "Precisa de ajuda"
             setOnClickListener{
-                Intent(Intent.ACTION_VIEW).run {
-                    this.data = Uri.parse("bancointer://precisaDeAjuda")
-                    ContextCompat.startActivity(requireContext(), this, null)
-                }
+                context.openDeepLink("bancointer://precisaDeAjuda")
             }
         }
     }
