@@ -167,6 +167,12 @@ fun LocalDateTime.toLocalFromUTC(): LocalDateTime {
         .toLocalDateTime()
 }
 
+fun LocalDateTime.toUTCFromLocal(): LocalDateTime {
+    return atZone(ZoneOffset.systemDefault())
+        .withZoneSameInstant(ZoneId.of("UTC"))
+        .toLocalDateTime()
+}
+
 fun LocalDateTime.toStringLocalFromUTC(): String {
     return atZone(ZoneOffset.UTC)
         .withZoneSameInstant(ZoneId.systemDefault())
@@ -185,10 +191,22 @@ fun LocalDateTime.toMonth(): String {
     return format(DateTimeFormatter.ofPattern("MMMM", Locale.getDefault()))
 }
 
-fun LocalDate.toYearMonth(): YearMonth? {
-    return try{
-        YearMonth.parse(this.toString(), DateTimeFormatter.ISO_DATE)
-    } catch (e: ParseException){
+fun LocalDate.toYearMonth(): YearMonth = YearMonth.from(this)
+
+fun String.toLocalDateTimeFromIso(): LocalDateTime {
+    val formatter = DateTimeFormatter.ofPattern(LOCAL_DATE_TIME_PARSE_FORMAT)
+    return LocalDateTime.parse(this, formatter).toLocalFromUTC()
+}
+
+fun String.toLocalDate(): LocalDate? {
+    return try {
+        LocalDate.parse(this)
+    } catch (e: ParseException) {
         null
     }
+}
+
+fun LocalDateTime.toIsoUtcString(): String {
+    return this.toUTCFromLocal()
+        .format(DateTimeFormatter.ofPattern(LOCAL_DATE_TIME_PARSE_FORMAT))
 }
