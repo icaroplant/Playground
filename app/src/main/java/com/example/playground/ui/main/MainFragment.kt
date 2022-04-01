@@ -213,9 +213,9 @@ import java.util.*
         }
 
         button4.apply {
-            text = "gointer Marketplace"
+            text = "Marketplace Produto"
             setOnClickListener{
-                context.openDeepLink("https://gointer.app/marketplace")
+                context.openDeepLink("bancointer://marketplace/produto?idProduto=23316&nomeProduto=%20&nomeLoja=Casas%20Bahia&idLoja=casasbahia&corTexto=%23ffffff&corFundo=%230e2e6a")
             }
         }
 
@@ -262,9 +262,9 @@ import java.util.*
         }
 
         button9.apply {
-            text = "Video Reunião"
+            text = "Comprovante"
             setOnClickListener{
-                context.openDeepLink("bancointer://videoConferencia?url=https%3A%2F%2Finter-video.loca.lt%2Froom%2FMobile")
+                context.openDeepLink("bancointer://detalhesComprovantes?receipt=%7BmMap%3D%7Breceipt%3D%7BreceiptButtons%3D%5B%5D%2CreceiptScheduling%3Dfalse%2CreceiptSections%3D%5B%7BreceiptRows%3D%5B%7BreceiptKey%3DFormadePagamento%2CreceiptValue%3D%7D%2C%7BreceiptKey%3DPagoVia%2CreceiptValue%3D%7D%2C%7BreceiptKey%3DInstitui%C3%A7%C3%A3oIniciadora%2CreceiptValue%3D%7D%2C%7BreceiptKey%3DDatadopagamento%2CreceiptValue%3DTer%C3%A7a%2C15%2F02%2F2022%7D%2C%7BreceiptKey%3DHor%C3%A1rio%2CreceiptValue%3D13h40%7D%2C%7BreceiptKey%3DTipo%2CreceiptValue%3D%7D%2C%7BreceiptKey%3DValordacompra%2CreceiptValue%3D%7D%2C%7BreceiptKey%3DValordotroco%2CreceiptValue%3D%7D%2C%7BreceiptKey%3DIDdatransa%C3%A7%C3%A3o%2CreceiptValue%3DE00416968202202151940tOTOH0A0v6z%7D%2C%7BreceiptKey%3DDescri%C3%A7%C3%A3o%2CreceiptValue%3D%7D%5D%2CreceiptTitle%3DSobreatransa%C3%A7%C3%A3o%7D%2C%7BreceiptRows%3D%5B%7BreceiptKey%3DNome%2CreceiptValue%3DNomecompleto90403518000169%7D%2C%7BreceiptKey%3DCPF%2FCNPJ%2CreceiptValue%3D90.403.518%2F0001-69%7D%2C%7BreceiptKey%3DInstitui%C3%A7%C3%A3o%2CreceiptValue%3DBancoInter%7D%2C%7BreceiptKey%3DAg%C3%AAncia%2CreceiptValue%3D0001%7D%2C%7BreceiptKey%3DConta%2CreceiptValue%3D857937-7%7D%5D%2CreceiptTitle%3DQuemrecebeu%7D%2C%7BreceiptRows%3D%5B%7BreceiptKey%3DNome%2CreceiptValue%3DNOMECOMPLETO90225503115%7D%2C%7BreceiptKey%3DCPF%2FCNPJ%2CreceiptValue%3D%2A%2A%2A.632.922-%2A%2A%7D%2C%7BreceiptKey%3DInstitui%C3%A7%C3%A3o%2CreceiptValue%3DBancoInterS.A.%7D%5D%2CreceiptTitle%3DQuempagou%7D%5D%2CreceiptShare%3Dfalse%2CreceiptShowBackButton%3Dtrue%2CreceiptShowNps%3Dfalse%2CreceiptTitle%3DPixenviado%2CreceiptValue%3DR%240%2C12%7D%7D%7D")
             }
         }
 

@@ -1,8 +1,11 @@
 package com.example.playground.codetest
 
+import android.telephony.PhoneNumberUtils
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
+
+const val BRAZIL_COUNTRY_AREA_CODE = "+55"
 
 fun String.toDateFromRestUtc(): Date? {
     return try {
@@ -33,4 +36,19 @@ fun String.toDateOrNull(): Date? {
     } catch (e: Exception) {
         null
     }
+}
+
+fun String?.formatToBrazilPhoneNumber(): String {
+    return PhoneNumberUtils.formatNumber(this, "BR")
+}
+
+fun String.toCapitalizeWords(): String {
+    val words = this.toLowerCase(defaultLocale).split(" ").toMutableList()
+    var output = ""
+
+    for (word in words) {
+        output += word.capitalize(defaultLocale) + " "
+    }
+
+    return output.trim()
 }

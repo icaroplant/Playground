@@ -221,7 +221,9 @@ fun main(){
         println("${it.toDateFromRestUtc()} | ${it.toDateOrNull()} - ${it.toDateFromRestUtc() == it.toDateOrNull()}")
     }
 
-
+    println("----------------")
+    val date = Date.from(LocalDateTime.now().toInstant(ZoneOffset.UTC))
+    println(date.toWeekDayTimeString())
 }
 
 fun PersonalHelpCenterResponse.toPersonalHelpCenterModel() = PersonalHelpCenterModel(

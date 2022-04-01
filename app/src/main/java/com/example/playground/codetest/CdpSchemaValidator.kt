@@ -4,27 +4,6 @@ import com.google.gson.GsonBuilder
 import java.io.BufferedReader
 import java.io.File
 
-data class Schema(
-    val records: List<CdpEvent>
-)
-
-data class CdpEvent(
-    val masterLabel: String,
-    val developerName: String,
-    val category: String,
-    val externalDataTranFields: List<CdpCustomField>,
-    var printed: Boolean = false
-)
-
-data class CdpCustomField(
-    val masterLabel: String,
-    val developerName: String,
-    val dataType: String,
-    val isDataRequired: Boolean,
-    val primaryIndexOrder: Int? = null,
-    var printed: Boolean = false
-)
-
 fun main() {
     val gson = GsonBuilder().setPrettyPrinting().serializeNulls().create()
     val f = "app/src/main/java/com/example/playground/codetest/schema_lite.json"
@@ -46,7 +25,7 @@ fun printDuplicatedEvents(schema: Schema) {
     val size = schema.records.size
     for (i in 0 until size) {
         val event = schema.records[i]
-        if (event.printed) continue
+        if (event.printed == true) continue
         val eventName = event.masterLabel
         for (j in i + 1 until size) {
             val otherEvent = schema.records[j]
@@ -69,7 +48,7 @@ fun printDuplicatedFields(schema: Schema) {
         val size = event.externalDataTranFields.size
         for (i in 0 until size) {
             val field = event.externalDataTranFields[i]
-            if (field.printed) continue
+            if (field.printed == true) continue
             val fieldName = field.masterLabel
             for (j in i + 1 until size) {
                 val otherField = event.externalDataTranFields[j]

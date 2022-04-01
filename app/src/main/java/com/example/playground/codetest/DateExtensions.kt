@@ -130,17 +130,6 @@ fun java.util.Date.toMonth(): String {
     return SimpleDateFormat("MMMM", Locale.getDefault()).format(this)
 }
 
-fun String.toCapitalizeWords(): String {
-    val words = this.toLowerCase(defaultLocale).split(" ").toMutableList()
-    var output = ""
-
-    for (word in words) {
-        output += word.capitalize(defaultLocale) + " "
-    }
-
-    return output.trim()
-}
-
 fun LocalDate.toCalendarString(): String{
     return "${this.toWeekDay().removeSuffix("-feira").toCapitalizeWords()}, ${this.toDayOfMonth()} de ${this.toMonth()}"
 }
@@ -209,4 +198,10 @@ fun String.toLocalDate(): LocalDate? {
 fun LocalDateTime.toIsoUtcString(): String {
     return this.toUTCFromLocal()
         .format(DateTimeFormatter.ofPattern(LOCAL_DATE_TIME_PARSE_FORMAT))
+}
+
+fun Date.toWeekDayTimeString(): String {
+    return SimpleDateFormat("EEEE, dd MMM - HH:mm", defaultLocale)
+        .format(this)
+        .toCapitalizeWords()
 }

@@ -116,4 +116,7 @@ dependencies {
     val glide = "4.11.0"
     implementation("com.github.bumptech.glide:glide:$glide")
 
+    //CaseChanger
+    implementation("com.github.KenjiOhtsuka:kotlin-case-changer:0.1.1")
+
 }
