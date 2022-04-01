@@ -6,20 +6,24 @@ import java.io.File
 
 fun main() {
     val gson = GsonBuilder().setPrettyPrinting().serializeNulls().create()
-    val f = "app/src/main/java/com/example/playground/codetest/schema_lite.json"
+    val f = "app/src/main/java/com/example/playground/codetest/newSchema.json"
 
     //read
     val bufferedReader: BufferedReader = File(f).bufferedReader()
     val inputString = bufferedReader.use { it.readText() }
     val schema = gson.fromJson(inputString, Schema::class.java)
 
-    printDuplicatedEvents(schema)
-    printDuplicatedFields(schema)
-    printInvalidLabels(schema)
+    val results = listOf<Boolean>(
+        printDuplicatedEvents(schema),
+        printDuplicatedFields(schema),
+        printInvalidLabels(schema),
+    )
 
+    val result = if (results.contains(false)) "ERROR" else "SUCCESS"
+    println(">>>>>> Result: $result")
 }
 
-fun printDuplicatedEvents(schema: Schema) {
+fun printDuplicatedEvents(schema: Schema): Boolean {
     println("searching duplicated events...\n")
     var count = 0
     val size = schema.records.size
@@ -36,12 +40,14 @@ fun printDuplicatedEvents(schema: Schema) {
             }
         }
     }
-    println("\nfinished! $count events duplicated")
+    println("\nfinished! $count duplicated events")
     println("-------------------------------------")
     println()
+
+    return count == 0
 }
 
-fun printDuplicatedFields(schema: Schema) {
+fun printDuplicatedFields(schema: Schema): Boolean {
     println("searching duplicated fields...\n")
     var count = 0
     schema.records.forEach { event ->
@@ -60,12 +66,14 @@ fun printDuplicatedFields(schema: Schema) {
             }
         }
     }
-    println("\nfinished! $count fields duplicated")
+    println("\nfinished! $count duplicated fields")
     println("-------------------------------------")
     println()
+
+    return count == 0
 }
 
-fun printInvalidLabels(schema: Schema) {
+fun printInvalidLabels(schema: Schema): Boolean {
     println("searching invalid labels...\n")
     var count = 0
     schema.records.forEach { event ->
@@ -83,6 +91,8 @@ fun printInvalidLabels(schema: Schema) {
     println("\nfinished! $count invalid labels")
     println("-------------------------------------")
     println()
+
+    return count == 0
 }
 
 internal fun String.isValidField(): Boolean {
