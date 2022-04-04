@@ -1,8 +1,8 @@
 {
   "records": [
     {
-      "masterLabel": "C_CD_Home_DC_Tag",
-      "developerName": "C_CD_Home_DC_Tag",
+      "masterLabel": "C_CD_Home_DC_Widget",
+      "developerName": "C_CD_Home_DC_Widget",
       "category": "Engagement",
       "externalDataTranFields": [
         {"masterLabel": "eventId","developerName": "eventId","dataType": "Text","isDataRequired": true,"primaryIndexOrder": 1},
@@ -12,7 +12,9 @@
         {"masterLabel": "eventType","developerName": "eventType","dataType": "Text","isDataRequired": true},
         {"masterLabel": "sessionId","developerName": "sessionId","dataType": "Text","isDataRequired": true},
         {"masterLabel": "contactKey","developerName": "contactKey","dataType": "Text","isDataRequired": false},
-        {"masterLabel": "content_name","developerName": "content_name","dataType": "Text","isDataRequired": false}
+        {"masterLabel": "id","developerName": "id","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "action","developerName": "action","dataType": "Text","isDataRequired": false},
+        {"masterLabel": "content_id","developerName": "content_id","dataType": "Text","isDataRequired": false}
       ]
     },
     {
