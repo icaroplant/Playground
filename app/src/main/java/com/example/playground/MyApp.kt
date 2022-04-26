@@ -11,7 +11,7 @@ import org.koin.core.logger.Level
 
 class MyApp : Application() {
 
-    companion object{
+    companion object {
         lateinit var context: Context
     }
 
@@ -20,8 +20,8 @@ class MyApp : Application() {
 
         context = applicationContext
 
-        startKoin{
-            androidLogger()
+        startKoin {
+            androidLogger(Level.ERROR)
             androidContext(this@MyApp)
 
             modules(mainModule)

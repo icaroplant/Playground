@@ -2,16 +2,17 @@
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven("https://jitpack.io")
     }
     dependencies {
-        val kotlin_version = "1.4.30"
-        classpath("com.android.tools.build:gradle:4.0.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+        val agp = "7.1.1"
+        val kotlin = "1.5.32"
+        classpath("com.android.tools.build:gradle:$agp")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin")
 
-        val nav_version = "2.2.2"
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
+        val navigation = "2.4.1"
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$navigation")
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -21,16 +22,23 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
         mavenCentral()
         maven("https://jitpack.io")
+    }
+    configurations.all {
+        // Atualização do Koin
+        exclude(group = "io.insert-koin", module = "koin-androidx-scope")
+        exclude(group = "io.insert-koin", module = "koin-androidx-viewmodel")
+        exclude(group = "com.linkedin.dexmaker", module = "dexmaker")
+        // Substituído por io.insert-koin
+        exclude(group = "org.koin")
     }
 }
 
 subprojects {
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().all {
         kotlinOptions {
-            jvmTarget = "1.8"
+            jvmTarget = "11"
             freeCompilerArgs = listOf("-Xjvm-default=compatibility")
         }
     }

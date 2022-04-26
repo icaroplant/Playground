@@ -3,7 +3,7 @@ package com.example.playground.codetest
 import android.os.Parcelable
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.time.*

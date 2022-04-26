@@ -3,6 +3,7 @@ package com.example.playground.extensions
 import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import androidx.activity.OnBackPressedCallback
 import androidx.annotation.NonNull
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
@@ -82,4 +83,15 @@ fun Fragment.makeSnackBarWithActionFrom(
 fun Fragment.forceHideKeyboard() {
     val imm = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
     imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
+}
+
+fun Fragment.handleOnBackPressed(callback: OnBackPressedCallback.() -> Unit) {
+    activity?.onBackPressedDispatcher?.addCallback(
+        viewLifecycleOwner,
+        object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                callback()
+            }
+        }
+    )
 }

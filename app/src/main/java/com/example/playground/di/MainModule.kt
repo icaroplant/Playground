@@ -14,22 +14,24 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val mainModule = module {
-    single {
+    factory {
         MainRepositoryMock()
     }
 
-    viewModel { MainViewModel(
-        musicRepository = get()
-    ) }
+    viewModel {
+        MainViewModel(
+            musicRepository = get()
+        )
+    }
     viewModel { HomeViewModel() }
     viewModel { ChatViewModel() }
     viewModel { InstrumentViewModel() }
     viewModel { ManageMusicViewModel() }
 
-    single { AppDatabase.getInstance(androidApplication()).musicDAO }
-    single { AppDatabase.getInstance(androidApplication()).albumDAO }
+    factory { AppDatabase.getInstance(androidApplication()).musicDAO }
+    factory { AppDatabase.getInstance(androidApplication()).albumDAO }
 
-    single<MusicRepository>{
+    factory<MusicRepository> {
         MusicRepositoryImp(
             musicDAO = get()
         )

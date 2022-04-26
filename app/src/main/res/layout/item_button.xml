@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <Button
-        android:id="@+id/btMudarLayout"
-        style="@style/DefaultButton"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:backgroundTint="#00BCD4"
-        android:text="button"
-        android:textColor="#fff" />
+        android:layout_height="wrap_content">
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btMudarLayout"
+            style="@style/DefaultButton"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:backgroundTint="#00BCD4"
+            android:text="button"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+</layout>

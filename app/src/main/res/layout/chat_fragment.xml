@@ -1,96 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.chat.ChatFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        tools:context=".ui.chat.ChatFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_title"
+            <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="16dp"
+                    android:text="Chat"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="24dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btWhatsapp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24dp"
-                android:padding="16dp"
-                android:text="Chat" />
+                android:backgroundTint="@color/green_600"
+                android:text="Open Whatsapp"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/btBrowser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/blue_700"
+                android:text="Open Browser"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/tvSelectedContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Select a content with browser"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvInputStream"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="InputStream"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvSpannedText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:text="opa" />
+
+            <TextView
+                android:id="@+id/tvPlural"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:text="opas" />
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btWhatsapp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Open Whatsapp"
-            android:textColor="#fff"
-            android:backgroundTint="@color/green_600" />
+    </ScrollView>
 
-        <Button
-            android:id="@+id/btBrowser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_gravity="center"
-            android:text="Open Browser"
-            android:textColor="#fff"
-            android:backgroundTint="@color/blue_700" />
-
-        <TextView
-            android:id="@+id/tvSelectedContent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="16dp"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:text="Select a content with browser"/>
-
-        <TextView
-            android:id="@+id/tvInputStream"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="16dp"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:text="InputStream"/>
-
-        <TextView
-            android:id="@+id/tvSpannedText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            tools:text="opa"/>
-
-        <TextView
-            android:id="@+id/tvPlural"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            tools:text="opas"/>
-
-    </LinearLayout>
-
-</ScrollView>
+</layout>

@@ -1,39 +1,26 @@
 package com.example.playground.ui.home
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.playground.R
+import com.example.playground.common.CoreFragment
+import com.example.playground.databinding.HomeFragmentBinding
 import com.example.playground.extensions.navigateWithAnimations
-import kotlinx.android.synthetic.main.home_fragment.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class HomeFragment : Fragment() {
+class HomeFragment : CoreFragment<HomeFragmentBinding>(HomeFragmentBinding::inflate) {
 
     private val viewModel: HomeViewModel by viewModel()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.home_fragment, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
+    override fun setupViews() {
         val args = arguments
 
         if (args != null) {
-            tv_title.text = args.getString("title", "Erro")
-            tv_number.text = args.getInt("number", -1).toString()
-            tv_list.text = args.getString("list", "Erro")
+            binding.tvTitle.text = args.getString("title", "Erro")
+            binding.tvNumber.text = args.getInt("number", -1).toString()
+            binding.tvList.text = args.getString("list", "Erro")
         }
 
-        bt_chat.setOnClickListener() {
+        binding.btChat.setOnClickListener() {
             findNavController().navigateWithAnimations(R.id.action_homeFragment_to_chatFragment)
         }
     }

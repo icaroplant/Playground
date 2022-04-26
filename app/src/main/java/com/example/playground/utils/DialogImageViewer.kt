@@ -1,24 +1,25 @@
 package com.example.playground.utils
 
+import android.app.Activity
 import android.app.Dialog
-import android.content.Context
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import com.example.playground.R
-import kotlinx.android.synthetic.main.dialog_image_viewer.*
+import com.example.playground.databinding.DialogImageViewerBinding
 
 class DialogImageViewer(
-    val context: Context,
-    val resId: Int
+    private val activity: Activity,
+    private val resId: Int
 ) {
 
-    private val dialog: Dialog = Dialog(context).apply {
-        setContentView(R.layout.dialog_image_viewer)
+    private val dialog: Dialog = Dialog(activity).apply {
+        val binding: DialogImageViewerBinding = DataBindingUtil.setContentView(activity, R.layout.dialog_image_viewer)
         window?.setLayout(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.MATCH_PARENT
         )
-        pvDialogImagePhoto.setImageResource(resId)
-        ivDialogImageClose.setOnClickListener {
+        binding.pvDialogImagePhoto.setImageResource(resId)
+        binding.ivDialogImageClose.setOnClickListener {
             dismiss()
         }
     }

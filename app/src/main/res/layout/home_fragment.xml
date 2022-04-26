@@ -1,68 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/ripple_shape_rectangle_rounded4_transparent"
-    tools:context=".ui.home.HomeFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:background="@drawable/ripple_shape_rectangle_rounded4_transparent"
+        tools:context=".ui.home.HomeFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="16dp"
+                    android:text="Título"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="24dp" />
+
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_title"
+                android:id="@+id/tvNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:padding="16dp"
+                android:text="Número"
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="24dp"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tvList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:padding="16dp"
-                android:text="Título" />
+                android:text="Lista"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="36dp"
+                android:backgroundTint="#4CAF50"
+                android:text="Chat"
+                android:textColor="#fff" />
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="18dp"
-            android:padding="16dp"
-            android:text="Número" />
+    </ScrollView>
 
-        <TextView
-            android:id="@+id/tv_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="18dp"
-            android:padding="16dp"
-            android:text="Lista" />
 
-        <Button
-            android:id="@+id/bt_chat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:layout_gravity="center"
-            android:text="Chat"
-            android:textColor="#fff"
-            android:backgroundTint="#4CAF50" />
-
-    </LinearLayout>
-
-</ScrollView>
+</layout>
 

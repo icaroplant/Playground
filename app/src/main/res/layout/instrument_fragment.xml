@@ -1,81 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.instrument.InstrumentFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ProgressBar
-            android:id="@+id/progressInstrument"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="64dp"/>
+        android:layout_height="match_parent"
+        tools:context=".ui.instrument.InstrumentFragment">
 
         <LinearLayout
-            android:id="@+id/llInstrumentContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tvName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                tools:text="Nome" />
-
-            <TextView
-                android:id="@+id/tvType"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textColor="@color/grey_700"
-                android:textSize="14sp"
-                tools:text="Tipo" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="24dp"
-                android:layout_gravity="center"
-                app:cardElevation="8dp">
-
-                <ImageView
-                    android:id="@+id/ivPhoto"
-                    android:layout_width="300dp"
-                    android:layout_height="300dp"
-                    android:padding="4dp"
-                    android:contentDescription="@string/instrument_photo_description"
-                    tools:src="@drawable/guitarra_les_paul"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <Button
-                android:id="@+id/btnShow"
+            <ProgressBar
+                android:id="@+id/progressInstrument"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Hide"
-                android:backgroundTint="@color/blue_500"
-                android:textColor="@color/white"/>
+                android:layout_margin="64dp" />
+
+            <LinearLayout
+                android:id="@+id/llInstrumentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    tools:text="Nome" />
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey_700"
+                    android:textSize="14sp"
+                    tools:text="Tipo" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    app:cardElevation="8dp">
+
+                    <ImageView
+                        android:id="@+id/ivPhoto"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:contentDescription="@string/instrument_photo_description"
+                        android:padding="4dp"
+                        tools:src="@drawable/guitarra_les_paul" />
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btnShow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/blue_500"
+                    android:text="Hide"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
 
-</ScrollView>
+
+</layout>
 

@@ -1,6 +1,7 @@
 package com.example.playground.extensions
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 
@@ -24,3 +25,5 @@ fun View.gone() {
 fun View.visible() {
     visibility = View.VISIBLE
 }
+
+val Context.inflater: LayoutInflater get() = LayoutInflater.from(this)

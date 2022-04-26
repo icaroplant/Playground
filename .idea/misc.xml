@@ -7,14 +7,20 @@
         <entry key="app/src/main/res/drawable/shape_oval_border_grayscale_500.xml" value="0.31979166666666664" />
         <entry key="app/src/main/res/drawable/shape_rectangle_rounded4_transparent.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/layout/animations_fragment.xml" value="0.29635416666666664" />
+        <entry key="app/src/main/res/layout/chat_fragment.xml" value="0.2916241062308478" />
+        <entry key="app/src/main/res/layout/dialog_image_viewer.xml" value="0.2906026557711951" />
         <entry key="app/src/main/res/layout/glide_fragment.xml" value="0.2994791666666667" />
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.3079673135852911" />
         <entry key="app/src/main/res/layout/instrument_fragment.xml" value="0.2994791666666667" />
+        <entry key="app/src/main/res/layout/item_button.xml" value="0.2916241062308478" />
+        <entry key="app/src/main/res/layout/item_musica.xml" value="0.2759259259259259" />
+        <entry key="app/src/main/res/layout/main_activity.xml" value="0.2752808988764045" />
         <entry key="app/src/main/res/layout/main_fragment.xml" value="0.2994791666666667" />
+        <entry key="app/src/main/res/layout/manage_music_bottom_sheet.xml" value="0.2906026557711951" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
