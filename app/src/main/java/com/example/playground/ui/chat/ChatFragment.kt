@@ -19,8 +19,8 @@ class ChatFragment : CoreFragment<ChatFragmentBinding>(ChatFragmentBinding::infl
 
     private val viewModel: ChatViewModel by viewModel()
     private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
-        binding.tvSelectedContent.text = uri.toString()
         try {
+            binding.tvSelectedContent.text = uri.toString()
             val contentResolver = requireActivity().contentResolver
             val inputStream = contentResolver.openInputStream(uri)
             binding.tvInputStream.text = contentResolver.getType(uri)
