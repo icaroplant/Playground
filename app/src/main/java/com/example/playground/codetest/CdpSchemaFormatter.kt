@@ -14,7 +14,7 @@ fun main() {
     //read
     val bufferedReader: BufferedReader = File(f).bufferedReader()
     val inputString = bufferedReader.use { it.readText() }
-    val schema = gson.fromJson(inputString, Schema::class.java)
+    val schema = gson.fromJson(inputString, CdpSchema::class.java)
 
     val newSchema = schema.copy(
         records = schema.records.map { event ->

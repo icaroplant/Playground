@@ -11,7 +11,7 @@ fun main() {
     //read
     val bufferedReader: BufferedReader = File(f).bufferedReader()
     val inputString = bufferedReader.use { it.readText() }
-    val schema = gson.fromJson(inputString, Schema::class.java)
+    val schema = gson.fromJson(inputString, CdpSchema::class.java)
 
     val results = listOf<Boolean>(
         printDuplicatedEvents(schema),
@@ -23,7 +23,7 @@ fun main() {
     println(">>>>>> Result: $result")
 }
 
-fun printDuplicatedEvents(schema: Schema): Boolean {
+fun printDuplicatedEvents(schema: CdpSchema): Boolean {
     println("searching duplicated events...\n")
     var count = 0
     val size = schema.records.size
@@ -47,7 +47,7 @@ fun printDuplicatedEvents(schema: Schema): Boolean {
     return count == 0
 }
 
-fun printDuplicatedFields(schema: Schema): Boolean {
+fun printDuplicatedFields(schema: CdpSchema): Boolean {
     println("searching duplicated fields...\n")
     var count = 0
     schema.records.forEach { event ->
@@ -73,7 +73,7 @@ fun printDuplicatedFields(schema: Schema): Boolean {
     return count == 0
 }
 
-fun printInvalidLabels(schema: Schema): Boolean {
+fun printInvalidLabels(schema: CdpSchema): Boolean {
     println("searching invalid labels...\n")
     var count = 0
     schema.records.forEach { event ->
