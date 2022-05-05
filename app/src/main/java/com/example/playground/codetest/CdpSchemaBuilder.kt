@@ -38,7 +38,7 @@ fun main() {
             val fields = getBaseFields().apply {
                 for (i in 1 until itens.size) {
                     val fieldName = itens[i]
-                    add(buildCdpCustomField(fieldName))
+                    add(buildCdpCustomField(fieldName.toCdpCase()))
                 }
             }
             records.add(

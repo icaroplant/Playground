@@ -13,7 +13,7 @@ fun main() {
     val inputString = bufferedReader.use { it.readText() }
     val schema = gson.fromJson(inputString, CdpSchema::class.java)
 
-    val results = listOf<Boolean>(
+    val results = listOf(
         printDuplicatedEvents(schema),
         printDuplicatedFields(schema),
         printInvalidLabels(schema),
