@@ -26,7 +26,7 @@ fun main() {
                     )
                 }
             )
-        }.sortedBy { it.developerName.toLowerCase(Locale.getDefault()) }
+        }.sortedBy { it.developerName.lowercase() }
     )
 
     //write
