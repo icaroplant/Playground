@@ -75,6 +75,17 @@
 
                     <Button
                         style="@style/DefaultButton"
+                        android:id="@+id/buttonCompose"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:backgroundTint="#7B1FA2"
+                        android:text="Jetpack Compose"
+                        android:textColor="#fff" />
+
+                    <Button
+                        style="@style/DefaultButton"
                         android:id="@+id/buttonInstrument"
                         android:layout_width="0dp"
                         android:layout_height="80dp"

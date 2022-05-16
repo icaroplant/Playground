@@ -22,7 +22,7 @@ class ChatFragment : CoreFragment<ChatFragmentBinding>(ChatFragmentBinding::infl
         try {
             binding.tvSelectedContent.text = uri.toString()
             val contentResolver = requireActivity().contentResolver
-            val inputStream = contentResolver.openInputStream(uri)
+            val inputStream = contentResolver.openInputStream(uri!!)
             binding.tvInputStream.text = contentResolver.getType(uri)
         } catch (e: Exception){
             e.printStackTrace()

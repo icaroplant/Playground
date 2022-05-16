@@ -80,6 +80,12 @@ class MainFragment : CoreFragment<MainFragmentBinding>(MainFragmentBinding::infl
 
         }
 
+        binding.buttonCompose.setOnClickListener {
+            findNavController().navigateWithAnimations(
+                MainFragmentDirections.actionMainFragmentToComposeHomeFragment()
+            )
+        }
+
         binding.buttonInstrument.setOnClickListener {
             findNavController().navigateWithAnimations(
                 MainFragmentDirections.actionMainFragmentToInstrumentFragment()

@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_mainFragment_to_animationsFragment"
             app:destination="@id/animationsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_composeHomeFragment"
+            app:destination="@id/composeHomeFragment" />
     </fragment>
 
     <fragment
@@ -67,5 +70,10 @@
         android:name="com.example.playground.ui.animations.AnimationsFragment"
         android:label="animations_fragment"
         tools:layout="@layout/animations_fragment" />
+    <fragment
+        android:id="@+id/composeHomeFragment"
+        android:name="com.example.playground.ui.compose.home.ComposeHomeFragment"
+        android:label="Compose Home"
+        tools:layout="@layout/compose_home_fragment"/>
 
 </navigation>

@@ -7,7 +7,7 @@ buildscript {
     }
     dependencies {
         val agp = "7.1.1"
-        val kotlin = "1.5.32"
+        val kotlin = "1.6.10"
         classpath("com.android.tools.build:gradle:$agp")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin")
 
