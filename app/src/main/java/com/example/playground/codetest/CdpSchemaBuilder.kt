@@ -1,14 +1,19 @@
 package com.example.playground.codetest
 
+import com.example.playground.codetest.CdpSchemaBuilderConfig.isUpdateSchema
+import com.example.playground.codetest.CdpSchemaBuilderConfig.withContactKey
 import com.google.gson.GsonBuilder
 import java.io.BufferedReader
 import java.io.File
 
+object CdpSchemaBuilderConfig {
+    val isUpdateSchema = true
+    val withContactKey = true
+}
+
 fun main() {
     val gson = GsonBuilder().setPrettyPrinting().create()
     val f = "app/src/main/java/com/example/playground/codetest/Events.txt"
-    val isUpdateSchema = true
-    val withContactKey = false
 
     //read
     val bufferedReader: BufferedReader = File(f).bufferedReader()
@@ -20,7 +25,7 @@ fun main() {
                     masterLabel = "partyIdentification",
                     developerName = "partyIdentification",
                     category = "Profile",
-                    externalDataTranFields = getBaseFields(withContactKey).apply {
+                    externalDataTranFields = getBaseFields().apply {
                         add(CdpField("IDName", "IDName", "Text", true))
                         add(CdpField("IDType", "IDType", "Text", true))
                         add(CdpField("userId", "userId", "Text", true))
@@ -61,8 +66,13 @@ fun main() {
 
     //write
     var newSchemaJson = gson.toJson(schema)
-    if(isUpdateSchema) {
-        newSchemaJson = newSchemaJson.trim('[',']')
+    if (isUpdateSchema) {
+        newSchemaJson = newSchemaJson
+            .trim('[', ']')
+            .removePrefix("  ")
+            .lines().reduce { acc, s ->
+                acc + "\n" + s.removePrefix("  ")
+            }.trim()
     }
     val newF = "app/src/main/java/com/example/playground/codetest/buildSchema.json"
     File(newF).printWriter().use { out ->
@@ -71,7 +81,7 @@ fun main() {
 
 }
 
-fun getBaseFields(withContactKey: Boolean = false) = mutableListOf<CdpField>().apply {
+fun getBaseFields() = mutableListOf<CdpField>().apply {
     add(CdpField("eventId", "eventId", "Text", true, 1))
     add(CdpField("category", "category", "Text", true))
     add(CdpField("dateTime", "dateTime", "Date", true))
