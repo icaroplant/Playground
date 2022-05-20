@@ -1,32 +1,33 @@
 package com.example.playground.codetest
 
 import com.google.gson.GsonBuilder
-import com.improve_future.case_changer.beginWithLowerCase
-import com.improve_future.case_changer.toCamelCase
 import java.io.BufferedReader
 import java.io.File
-import java.util.*
 
 fun main() {
     val gson = GsonBuilder().setPrettyPrinting().create()
     val f = "app/src/main/java/com/example/playground/codetest/Events.txt"
+    val isUpdateSchema = true
+    val withContactKey = true
 
     //read
     val bufferedReader: BufferedReader = File(f).bufferedReader()
     val records = mutableListOf<CdpEvent>().apply {
-        // Profile Event
-        add(
-            CdpEvent(
-                masterLabel = "partyIdentification",
-                developerName = "partyIdentification",
-                category = "Profile",
-                externalDataTranFields = getBaseFields().apply {
-                    add(CdpField("IDName", "IDName", "Text", true))
-                    add(CdpField("IDType", "IDType", "Text", true))
-                    add(CdpField("userId", "userId", "Text", true))
-                }
+        if (!isUpdateSchema) {
+            // Profile Event
+            add(
+                CdpEvent(
+                    masterLabel = "partyIdentification",
+                    developerName = "partyIdentification",
+                    category = "Profile",
+                    externalDataTranFields = getBaseFields(withContactKey).apply {
+                        add(CdpField("IDName", "IDName", "Text", true))
+                        add(CdpField("IDType", "IDType", "Text", true))
+                        add(CdpField("userId", "userId", "Text", true))
+                    }
+                )
             )
-        )
+        }
     }
     bufferedReader.forEachLine { line ->
         if (line.isNotBlank()) {
@@ -52,9 +53,11 @@ fun main() {
         }
     }
 
-    val schema = CdpSchema(
-        records = records
-    )
+    val schema: Any = if (isUpdateSchema) records else {
+        CdpSchema(
+            records = records
+        )
+    }
 
     //write
     val newSchemaJson = gson.toJson(schema)
@@ -65,13 +68,16 @@ fun main() {
 
 }
 
-fun getBaseFields() = mutableListOf<CdpField>().apply {
+fun getBaseFields(withContactKey: Boolean = false) = mutableListOf<CdpField>().apply {
     add(CdpField("eventId", "eventId", "Text", true, 1))
     add(CdpField("category", "category", "Text", true))
     add(CdpField("dateTime", "dateTime", "Date", true))
     add(CdpField("deviceId", "deviceId", "Text", true))
     add(CdpField("eventType", "eventType", "Text", true))
     add(CdpField("sessionId", "sessionId", "Text", true))
+    withContactKey.takeIf { it }.run {
+        add(CdpField("contactKey", "contactKey", "Text", false))
+    }
 }
 
 fun buildCdpCustomField(name: String): CdpField = CdpField(

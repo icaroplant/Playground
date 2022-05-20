@@ -35,7 +35,7 @@ fun printDuplicatedEvents(schema: CdpSchema): Boolean {
             val otherEvent = schema.records[j]
             if (eventName == otherEvent.masterLabel) {
                 count++
-                println("Event: ${event.masterLabel}")
+                println(event.masterLabel)
                 otherEvent.printed = true
             }
         }

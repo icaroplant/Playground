@@ -1,418 +1,1558 @@
-{
-  "records": [
-    {
-      "masterLabel": "partyIdentification",
-      "developerName": "partyIdentification",
-      "category": "Profile",
-      "externalDataTranFields": [
-        {
-          "masterLabel": "eventId",
-          "developerName": "eventId",
-          "dataType": "Text",
-          "isDataRequired": true,
-          "primaryIndexOrder": 1
-        },
-        {
-          "masterLabel": "category",
-          "developerName": "category",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "dateTime",
-          "developerName": "dateTime",
-          "dataType": "Date",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "deviceId",
-          "developerName": "deviceId",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "eventType",
-          "developerName": "eventType",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "sessionId",
-          "developerName": "sessionId",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "IDName",
-          "developerName": "IDName",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "IDType",
-          "developerName": "IDType",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "userId",
-          "developerName": "userId",
-          "dataType": "Text",
-          "isDataRequired": true
-        }
-      ]
-    },
-    {
-      "masterLabel": "C_CD_Home_T_Shopping",
-      "developerName": "C_CD_Home_T_Shopping",
-      "category": "Engagement",
-      "externalDataTranFields": [
-        {
-          "masterLabel": "eventId",
-          "developerName": "eventId",
-          "dataType": "Text",
-          "isDataRequired": true,
-          "primaryIndexOrder": 1
-        },
-        {
-          "masterLabel": "category",
-          "developerName": "category",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "dateTime",
-          "developerName": "dateTime",
-          "dataType": "Date",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "deviceId",
-          "developerName": "deviceId",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "eventType",
-          "developerName": "eventType",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "sessionId",
-          "developerName": "sessionId",
-          "dataType": "Text",
-          "isDataRequired": true
-        }
-      ]
-    },
-    {
-      "masterLabel": "C_PJ_Home_T_Investimentos",
-      "developerName": "C_PJ_Home_T_Investimentos",
-      "category": "Engagement",
-      "externalDataTranFields": [
-        {
-          "masterLabel": "eventId",
-          "developerName": "eventId",
-          "dataType": "Text",
-          "isDataRequired": true,
-          "primaryIndexOrder": 1
-        },
-        {
-          "masterLabel": "category",
-          "developerName": "category",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "dateTime",
-          "developerName": "dateTime",
-          "dataType": "Date",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "deviceId",
-          "developerName": "deviceId",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "eventType",
-          "developerName": "eventType",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "sessionId",
-          "developerName": "sessionId",
-          "dataType": "Text",
-          "isDataRequired": true
-        }
-      ]
-    },
-    {
-      "masterLabel": "C_PJ_Home_T_PIX",
-      "developerName": "C_PJ_Home_T_PIX",
-      "category": "Engagement",
-      "externalDataTranFields": [
-        {
-          "masterLabel": "eventId",
-          "developerName": "eventId",
-          "dataType": "Text",
-          "isDataRequired": true,
-          "primaryIndexOrder": 1
-        },
-        {
-          "masterLabel": "category",
-          "developerName": "category",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "dateTime",
-          "developerName": "dateTime",
-          "dataType": "Date",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "deviceId",
-          "developerName": "deviceId",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "eventType",
-          "developerName": "eventType",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "sessionId",
-          "developerName": "sessionId",
-          "dataType": "Text",
-          "isDataRequired": true
-        }
-      ]
-    },
-    {
-      "masterLabel": "C_GestaoCobranca_Home_T_Aba",
-      "developerName": "C_GestaoCobranca_Home_T_Aba",
-      "category": "Engagement",
-      "externalDataTranFields": [
-        {
-          "masterLabel": "eventId",
-          "developerName": "eventId",
-          "dataType": "Text",
-          "isDataRequired": true,
-          "primaryIndexOrder": 1
-        },
-        {
-          "masterLabel": "category",
-          "developerName": "category",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "dateTime",
-          "developerName": "dateTime",
-          "dataType": "Date",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "deviceId",
-          "developerName": "deviceId",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "eventType",
-          "developerName": "eventType",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "sessionId",
-          "developerName": "sessionId",
-          "dataType": "Text",
-          "isDataRequired": true
-        }
-      ]
-    },
-    {
-      "masterLabel": "C_CD_Home_T_ContaMei",
-      "developerName": "C_CD_Home_T_ContaMei",
-      "category": "Engagement",
-      "externalDataTranFields": [
-        {
-          "masterLabel": "eventId",
-          "developerName": "eventId",
-          "dataType": "Text",
-          "isDataRequired": true,
-          "primaryIndexOrder": 1
-        },
-        {
-          "masterLabel": "category",
-          "developerName": "category",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "dateTime",
-          "developerName": "dateTime",
-          "dataType": "Date",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "deviceId",
-          "developerName": "deviceId",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "eventType",
-          "developerName": "eventType",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "sessionId",
-          "developerName": "sessionId",
-          "dataType": "Text",
-          "isDataRequired": true
-        }
-      ]
-    },
-    {
-      "masterLabel": "C_PJ_Maquininha_SimularTaxas_T_Simular",
-      "developerName": "C_PJ_Maquininha_SimularTaxas_T_Simular",
-      "category": "Engagement",
-      "externalDataTranFields": [
-        {
-          "masterLabel": "eventId",
-          "developerName": "eventId",
-          "dataType": "Text",
-          "isDataRequired": true,
-          "primaryIndexOrder": 1
-        },
-        {
-          "masterLabel": "category",
-          "developerName": "category",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "dateTime",
-          "developerName": "dateTime",
-          "dataType": "Date",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "deviceId",
-          "developerName": "deviceId",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "eventType",
-          "developerName": "eventType",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "sessionId",
-          "developerName": "sessionId",
-          "dataType": "Text",
-          "isDataRequired": true
-        }
-      ]
-    },
-    {
-      "masterLabel": "C_PJ_Maquininha_Antecipacao_T_Switch",
-      "developerName": "C_PJ_Maquininha_Antecipacao_T_Switch",
-      "category": "Engagement",
-      "externalDataTranFields": [
-        {
-          "masterLabel": "eventId",
-          "developerName": "eventId",
-          "dataType": "Text",
-          "isDataRequired": true,
-          "primaryIndexOrder": 1
-        },
-        {
-          "masterLabel": "category",
-          "developerName": "category",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "dateTime",
-          "developerName": "dateTime",
-          "dataType": "Date",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "deviceId",
-          "developerName": "deviceId",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "eventType",
-          "developerName": "eventType",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "sessionId",
-          "developerName": "sessionId",
-          "dataType": "Text",
-          "isDataRequired": true
-        }
-      ]
-    },
-    {
-      "masterLabel": "C_PJ_Maquininha_NegociarProposta_T_Envia",
-      "developerName": "C_PJ_Maquininha_NegociarProposta_T_Envia",
-      "category": "Engagement",
-      "externalDataTranFields": [
-        {
-          "masterLabel": "eventId",
-          "developerName": "eventId",
-          "dataType": "Text",
-          "isDataRequired": true,
-          "primaryIndexOrder": 1
-        },
-        {
-          "masterLabel": "category",
-          "developerName": "category",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "dateTime",
-          "developerName": "dateTime",
-          "dataType": "Date",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "deviceId",
-          "developerName": "deviceId",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "eventType",
-          "developerName": "eventType",
-          "dataType": "Text",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "sessionId",
-          "developerName": "sessionId",
-          "dataType": "Text",
-          "isDataRequired": true
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "masterLabel": "LoginFirstAccessSuccess",
+    "developerName": "LoginFirstAccessSuccess",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_ConfirmarEmail_P_Email",
+    "developerName": "V_CDPF_ConfirmarEmail_P_Email",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_ConfirmarSms_P_SMS",
+    "developerName": "V_CDPF_ConfirmarSms_P_SMS",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_ContaAprovada",
+    "developerName": "V_CDPF_ContaAprovada",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_ContaEmAnalise",
+    "developerName": "V_CDPF_ContaEmAnalise",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_ContaReprovada_T_OK",
+    "developerName": "V_CDPF_ContaReprovada_T_OK",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_Cpf_T_Continuar",
+    "developerName": "V_CDPF_Cpf_T_Continuar",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_CriarSenha_T_Finalizar",
+    "developerName": "V_CDPF_CriarSenha_T_Finalizar",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_DadosProf_T_Continuar",
+    "developerName": "V_CDPF_DadosProf_T_Continuar",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_DataNascimento_T_Continuar",
+    "developerName": "V_CDPF_DataNascimento_T_Continuar",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_EndResidencialOnboard_T_Continuar",
+    "developerName": "V_CDPF_EndResidencialOnboard_T_Continuar",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_EstadoCivil_P_EstadoCivil",
+    "developerName": "V_CDPF_EstadoCivil_P_EstadoCivil",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_Login_T_AbrirContaCompleta",
+    "developerName": "V_CDPF_Login_T_AbrirContaCompleta",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_Naturalidade_T_Confirmar",
+    "developerName": "V_CDPF_Naturalidade_T_Confirmar",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_Nome_P_Continuar",
+    "developerName": "V_CDPF_Nome_P_Continuar",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_Pendenciado",
+    "developerName": "V_CDPF_Pendenciado",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_RG",
+    "developerName": "V_CDPF_RG",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_Selfie",
+    "developerName": "V_CDPF_Selfie",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "V_CDPF_TipoConta_T_Continuar",
+    "developerName": "V_CDPF_TipoConta_T_Continuar",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "C_Cartoes_Home_T_PagarFatura",
+    "developerName": "C_Cartoes_Home_T_PagarFatura",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "C_Cartoes_Home_T_BloquearTemp",
+    "developerName": "C_Cartoes_Home_T_BloquearTemp",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "C_Cartoes_Home_T_CartaoVirtual",
+    "developerName": "C_Cartoes_Home_T_CartaoVirtual",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "C_Cartoes_Home_T_Produtos",
+    "developerName": "C_Cartoes_Home_T_Produtos",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      },
+      {
+        "masterLabel": "produto",
+        "developerName": "produto",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "C_Cartoes_Home_T_VerExtrato",
+    "developerName": "C_Cartoes_Home_T_VerExtrato",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "C_CD_Home_T_CGlobal",
+    "developerName": "C_CD_Home_T_CGlobal",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "C_CGlobalTermosUso_T_Aceite",
+    "developerName": "C_CGlobalTermosUso_T_Aceite",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "C_PIX_ProcessandoPIX_DC",
+    "developerName": "C_PIX_ProcessandoPIX_DC",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "C_DDA_DDA_T_Autorizar",
+    "developerName": "C_DDA_DDA_T_Autorizar",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "C_CD_Home_T_Pagar",
+    "developerName": "C_CD_Home_T_Pagar",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "C_DDA_Cancelar_T_Botao",
+    "developerName": "C_DDA_Cancelar_T_Botao",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  },
+  {
+    "masterLabel": "C_PSalario_DC_Sucesso",
+    "developerName": "C_PSalario_DC_Sucesso",
+    "category": "Engagement",
+    "externalDataTranFields": [
+      {
+        "masterLabel": "eventId",
+        "developerName": "eventId",
+        "dataType": "Text",
+        "isDataRequired": true,
+        "primaryIndexOrder": 1
+      },
+      {
+        "masterLabel": "category",
+        "developerName": "category",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "dateTime",
+        "developerName": "dateTime",
+        "dataType": "Date",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "deviceId",
+        "developerName": "deviceId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "eventType",
+        "developerName": "eventType",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "sessionId",
+        "developerName": "sessionId",
+        "dataType": "Text",
+        "isDataRequired": true
+      },
+      {
+        "masterLabel": "contactKey",
+        "developerName": "contactKey",
+        "dataType": "Text",
+        "isDataRequired": false
+      }
+    ]
+  }
+]

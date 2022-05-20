@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -26,7 +28,7 @@ class ComposeHomeFragment :
     @Preview
     @Composable
     fun PreviewContent() {
-        SetupContent()
+        MusicList(SampleData.musicsModel)
     }
 
     override fun setupViews() {
@@ -35,19 +37,12 @@ class ComposeHomeFragment :
 
     @Composable
     private fun SetupContent() {
-        Column(
-            Modifier
-                .padding(16.dp)
-                .background(Color.White)) {
-            Text(text = "Music List", Modifier.size(32.dp))
-            Spacer(modifier = Modifier.height(16.dp))
-            MusicList(SampleData.musicsModel)
-        }
+        MusicList(SampleData.musicsModel)
     }
 
     @Composable
     private fun MusicList(list: List<MusicModel>) {
-        LazyColumn {
+        LazyColumn(Modifier.padding(16.dp)) {
             items(list) { music ->
                 MusicCard(music)
                 Spacer(modifier = Modifier.height(8.dp))
@@ -57,21 +52,27 @@ class ComposeHomeFragment :
 
     @Composable
     private fun MusicCard(music: MusicModel) {
-        Row {
-            Image(
-                painter = painterResource(id = R.drawable.ic_music),
-                contentDescription = "Profile Image",
-                modifier = Modifier
-                    .size(40.dp)
-                    .clip(CircleShape)
-                    .background(Color.LightGray)
-            )
+        Surface(
+            shape = MaterialTheme.shapes.medium,
+            elevation = 2.dp,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Row(Modifier.padding(8.dp)) {
+                Image(
+                    painter = painterResource(id = R.drawable.ic_music),
+                    contentDescription = "Profile Image",
+                    modifier = Modifier
+                        .size(40.dp)
+                        .clip(CircleShape)
+                        .background(Color.LightGray)
+                )
 
-            Spacer(modifier = Modifier.width(8.dp))
+                Spacer(modifier = Modifier.width(8.dp))
 
-            Column {
-                Text(text = music.name)
-                music.artist?.let { Text(text = it) }
+                Column {
+                    Text(text = music.name, style = MaterialTheme.typography.subtitle2)
+                    music.artist?.let { Text(text = it, style = MaterialTheme.typography.body2) }
+                }
             }
         }
     }
