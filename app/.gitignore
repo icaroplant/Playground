@@ -1,1 +1,3 @@
 /build
+/src/main/java/com/example/playground/codetest/*.json
+/src/main/java/com/example/playground/codetest/*.txt
