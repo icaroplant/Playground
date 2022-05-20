@@ -8,7 +8,7 @@ fun main() {
     val gson = GsonBuilder().setPrettyPrinting().create()
     val f = "app/src/main/java/com/example/playground/codetest/Events.txt"
     val isUpdateSchema = true
-    val withContactKey = true
+    val withContactKey = false
 
     //read
     val bufferedReader: BufferedReader = File(f).bufferedReader()
@@ -60,7 +60,10 @@ fun main() {
     }
 
     //write
-    val newSchemaJson = gson.toJson(schema)
+    var newSchemaJson = gson.toJson(schema)
+    if(isUpdateSchema) {
+        newSchemaJson = newSchemaJson.trim('[',']')
+    }
     val newF = "app/src/main/java/com/example/playground/codetest/buildSchema.json"
     File(newF).printWriter().use { out ->
         out.println(newSchemaJson)
@@ -75,7 +78,7 @@ fun getBaseFields(withContactKey: Boolean = false) = mutableListOf<CdpField>().a
     add(CdpField("deviceId", "deviceId", "Text", true))
     add(CdpField("eventType", "eventType", "Text", true))
     add(CdpField("sessionId", "sessionId", "Text", true))
-    withContactKey.takeIf { it }.run {
+    withContactKey.takeIf { it }?.run {
         add(CdpField("contactKey", "contactKey", "Text", false))
     }
 }
