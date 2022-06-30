@@ -146,5 +146,4 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1")
     // When using a AppCompat theme
     implementation("com.google.accompanist:accompanist-appcompat-theme:0.16.0")
-
 }

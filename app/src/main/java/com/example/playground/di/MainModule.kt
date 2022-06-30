@@ -6,6 +6,7 @@ import com.example.playground.repository.MusicRepositoryImp
 import com.example.playground.ui.chat.ChatViewModel
 import com.example.playground.ui.home.HomeViewModel
 import com.example.playground.repository.MainRepositoryMock
+import com.example.playground.ui.compose.home.ComposeHomeViewModel
 import com.example.playground.ui.instrument.InstrumentViewModel
 import com.example.playground.ui.main.MainViewModel
 import com.example.playground.ui.manage.ManageMusicViewModel
@@ -27,6 +28,7 @@ val mainModule = module {
     viewModel { ChatViewModel() }
     viewModel { InstrumentViewModel() }
     viewModel { ManageMusicViewModel() }
+    viewModel { ComposeHomeViewModel() }
 
     factory { AppDatabase.getInstance(androidApplication()).musicDAO }
     factory { AppDatabase.getInstance(androidApplication()).albumDAO }

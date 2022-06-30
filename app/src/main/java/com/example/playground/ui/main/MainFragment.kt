@@ -203,16 +203,23 @@ class MainFragment : CoreFragment<MainFragmentBinding>(MainFragmentBinding::infl
         }
 
         binding.button10.apply {
-            text = "Intercom"
+            text = "Interchat"
             setOnClickListener {
-                context.openDeepLink("bancointer://interchat")
+                context.openDeepLink("bancointer://interchat?origin=TestePlayground")
             }
         }
 
         binding.button11.apply {
-            text = "Precisa de ajuda"
+            text = "Faq Search"
             setOnClickListener {
-                context.openDeepLink("bancointer://precisaDeAjuda")
+                context.openDeepLink("bancointer://centralAjuda/faq?q=Cart%C3%A3o%20Black")
+            }
+        }
+
+        binding.button12.apply {
+            text = "Artigo"
+            setOnClickListener {
+                context.openDeepLink("bancointer://centralAjuda/artigo?id=14922e60-09e2-4b23-a58a-1d053c31a7d8")
             }
         }
 

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/composeHomeFragment">
 
     <fragment
         android:id="@+id/mainFragment"
@@ -74,6 +74,6 @@
         android:id="@+id/composeHomeFragment"
         android:name="com.example.playground.ui.compose.home.ComposeHomeFragment"
         android:label="Compose Home"
-        tools:layout="@layout/compose_home_fragment"/>
+        tools:layout="@layout/compose_home_fragment" />
 
 </navigation>
