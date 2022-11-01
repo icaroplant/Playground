@@ -1,14 +1,12 @@
 package com.example.playground.codetest
 
 import com.example.playground.codetest.CdpSchemaBuilderConfig.isUpdateSchema
-import com.example.playground.codetest.CdpSchemaBuilderConfig.withContactKey
 import com.google.gson.GsonBuilder
 import java.io.BufferedReader
 import java.io.File
 
 object CdpSchemaBuilderConfig {
-    val isUpdateSchema = true
-    val withContactKey = true
+    const val isUpdateSchema = false
 }
 
 fun main() {
@@ -17,23 +15,8 @@ fun main() {
 
     //read
     val bufferedReader: BufferedReader = File(f).bufferedReader()
-    val records = mutableListOf<CdpEvent>().apply {
-        if (!isUpdateSchema) {
-            // Profile Event
-            add(
-                CdpEvent(
-                    masterLabel = "partyIdentification",
-                    developerName = "partyIdentification",
-                    category = "Profile",
-                    externalDataTranFields = getBaseFields().apply {
-                        add(CdpField("IDName", "IDName", "Text", true))
-                        add(CdpField("IDType", "IDType", "Text", true))
-                        add(CdpField("userId", "userId", "Text", true))
-                    }
-                )
-            )
-        }
-    }
+    val records = mutableListOf<CdpEvent>()
+
     bufferedReader.forEachLine { line ->
         if (line.isNotBlank()) {
             val itens = line
@@ -53,6 +36,24 @@ fun main() {
                     developerName = eventName,
                     category = "Engagement",
                     externalDataTranFields = fields
+                )
+            )
+        }
+    }
+
+    records.apply {
+        sortBy { it.developerName }
+        if (!isUpdateSchema) {
+            add(0,
+                CdpEvent(
+                    masterLabel = "partyIdentification",
+                    developerName = "partyIdentification",
+                    category = "Profile",
+                    externalDataTranFields = getBaseFields(true).apply {
+                        add(CdpField("IDName", "IDName", "Text", true))
+                        add(CdpField("IDType", "IDType", "Text", true))
+                        add(CdpField("userId", "userId", "Text", true))
+                    }
                 )
             )
         }
@@ -81,16 +82,21 @@ fun main() {
 
 }
 
-fun getBaseFields() = mutableListOf<CdpField>().apply {
-    add(CdpField("eventId", "eventId", "Text", true, 1))
+fun getBaseFields(isProfileEvent: Boolean = false) = mutableListOf<CdpField>().apply {
+    if (isProfileEvent) {
+        add(CdpField("eventId", "eventId", "Text", true))
+    } else {
+        add(CdpField("eventId", "eventId", "Text", true, 1))
+    }
     add(CdpField("category", "category", "Text", true))
     add(CdpField("dateTime", "dateTime", "Date", true))
-    add(CdpField("deviceId", "deviceId", "Text", true))
+    if (isProfileEvent) {
+        add(CdpField("deviceId", "deviceId", "Text", true, 1))
+    } else {
+        add(CdpField("deviceId", "deviceId", "Text", true))
+    }
     add(CdpField("eventType", "eventType", "Text", true))
     add(CdpField("sessionId", "sessionId", "Text", true))
-    withContactKey.takeIf { it }?.run {
-        add(CdpField("contactKey", "contactKey", "Text", false))
-    }
 }
 
 fun buildCdpCustomField(name: String): CdpField = CdpField(

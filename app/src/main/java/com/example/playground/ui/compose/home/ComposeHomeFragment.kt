@@ -65,24 +65,12 @@ class ComposeHomeFragment :
         state: ComposeHomeState
     ) {
         Column(Modifier.padding(16.dp)) {
-            Button(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                onClick = onClickFetch
-            ) {
-                Text(text = "Fetch")
-            }
+
+            ButtonFetch(onClick = onClickFetch)
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            Button(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                onClick = onClickAdd,
-                enabled = state is Success
-            ) {
-                Text(text = "Add Item")
-            }
+            ButtonAdd(state = state, onClick = onClickAdd)
 
             Spacer(modifier = Modifier.height(16.dp))
 
@@ -113,7 +101,37 @@ class ComposeHomeFragment :
     }
 
     @Composable
-    private fun MusicList(list: List<MusicModel>) {
+    private fun ButtonFetch(
+        onClick: () -> Unit
+    ) {
+        Button(
+            modifier = Modifier
+                .fillMaxWidth(),
+            onClick = onClick
+        ) {
+            Text(text = "Fetch")
+        }
+    }
+
+    @Composable
+    private fun ButtonAdd(
+        state: ComposeHomeState,
+        onClick: () -> Unit
+    ) {
+        Button(
+            modifier = Modifier
+                .fillMaxWidth(),
+            onClick = onClick,
+            enabled = state is Success
+        ) {
+            Text(text = "Add Item")
+        }
+    }
+
+    @Composable
+    private fun MusicList(
+        list: List<MusicModel>
+    ) {
         LazyColumn {
             items(list) { music ->
                 MusicCard(music)

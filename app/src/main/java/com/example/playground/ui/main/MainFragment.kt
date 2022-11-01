@@ -189,23 +189,23 @@ class MainFragment : CoreFragment<MainFragmentBinding>(MainFragmentBinding::infl
         }
 
         binding.button8.apply {
-            text = "Video Conference"
+            text = "OpenBanking authorize"
             setOnClickListener {
-                context.openDeepLink("bancointer://videoConferenciaAgendamento")
+                context.openDeepLink("https://auth.openbanking.uatbi.com.br/authorize")
             }
         }
 
         binding.button9.apply {
-            text = "Gointer"
+            text = "Gointer HMG"
             setOnClickListener {
-                context.openDeepLink("https://gointer-app.uatbi.com.br/convidarAmigo")
+                context.openDeepLink("https://gointer-app.uatbi.com.br/pix")
             }
         }
 
         binding.button10.apply {
-            text = "Interchat"
+            text = "Gointer PRD"
             setOnClickListener {
-                context.openDeepLink("bancointer://interchat?origin=TestePlayground")
+                context.openDeepLink("https://gointer.app/convidarAmigo")
             }
         }
 
@@ -219,7 +219,28 @@ class MainFragment : CoreFragment<MainFragmentBinding>(MainFragmentBinding::infl
         binding.button12.apply {
             text = "Artigo"
             setOnClickListener {
-                context.openDeepLink("bancointer://centralAjuda/artigo?id=14922e60-09e2-4b23-a58a-1d053c31a7d8")
+                context.openDeepLink("bancointer://centralAjuda/artigo?id=007a092b-6b18-4caa-93c6-28a82a890236")
+            }
+        }
+
+        binding.button13.apply {
+            text = "Chamado"
+            setOnClickListener {
+                context.openDeepLink("bancointer://centralAjuda/chamado?id=5000R000008mTRhQAM")
+            }
+        }
+
+        binding.button14.apply {
+            text = "Central Ajuda - Interchat"
+            setOnClickListener {
+                context.openDeepLink("bancointer://centralAjuda/interchat")
+            }
+        }
+
+        binding.button15.apply {
+            text = "Interchat"
+            setOnClickListener {
+                context.openDeepLink("bancointer://interchat")
             }
         }
 
